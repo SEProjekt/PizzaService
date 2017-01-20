@@ -1,0 +1,20 @@
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Label?>
+
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<GridPane alignment="CENTER" hgap="10" vgap="10" fx:controller="com.pizzaservice.orderpage.controller.ChooseSplitController"
+          xmlns:fx="http://javafx.com/fxml">
+
+    <Label text="Willst du, dass deine Pizza zur Hälfte anders belegt wird?" wrapText="true" GridPane.rowIndex="0"/>
+
+    <RadioButton fx:id="radSplitYes" text="Ja" GridPane.rowIndex="1"/>
+    <RadioButton fx:id="radSplitNo" text="Nein" GridPane.rowIndex="2"/>
+
+    <HBox spacing="10" alignment="BOTTOM_RIGHT" maxWidth="Infinity" GridPane.rowIndex="4">
+        <Button text="Abbrechen" onAction="#actionAbort" />
+        <Button text="Weiter" onAction="#actionNext" />
+    </HBox>
+</GridPane>

@@ -1,6 +1,6 @@
 package com.pizzaservice.data_access_objects;
 
-import com.pizzaservice.value_objects.Store;
+import com.pizzaservice.buissness_objects.Store;
 
 import java.util.Collection;
 
@@ -9,15 +9,15 @@ import java.util.Collection;
  */
 public interface StoreDAO
 {
-    void insertStore( Store Store );
+    void addStore( Store Store ) throws DataAccessException;
 
-    void deleteStore( Store Store );
+    void deleteStore( Store Store ) throws DataAccessException;
 
-    void updateStore( Store Store );
+    void updateStore( Store Store ) throws DataAccessException;
 
-    void updateStockItems( Store store );
+    void updateStockItems( Store store ) throws DataAccessException;
 
-    void updateOrders( Store store );
+    void updateOrders( Store store ) throws DataAccessException;
 
-    Collection<Store> getStores();
+    Collection<Store> getStores() throws DataAccessException;
 }

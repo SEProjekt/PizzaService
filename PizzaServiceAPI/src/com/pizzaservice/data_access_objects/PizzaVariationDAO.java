@@ -1,6 +1,6 @@
 package com.pizzaservice.data_access_objects;
 
-import com.pizzaservice.value_objects.PizzaVariation;
+import com.pizzaservice.buissness_objects.PizzaVariation;
 
 import java.util.Collection;
 
@@ -9,11 +9,11 @@ import java.util.Collection;
  */
 public interface PizzaVariationDAO
 {
-    void insertPizzaVariation( PizzaVariation pizzaVariation );
+    void addPizzaVariation( PizzaVariation pizzaVariation ) throws DataAccessException;
 
-    void deletePizzaVariation( PizzaVariation pizzaVariation );
+    void deletePizzaVariation( PizzaVariation pizzaVariation ) throws DataAccessException;
 
-    void updatePizzaVariation( PizzaVariation pizzaVariation );
+    void updatePizzaVariation( PizzaVariation pizzaVariation ) throws DataAccessException;
 
-    Collection<PizzaVariation> getPizzaVariations( PizzaVariation pizzaVariation );
+    Collection<PizzaVariation> getPizzaVariations() throws DataAccessException;
 }

@@ -1,6 +1,6 @@
 package com.pizzaservice.data_access_objects;
 
-import com.pizzaservice.value_objects.Ingredient;
+import com.pizzaservice.buissness_objects.Ingredient;
 
 import java.util.Collection;
 
@@ -9,11 +9,13 @@ import java.util.Collection;
  */
 public interface IngredientDAO
 {
-    void insertIngredient( Ingredient ingredient );
+    void addIngredient( Ingredient ingredient ) throws DataAccessException;
 
-    void deleteIngredient( Ingredient ingredient );
+    void deleteIngredient( Ingredient ingredient ) throws DataAccessException;
 
-    void updateIngredient( Ingredient ingredient );
+    void updateIngredient( Ingredient ingredient ) throws DataAccessException;
 
-    Collection<Ingredient> getIngredients();
+    Ingredient findIngredientById( long id ) throws DataAccessException;
+
+    Collection<Ingredient> getIngredients() throws DataAccessException;
 }

@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/PizzaServiceAPI/PizzaServiceAPI.iml" filepath="$PROJECT_DIR$/PizzaServiceAPI/PizzaServiceAPI.iml" />
       <module fileurl="file://$PROJECT_DIR$/PizzaServiceOrderPage/PizzaServiceOrderPage.iml" filepath="$PROJECT_DIR$/PizzaServiceOrderPage/PizzaServiceOrderPage.iml" />
       <module fileurl="file://$PROJECT_DIR$/../PizzaServiceOrderPage/PizzaServiceOrderPage.iml" filepath="$PROJECT_DIR$/../PizzaServiceOrderPage/PizzaServiceOrderPage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PizzaServiceOrderPageTest/PizzaServiceOrderPageTest.iml" filepath="$PROJECT_DIR$/PizzaServiceOrderPageTest/PizzaServiceOrderPageTest.iml" />
     </modules>
   </component>
 </project>

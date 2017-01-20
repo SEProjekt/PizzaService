@@ -1,6 +1,6 @@
 package com.pizzaservice.data_access_objects;
 
-import com.pizzaservice.value_objects.Topping;
+import com.pizzaservice.buissness_objects.Topping;
 
 import java.util.Collection;
 
@@ -9,11 +9,11 @@ import java.util.Collection;
  */
 public interface ToppingDAO
 {
-    void insertTopping( Topping Topping );
+    void addTopping( Topping Topping ) throws DataAccessException;
 
-    void deleteTopping( Topping Topping );
+    void deleteTopping( Topping Topping ) throws DataAccessException;
 
-    void updateTopping( Topping Topping );
+    void updateTopping( Topping Topping ) throws DataAccessException;
 
-    Collection<Topping> getToppings( Topping Topping );
+    Collection<Topping> getToppings() throws DataAccessException;
 }

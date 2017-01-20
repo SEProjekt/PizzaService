@@ -1,0 +1,11 @@
+<?import javafx.scene.layout.BorderPane?>
+
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.pizzaservice.orderpage.Main">
+    <center>
+        <StackPane fx:id="rootPane">
+            <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+        </StackPane>
+    </center>
+</BorderPane>
