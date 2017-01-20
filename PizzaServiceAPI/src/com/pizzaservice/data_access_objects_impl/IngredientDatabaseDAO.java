@@ -38,17 +38,9 @@ public class IngredientDatabaseDAO extends DatabaseDAO implements IngredientDAO
             List<Object> args = new ArrayList<>();
             args.add( ingredient.getName() );
             args.add( ingredient.getPricePerGramm() );
-            database.query( query, args, row ->
-                ingredient.setId( row.getLong( 1 ) ) );
+            database.query( query, args, row -> ingredient.setId( row.getLong( 1 ) ) );
         }
-        catch( SQLException e )
-        {
-            throw new DataAccessException( this, e );
-        }
-        catch( Exception e )
-        {
-            throw new DataAccessException();
-        }
+        catch( Exception e ) { throw handleException( e ); }
     }
 
     @Override
@@ -72,8 +64,7 @@ public class IngredientDatabaseDAO extends DatabaseDAO implements IngredientDAO
             List<Object> args = new ArrayList<>();
             args.add( id );
             Ingredient ingredient = new Ingredient();
-            boolean found = database.query( query, args, row ->
-            {
+            boolean found = database.query( query, args, row -> {
                 ingredient.setName( row.getString( COLUMN_NAME ) );
                 ingredient.setPricePerGramm( row.getFloat( COLUMN_PRICE_PER_GRAM ) );
             } );
@@ -83,14 +74,7 @@ public class IngredientDatabaseDAO extends DatabaseDAO implements IngredientDAO
 
             return ingredient;
         }
-        catch( SQLException e )
-        {
-            throw new DataAccessException( this, e );
-        }
-        catch( Exception e )
-        {
-            throw new DataAccessException();
-        }
+        catch( Exception e ) { throw handleException( e ); }
     }
 
     @Override

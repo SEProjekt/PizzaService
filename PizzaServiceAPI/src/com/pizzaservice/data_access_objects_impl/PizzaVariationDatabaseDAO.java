@@ -99,17 +99,6 @@ public class PizzaVariationDatabaseDAO extends DatabaseDAO implements PizzaVaria
 
             return pizzaVariations;
         }
-        catch( SQLException e )
-        {
-            throw new DataAccessException( this, e );
-        }
-        catch( DataAccessException e )
-        {
-            throw e;
-        }
-        catch( Exception e )
-        {
-            throw new DataAccessException();
-        }
+        catch( Exception e ) { throw handleException( e ); }
     }
 }

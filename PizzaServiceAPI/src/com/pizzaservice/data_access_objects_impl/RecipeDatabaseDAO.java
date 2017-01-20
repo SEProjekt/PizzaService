@@ -63,13 +63,6 @@ public class RecipeDatabaseDAO extends DatabaseDAO implements RecipeDAO
             recipe.setEntries( recipeEntries );
             return recipe;
         }
-        catch( SQLException e )
-        {
-            throw new DataAccessException( this, e );
-        }
-        catch( Exception e )
-        {
-            throw new DataAccessException();
-        }
+        catch( Exception e ) { throw handleException( e ); }
     }
 }
