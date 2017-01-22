@@ -59,9 +59,9 @@ public class Database
         }
         finally
         {
-            closeQuietly( connection );
-            closeQuietly( pstmt );
             closeQuietly( rs );
+            closeQuietly( pstmt );
+            closeQuietly( connection );
         }
     }
 
@@ -83,7 +83,13 @@ public class Database
             connectionProps.put( "user", connectionParams.getUserName() );
             connectionProps.put( "password", connectionParams.getPassword() );
 
-            return DriverManager.getConnection( "jdbc:" + connectionParams.getDbms() + "://" + connectionParams.getServerName() + ":" + connectionParams.getPortNumber() + "/" + connectionParams.getDatabaseName(), connectionProps );
+            return DriverManager.getConnection(
+                "jdbc:" + connectionParams.getDbms()
+                + "://" + connectionParams.getServerName()
+                + ":" + connectionParams.getPortNumber()
+                + "/" + connectionParams.getDatabaseName()
+                + "?autoReconnect=true&useSSL=false",
+                connectionProps );
         }
         catch( SQLException ex )
         {

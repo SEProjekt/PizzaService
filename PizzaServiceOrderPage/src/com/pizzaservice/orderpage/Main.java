@@ -16,12 +16,13 @@ import java.io.IOException;
 
 public class Main extends Application
 {
-    private static final String userName = "root";
-    private static final String password = "m13u21m13PPILIHP";
-    private static final String dbms = "mysql";
-    private static final String serverName = "localhost";
-    private static final String portNumber = "3306";
-    private static final String databaseName = "PizzaService";
+    public static final String userName = "root";
+    public static final String password = ""; // enter it!
+    public static final String dbms = "mysql";
+    public static final String serverName = "localhost";
+    public static final String portNumber = "3306";
+    public static final String databaseName = "PizzaService";
+    public static final String googleAPIKey = "AIzaSyAqM1vOIcpK9V1CMPQSjUg6QAuRA6jgzaM";
 
     @Override
     public void start( Stage primaryStage ) throws Exception
@@ -29,7 +30,7 @@ public class Main extends Application
         Parent root = FXMLLoader.load( getClass().getResource( "main.fxml" ) );
         root.getStylesheets().add( this.getClass().getResource( "style.css" ).toExternalForm() );
         primaryStage.setTitle( "Pizza Bestellungsseite" );
-        primaryStage.setScene( new Scene( root, 300, 275 ) );
+        primaryStage.setScene( new Scene( root, 400, 300 ) );
         primaryStage.show();
     }
 

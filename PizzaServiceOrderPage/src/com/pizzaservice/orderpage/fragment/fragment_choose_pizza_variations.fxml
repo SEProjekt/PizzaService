@@ -9,11 +9,12 @@
 <VBox fx:controller="com.pizzaservice.orderpage.controller.ChoosePizzaVariationController" xmlns:fx="http://javafx.com/fxml"
       alignment="CENTER" spacing="10">
 
-    <Label text="Wähle die Pizza Variation aus:" />
+    <Label text="Wähle die Pizza Variationen aus:" />
 
     <ChoiceBox fx:id="cbPizzaVariation1" />
+    <ChoiceBox fx:id="cbPizzaVariation2" />
 
-    <HBox spacing="10" alignment="BOTTOM_CENTER" >
+    <HBox spacing="10" alignment="BOTTOM_CENTER">
         <Button text="Abbrechen" onAction="#actionAbort" />
         <Button text="Weiter" onAction="#actionNext" />
     </HBox>

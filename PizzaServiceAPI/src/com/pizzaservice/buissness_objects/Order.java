@@ -17,7 +17,7 @@ public class Order
     private Address customerAddress;
     private Date timeAtStartOfDelivering;
 
-    private Order()
+    public Order()
     {
     }
 

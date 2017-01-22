@@ -12,7 +12,7 @@ public class Customer
     private String secondName;
     private String phoneNumber;
     private boolean locked;
-    private Date lockedUnil;
+    private Date lockedUntil;
 
     public Customer()
     {
@@ -68,13 +68,13 @@ public class Customer
         this.locked = locked;
     }
 
-    public Date getLockedUnil()
+    public Date getLockedUntil()
     {
-        return lockedUnil;
+        return lockedUntil;
     }
 
-    public void setLockedUnil( Date lockedUnil )
+    public void setLockedUntil( Date lockedUntil )
     {
-        this.lockedUnil = lockedUnil;
+        this.lockedUntil = lockedUntil;
     }
 }
