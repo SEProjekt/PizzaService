@@ -12,9 +12,7 @@ public class Store
     private Collection<StockItem> stockItems;
     private Collection<Order> order;
 
-    private Store()
-    {
-    }
+    private Store() {}
 
     public long getId()
     {

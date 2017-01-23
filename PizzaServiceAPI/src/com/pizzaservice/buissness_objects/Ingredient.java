@@ -9,9 +9,7 @@ public class Ingredient
     private String name;
     private float pricePerGramm;
 
-    public Ingredient()
-    {
-    }
+    public Ingredient() {}
 
     public long getId()
     {

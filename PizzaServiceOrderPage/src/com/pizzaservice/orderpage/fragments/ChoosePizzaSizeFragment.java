@@ -1,6 +1,6 @@
-package com.pizzaservice.orderpage.controller;
+package com.pizzaservice.orderpage.fragments;
 
-import com.pizzaservice.orderpage.fragment.FragmentURLs;
+import com.pizzaservice.orderpage.fragment_fxml.FragmentURLs;
 import com.pizzaservice.buissness_objects.PizzaConfiguration;
 import com.pizzaservice.buissness_objects.PizzaSize;
 import javafx.event.ActionEvent;
@@ -13,7 +13,7 @@ import java.io.IOException;
 /**
  * Created by philipp on 16.01.17.
  */
-public class ChoosePizzaSizeController extends Controller
+public class ChoosePizzaSizeFragment extends Fragment
 {
     private ToggleGroup sizeGroup;
 
@@ -24,8 +24,13 @@ public class ChoosePizzaSizeController extends Controller
     @FXML
     RadioButton radSizeXLarge;
 
+    public ChoosePizzaSizeFragment( Fragment oldFragment )
+    {
+        super( FragmentURLs.CHOOSE_PIZZA_SIZE, oldFragment );
+    }
+
     @Override
-    protected void onSetup()
+    protected void onLoadFinished()
     {
         sizeGroup = new ToggleGroup();
         radSizeSmall.setToggleGroup( sizeGroup );
@@ -44,7 +49,7 @@ public class ChoosePizzaSizeController extends Controller
         {
             pizzaConfiguration.setSize( PizzaSize.SMALL );
 
-            this.<ChoosePizzaVariationController>setFragment( FragmentURLs.CHOOSE_PIZZA_VARIATION );
+            setNewFragment( new ChoosePizzaVariationFragment( this, false ) );
         }
         else
         {
@@ -53,13 +58,13 @@ public class ChoosePizzaSizeController extends Controller
             else
                 pizzaConfiguration.setSize( PizzaSize.X_LARGE );
 
-            this.<ChooseSplitController>setFragment( FragmentURLs.CHOOSE_SPLIT );
+            setNewFragment( new ChooseSplitFragment( this ) );
         }
     }
 
     @FXML
     public void actionAbort( ActionEvent actionEvent ) throws IOException
     {
-        this.<MainMenuController>setFragment( FragmentURLs.MAIN_MENU );
+        setNewFragment( new MainMenuFragment( this ) );
     }
 }

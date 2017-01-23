@@ -26,10 +26,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="fragment_finish_order.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/fragment_finish_order.fxml">
+        <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment_fxml/fragment_finish_order.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="16">
+              <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -41,91 +41,105 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="19" column="58" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Order.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/Order.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/data_access_objects_impl/DatabaseDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="133">
-              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+              <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Store.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/Store.java">
+      <file leaf-file-name="fragment_show_card.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment_fxml/fragment_show_card.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+            <state relative-caret-position="171">
+              <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
               <folding />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/Customer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-              <folding />
-            </state>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FinishOrderController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/controller/FinishOrderController.java">
+      <file leaf-file-name="ToppingSelector.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/views/ToppingSelector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/controller/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShowCartController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/controller/ShowCartController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="115" column="9" selection-start-line="115" selection-start-column="9" selection-end-line="115" selection-end-column="9" />
+            <state relative-caret-position="380">
+              <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4056#4076#0" expanded="true" />
+                <element signature="e#1478#1479#0" expanded="true" />
+                <element signature="e#1534#1535#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fragment_main_menu.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/fragment_main_menu.fxml">
+      <file leaf-file-name="ChooseToppingsFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragments/ChooseToppingsFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+            <state relative-caret-position="319">
+              <caret line="150" column="38" selection-start-line="150" selection-start-column="38" selection-end-line="150" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShowCartFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragments/ShowCartFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FinishOrderFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragments/FinishOrderFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1140#1141#0" expanded="true" />
+                <element signature="e#1202#1203#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChoosePizzaSizeFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragments/ChoosePizzaSizeFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="874">
+              <caret line="60" column="62" selection-start-line="60" selection-start-column="62" selection-end-line="60" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CartItem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/views/CartItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1420#1421#0" expanded="true" />
+                <element signature="e#1476#1477#0" expanded="true" />
+                <element signature="e#1530#1531#0" expanded="true" />
+                <element signature="e#1570#1571#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view_cart_item.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/view_fxml/view_cart_item.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -155,56 +169,56 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/data_access_objects_impl/IngredientDatabaseDAO.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/Order.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/Ingredient.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/Customer.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/Address.java" />
         <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/PizzaConfiguration.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/PizzaVariation.java" />
         <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/Recipe.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/RecipeEntry.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/StockItem.java" />
         <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/Store.java" />
         <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/Topping.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/data_access_objects/QueryUtils.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/data_access_objects/DatabaseDAO.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/data_access_objects/PizzaVariationDAO.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/data_access_objects/StoreDAO.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/data_access_objects/ToppingDAO.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/data_access_objects/IngredientDAO.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/data_access_objects/RecipeDAO.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/controller/ChoosePizzaSizeController.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/db/QueryArgs.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/db/DatabaseAccess.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/db/DatabaseHelper.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/controller/Controller.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/db/Row.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/db/OnRowProcessedListener.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/data_access_objects/DataAccessException.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/Utils.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/data_access_objects_impl/DatabaseDAO.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/data_access_objects_impl/IngredientDatabaseDAO.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/data_access_objects_impl/PizzaVariationDatabaseDAO.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/data_access_objects_impl/RecipeDatabaseDAO.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/PizzaVariation.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/controller/ChooseSplitController.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/db/Database.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/arbitary/PizzaVariationItem.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/fragment_choose_toppings.fxml" />
-        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/data_access_objects_impl/ToppingDatabaseDAO.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/fragment_finish_pizza_configuration.fxml" />
-        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/controller/ChoosePizzaVariationController.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/items/ToppingItem.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/Session.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/controller/ChooseToppingsController.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/fragment_choose_pizza_size.fxml" />
-        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/fragment_main_menu.fxml" />
-        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/controller/FinishPizzaConfigurationController.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/main.fxml" />
-        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/fragment_show_card.fxml" />
-        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/items/PizzaVariationItem.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/items/PizzaConfigurationItem.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/fragment_choose_split.fxml" />
-        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/fragment_choose_pizza_variations.fxml" />
-        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/fragment_choose_pizza_variation.fxml" />
-        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/FragmentURLs.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/controller/ShowCartController.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/fragment_finish_order.fxml" />
         <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/controller/FinishOrderController.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/controller/MainMenuController.java" />
-        <option value="$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/Customer.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/items/PizzaConfigurationItem.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/controller/ChooseToppingsController.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/controller/Fragment.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/controller/MainMenu.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/fragment_main_menu.fxml" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/MainMenu.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/Fragment.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/MainMenuFragment.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/ShowCartFragment.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/FinishPizzaConfigurationFragment.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/FinishOrderController.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/FinishOrderControlle.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/FinishOrderFragment.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/ChooseToppingsFragment.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/ChoosePizzaVariationFragment.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/ChoosePizzaSizeFragment.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/ChooseSplitFragment.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment_fxml/fragment_choose_pizza_size.fxml" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment_fxml/fragment_choose_pizza_variation.fxml" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment_fxml/fragment_choose_pizza_variations.fxml" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment_fxml/fragment_choose_split.fxml" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment_fxml/fragment_choose_toppings.fxml" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment_fxml/fragment_finish_order.fxml" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment_fxml/fragment_finish_pizza_configuration.fxml" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment_fxml/fragment_main_menu.fxml" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment_fxml/fragment_show_card.fxml" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragments/Fragment.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/Utils.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/view_fxml/ViewURLs.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/view_fxml/view_topping_selector.fxml" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/view_fxml/view_cart_item.fxml" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragments/ShowCartFragment.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/views/ToppingSelector.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragments/ChooseToppingsFragment.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/views/CartItem.java" />
+        <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragments/FinishOrderFragment.java" />
         <option value="$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/Main.java" />
       </list>
     </option>
@@ -252,6 +266,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane />
       </pane>
@@ -334,6 +349,50 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PizzaService" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PizzaServiceOrderPage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="orderpage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view_fxml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PizzaService" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PizzaServiceOrderPage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="orderpage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="items" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -356,7 +415,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fragment" />
+              <option name="myItemId" value="fragments" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -378,7 +437,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
+              <option name="myItemId" value="fragment_fxml" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -482,7 +541,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -884,6 +942,7 @@
       <workItem from="1484929485152" duration="945000" />
       <workItem from="1484930511891" duration="8416000" />
       <workItem from="1485009882362" duration="15676000" />
+      <workItem from="1485125895931" duration="18242000" />
     </task>
     <servers />
   </component>
@@ -902,11 +961,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129907000" />
+    <option name="totallyTimeSpent" value="148149000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1919" y="0" width="1922" height="1081" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -916,13 +975,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32291666" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32291666" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21884984" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32799146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -934,6 +993,33 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32291666" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21884984" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -957,273 +1043,157 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/db/Database.java">
+    <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/data_access_objects_impl/DatabaseDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="90" column="53" selection-start-line="90" selection-start-column="53" selection-end-line="90" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/control/ButtonBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="120" column="41" selection-start-line="120" selection-start-column="41" selection-end-line="120" selection-end-column="41" />
+        <state relative-caret-position="133">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/local/java/jdk1.8.0_65/javafx-src.zip!/javafx/event/EventHandler.java">
+    <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/data_access_objects/PizzaVariationDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+        <state relative-caret-position="133">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/data_access_objects_impl/StoreDatabaseDAO.java">
+    <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/data_access_objects/IngredientDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        <state relative-caret-position="133">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/data_access_objects_impl/RecipeDatabaseDAO.java">
+    <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/Ingredient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="64" column="9" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#640#641#0" expanded="false" />
-            <element signature="e#673#674#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="209">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/PizzaConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/PizzaVariation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/Recipe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/RecipeEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/StockItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/Topping.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/data_access_objects_impl/ToppingDatabaseDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+        <state relative-caret-position="228">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/local/java/jdk1.8.0_65/javafx-src.zip!/javafx/beans/value/ObservableValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1102">
-          <caret line="82" column="17" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/java/jdk1.8.0_65/javafx-src.zip!/javafx/beans/value/ChangeListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="62" column="23" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/java/jdk1.8.0_65/javafx-src.zip!/javafx/event/Event.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3040">
-          <caret line="197" column="0" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#5921#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1925#1926#0" expanded="false" />
-            <element signature="e#1968#1969#0" expanded="false" />
-            <element signature="e#2975#2976#0" expanded="false" />
-            <element signature="e#3004#3005#0" expanded="false" />
-            <element signature="e#3304#3305#0" expanded="false" />
-            <element signature="e#3336#3337#0" expanded="false" />
-            <element signature="e#4362#4363#0" expanded="false" />
-            <element signature="e#4393#4394#0" expanded="false" />
-            <element signature="e#4519#4520#0" expanded="false" />
-            <element signature="e#4550#4551#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/java/jdk1.8.0_65/javafx-src.zip!/javafx/collections/FXCollections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="338" column="40" selection-start-line="338" selection-start-column="40" selection-end-line="338" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/data_access_objects_impl/IngredientDatabaseDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="42" column="60" selection-start-line="42" selection-start-column="60" selection-end-line="42" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/java/jdk1.8.0_65/javafx-src.zip!/javafx/collections/ModifiableObservableListBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="182" column="0" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/java/jdk1.8.0_65/javafx-src.zip!/javafx/collections/ListChangeBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="540" column="0" selection-start-line="540" selection-start-column="0" selection-end-line="540" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/java/jdk1.8.0_65/javafx-src.zip!/com/sun/javafx/collections/ListListenerHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="328" column="0" selection-start-line="328" selection-start-column="0" selection-end-line="328" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/control/ChoiceBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="283" column="0" selection-start-line="283" selection-start-column="0" selection-end-line="283" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/java/jdk1.8.0_65/javafx-src.zip!/javafx/beans/property/IntegerPropertyBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="147" column="9" selection-start-line="147" selection-start-column="9" selection-end-line="147" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/control/SelectionModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="58" column="11" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/java/jdk1.8.0_65/javafx-src.zip!/javafx/collections/ObservableListBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="232" column="0" selection-start-line="232" selection-start-column="0" selection-end-line="232" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/java/jdk1.8.0_65/javafx-src.zip!/com/sun/javafx/binding/ExpressionHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="360" column="0" selection-start-line="360" selection-start-column="0" selection-end-line="360" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/controller/ChoosePizzaVariationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="37" column="110" selection-start-line="37" selection-start-column="110" selection-end-line="37" selection-end-column="110" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/controller/ChoosePizzaSizeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/controller/ChooseSplitController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/controller/ChooseToppingsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2525">
-          <caret line="68" column="9" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/fragment_choose_pizza_size.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/fragment_finish_pizza_configuration.fxml">
+    <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/Store.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/fragment_choose_toppings.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/layout/ColumnConstraints.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="372" column="22" selection-start-line="372" selection-start-column="22" selection-end-line="372" selection-end-column="22" />
-          <folding>
-            <element signature="e#11043#11044#0" expanded="false" />
-            <element signature="e#11089#11090#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/controller/FinishPizzaConfigurationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/local/java/jdk1.8.0_65/src.zip!/java/util/List.java">
+    <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/PizzaSize.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="571" column="74" selection-start-line="571" selection-start-column="74" selection-end-line="571" selection-end-column="74" />
+        <state relative-caret-position="95">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/Session.java">
+    <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/OrderState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        <state relative-caret-position="95">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/items/PizzaConfigurationItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/items/PizzaVariationItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_65/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="2249" column="16" selection-start-line="2249" selection-start-column="16" selection-end-line="2249" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1238,6 +1208,162 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/MainMenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragments/FinishPizzaConfigurationFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="13" column="45" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragments/ChooseSplitFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragments/MainMenuFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment_fxml/fragment_choose_pizza_size.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment_fxml/fragment_choose_pizza_variation.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment_fxml/fragment_choose_pizza_variations.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment_fxml/fragment_choose_split.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment_fxml/fragment_choose_toppings.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment_fxml/fragment_finish_pizza_configuration.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment_fxml/fragment_main_menu.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/view_fxml.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/layout/HBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="228" column="11" selection-start-line="228" selection-start-column="11" selection-end-line="228" selection-end-column="11" />
+          <folding>
+            <element signature="e#8592#8593#0" expanded="false" />
+            <element signature="e#8615#8616#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragments/Fragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragments/ChoosePizzaVariationFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-389">
+          <caret line="58" column="50" selection-start-line="58" selection-start-column="50" selection-end-line="58" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/items/ToppingItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -1246,72 +1372,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/items/PizzaVariationItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-          <folding>
-            <element signature="e#517#518#0" expanded="true" />
-            <element signature="e#614#615#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/items/PizzaConfigurationItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="72" column="29" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/fragment_show_card.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/fragment_choose_split.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/fragment_choose_pizza_variations.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/fragment_choose_pizza_variation.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/FragmentURLs.java">
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment_fxml/FragmentURLs.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
@@ -1319,82 +1380,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/controller/MainMenuController.java">
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-          <folding>
-            <element signature="e#830#850#0" expanded="true" />
-            <element signature="e#1005#1028#0" expanded="true" />
-            <element signature="e#1151#1152#0" expanded="true" />
-            <element signature="e#1183#1184#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/controller/FinishOrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/Store.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/buissness_objects/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceAPI/src/com/pizzaservice/data_access_objects_impl/DatabaseDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/controller/ShowCartController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="115" column="9" selection-start-line="115" selection-start-column="9" selection-end-line="115" selection-end-column="9" />
+        <state relative-caret-position="257">
+          <caret line="23" column="75" selection-start-line="23" selection-start-column="75" selection-end-line="23" selection-end-column="75" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4056#4076#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/fragment_main_menu.fxml">
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/view_fxml/ViewURLs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        <state relative-caret-position="209">
+          <caret line="11" column="97" selection-start-line="11" selection-start-column="97" selection-end-line="11" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/view_fxml/view_topping_selector.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -1402,21 +1409,105 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment/fragment_finish_order.fxml">
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/view_fxml/view_cart_item.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="228">
+          <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
           <folding />
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/views/ToppingSelector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1478#1479#0" expanded="true" />
+            <element signature="e#1534#1535#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragments/ChooseToppingsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="150" column="38" selection-start-line="150" selection-start-column="38" selection-end-line="150" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/views/CartItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1420#1421#0" expanded="true" />
+            <element signature="e#1476#1477#0" expanded="true" />
+            <element signature="e#1530#1531#0" expanded="true" />
+            <element signature="e#1570#1571#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragments/ShowCartFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragments/ChoosePizzaSizeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="60" column="62" selection-start-line="60" selection-start-column="62" selection-end-line="60" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment_fxml/fragment_show_card.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragment_fxml/fragment_finish_order.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/fragments/FinishOrderFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1140#1141#0" expanded="true" />
+            <element signature="e#1202#1203#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PizzaServiceOrderPage/src/com/pizzaservice/orderpage/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="19" column="58" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
+        <state relative-caret-position="133">
+          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
           <folding />
         </state>
       </provider>

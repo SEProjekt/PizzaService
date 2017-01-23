@@ -24,19 +24,10 @@ public class PizzaConfigurationItem
     @Override
     public String toString()
     {
+        String text = "";
         float totalPrice = 0;
 
-        String text = "Größe: ";
         PizzaSize size = pizzaConfiguration.getSize();
-        if( size == PizzaSize.SMALL )
-            text += "Small";
-        else if( size == PizzaSize.LARGE )
-            text += "Large";
-        else
-            text += "X-Large";
-
-        text += "\n\n";
-
         PizzaVariationItem variation1 = new PizzaVariationItem( pizzaConfiguration.getPizzaVariation1(), size );
         PizzaVariationItem variation2 = new PizzaVariationItem( pizzaConfiguration.getPizzaVariation2(), size );
 
@@ -50,6 +41,14 @@ public class PizzaConfigurationItem
             text += "Belag: " + variation1.toString();
             totalPrice += variation1.getPrice();
         }
+
+        text += "\n\nGröße: ";
+        if( size == PizzaSize.SMALL )
+            text += "Small";
+        else if( size == PizzaSize.LARGE )
+            text += "Large";
+        else
+            text += "X-Large";
 
         if( !pizzaConfiguration.getToppings().isEmpty() )
         {

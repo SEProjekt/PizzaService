@@ -10,9 +10,7 @@ public class Topping
     private float price;
     private Recipe recipe;
 
-    public Topping()
-    {
-    }
+    public Topping() {}
 
     public long getId()
     {

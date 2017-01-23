@@ -10,9 +10,7 @@ public class Recipe
     private long id;
     private Collection<RecipeEntry> entries;
 
-    public Recipe()
-    {
-    }
+    public Recipe() {}
 
     public long getId()
     {

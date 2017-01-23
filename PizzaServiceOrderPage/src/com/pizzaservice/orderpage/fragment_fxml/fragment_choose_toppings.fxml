@@ -4,10 +4,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.control.Button?>
 <?import javafx.geometry.Insets?>
-<VBox fx:controller="com.pizzaservice.orderpage.controller.ChooseToppingsController"
-      xmlns:fx="http://javafx.com/fxml"
-      spacing="10"
-      alignment="CENTER">
+<?import com.pizzaservice.orderpage.fragments.Fragment?>
+<fx:root xmlns:fx="http://javafx.com/fxml"
+         type="Fragment" spacing="20" alignment="CENTER">
     <padding><Insets top="10" bottom="10" left="10" right="10" /></padding>
 
     <Label text="Wähle deine Topppings:" />
@@ -20,4 +19,4 @@
         <Button text="Abbrechen" onAction="#actionAbort" />
         <Button text="Weiter" onAction="#actionNext" />
     </HBox>
-</VBox>
+</fx:root>

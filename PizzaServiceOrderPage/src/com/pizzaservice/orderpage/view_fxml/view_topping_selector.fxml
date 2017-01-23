@@ -1,0 +1,9 @@
+<?import javafx.scene.control.Button?>
+<?import com.pizzaservice.orderpage.views.ToppingSelector?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<fx:root xmlns:fx="http://javafx.com/fxml"
+         type="ToppingSelector" spacing="10" alignment="CENTER">
+    <ChoiceBox fx:id="cbTopping" />
+    <Button text="Entfernen" onAction="#actionDelete" />
+</fx:root>

@@ -14,9 +14,7 @@ public class PizzaVariation
     private float priceLarge;
     private float priceXLarge;
 
-    public PizzaVariation()
-    {
-    }
+    public PizzaVariation() {}
 
     public long getId()
     {

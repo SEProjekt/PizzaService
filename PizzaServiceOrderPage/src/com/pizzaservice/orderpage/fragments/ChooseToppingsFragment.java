@@ -1,4 +1,4 @@
-package com.pizzaservice.orderpage.controller;
+package com.pizzaservice.orderpage.fragments;
 
 import com.pizzaservice.buissness_objects.PizzaConfiguration;
 import com.pizzaservice.buissness_objects.PizzaSize;
@@ -7,8 +7,9 @@ import com.pizzaservice.data_access_objects.DataAccessException;
 import com.pizzaservice.data_access_objects.ToppingDAO;
 import com.pizzaservice.data_access_objects_impl.ToppingDatabaseDAO;
 import com.pizzaservice.orderpage.Utils;
-import com.pizzaservice.orderpage.fragment.FragmentURLs;
+import com.pizzaservice.orderpage.fragment_fxml.FragmentURLs;
 import com.pizzaservice.orderpage.items.ToppingItem;
+import com.pizzaservice.orderpage.views.ToppingSelector;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -26,7 +27,7 @@ import java.util.List;
 /**
  * Created by philipp on 18.01.17.
  */
-public class ChooseToppingsController extends Controller
+public class ChooseToppingsFragment extends Fragment
 {
     /**
      * Button to add a topping selector. This button will be displayed under the list of topping selectors
@@ -56,106 +57,23 @@ public class ChooseToppingsController extends Controller
     @FXML
     VBox vbContainer;
 
-    /**
-     * UI element to select a topping which contains a choice box of topping items and a delete button
-     * to discard the topping selection.
-     */
-    private class ToppingSelector extends HBox
+    public ChooseToppingsFragment( Fragment oldFragment )
     {
-        private ChoiceBox cbTopping;
-        private Button btnDelete;
-
-        public ToppingSelector()
-        {
-            super();
-
-            setupToppingChoiceBox();
-            setupDeleteButton();
-
-            setAlignment( Pos.CENTER );
-            setSpacing( 10 );
-            getChildren().add( cbTopping );
-            getChildren().add( btnDelete );
-        }
-
-        private void setupToppingChoiceBox()
-        {
-            cbTopping = new ChoiceBox();
-            cbTopping.setItems( FXCollections.observableArrayList( toppingItems ) );
-            cbTopping.getSelectionModel().selectedIndexProperty().addListener( ( ov, oldIndex, newIndex ) ->
-            {
-                // Very important check: when we remove an item from the item list, we might have
-                // selected the item with the biggest index before. Therefore, this index will be updated
-                // and that means the oldIndex becomes out of bounds!
-                if( oldIndex.intValue() >= getToppingItems().size() )
-                    return;
-
-                // must check if unselected
-                ToppingItem oldItem = null;
-                if( oldIndex.intValue() >= 0 )
-                    oldItem = getToppingItems().get( oldIndex.intValue() );
-
-                ToppingItem newItem = getToppingItems().get( newIndex.intValue() );
-
-                updateToppingSelectors( oldItem, newItem, ToppingSelector.this );
-            } );
-        }
-
-        private void setupDeleteButton()
-        {
-            btnDelete = new Button( "Entfernen" );
-            btnDelete.setOnAction( event ->
-            {
-                // update topping items
-                ToppingItem selectedItem = getSelectedToppingItem();
-                if( selectedItem != null )
-                    updateToppingSelectors( selectedItem, null, ToppingSelector.this );
-
-                // if we reached the max number of toppings we have to add the "add topping" button back again
-                if( toppingSelectors.size() == maxToppingCount )
-                    vbContainer.getChildren().add( btnAddToppingSelector );
-
-                toppingSelectors.remove( ToppingSelector.this );
-                vbContainer.getChildren().remove( ToppingSelector.this );
-            } );
-        }
-
-        public ToppingItem getSelectedToppingItem()
-        {
-            return (ToppingItem) cbTopping.getSelectionModel().getSelectedItem();
-        }
-
-        public List<ToppingItem> getToppingItems()
-        {
-            return cbTopping.getItems();
-        }
+        super( FragmentURLs.CHOOSE_TOPPINGS, oldFragment );
     }
 
     @Override
-    protected void onSetup()
+    protected void onLoadFinished()
     {
         try
         {
             btnAddToppingSelector = new Button( "Topping hinzufügen" );
             toppingSelectors = new ArrayList<>();
+
             setupMaxToppingCount();
             setupToppingItems();
 
-            btnAddToppingSelector.setOnAction( event ->
-            {
-                vbContainer.getChildren().clear();
-
-                for( ToppingSelector toppingSelector : toppingSelectors )
-                    vbContainer.getChildren().add( toppingSelector );
-
-                ToppingSelector nextToppingSelector = new ToppingSelector();
-                toppingSelectors.add( nextToppingSelector );
-                vbContainer.getChildren().add( nextToppingSelector );
-
-                // stop adding toppings by removing the "add topping" button when reaching the max number of toppings
-                if( toppingSelectors.size() < maxToppingCount )
-                    vbContainer.getChildren().add( btnAddToppingSelector );
-            } );
+            btnAddToppingSelector.setOnAction( event -> addToppingSelector() );
 
             vbContainer.getChildren().add( btnAddToppingSelector );
         }
@@ -168,7 +86,7 @@ public class ChooseToppingsController extends Controller
     @FXML
     public void actionAbort( ActionEvent actionEvent ) throws IOException
     {
-        this.<MainMenuController>setFragment( FragmentURLs.MAIN_MENU );
+        setNewFragment( new MainMenuFragment( this ) );
     }
 
     @FXML
@@ -192,7 +110,7 @@ public class ChooseToppingsController extends Controller
 
         currentConfiguration.setToppings( toppings );
 
-        this.<FinishPizzaConfigurationController>setFragment( FragmentURLs.FINISH_PIZZA_CONFIGURATION );
+        setNewFragment( new FinishPizzaConfigurationFragment( this ) );
     }
 
     private void setupToppingItems() throws DataAccessException
@@ -217,6 +135,37 @@ public class ChooseToppingsController extends Controller
             maxToppingCount = 3;
         else
             maxToppingCount = 5;
+    }
+
+    private void addToppingSelector()
+    {
+        ToppingSelector nextToppingSelector = new ToppingSelector( toppingItems );
+
+        nextToppingSelector.setOnToppingItemChangedListener( ( oldItem, newItem, instance ) ->
+            updateToppingSelectors( oldItem, newItem, instance ) );
+
+        nextToppingSelector.setOnDeleteListener( instance ->
+        {
+            // selected item becomes available now -> update
+            ToppingItem selectedItem = instance.getSelectedToppingItem();
+            if( selectedItem != null )
+                updateToppingSelectors( selectedItem, null, instance );
+
+            // if we reached the max number of toppings we have to add the "add topping" button back again
+            if( toppingSelectors.size() == maxToppingCount )
+                vbContainer.getChildren().add( btnAddToppingSelector );
+
+            toppingSelectors.remove( instance );
+            vbContainer.getChildren().remove( instance );
+        } );
+
+        toppingSelectors.add( nextToppingSelector );
+        vbContainer.getChildren().add( vbContainer.getChildren().size() - 1, nextToppingSelector );
+
+        // stop adding toppings by removing the "add topping" button when reaching the max number of toppings
+        int selectorCount = toppingSelectors.size();
+        if( selectorCount == maxToppingCount )
+            vbContainer.getChildren().remove( btnAddToppingSelector );
     }
 
     /**

@@ -8,9 +8,7 @@ public class RecipeEntry
     private Ingredient ingredient;
     private float quantityInGrams;
 
-    public RecipeEntry()
-    {
-    }
+    public RecipeEntry() {}
 
     public Ingredient getIngredient()
     {

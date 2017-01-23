@@ -1,4 +1,4 @@
-package com.pizzaservice.orderpage.fragment;
+package com.pizzaservice.orderpage.fragment_fxml;
 
 import java.net.URL;
 

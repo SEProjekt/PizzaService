@@ -64,7 +64,8 @@ public class IngredientDatabaseDAO extends DatabaseDAO implements IngredientDAO
             List<Object> args = new ArrayList<>();
             args.add( id );
             Ingredient ingredient = new Ingredient();
-            boolean found = database.query( query, args, row -> {
+            boolean found = database.query( query, args, row ->
+            {
                 ingredient.setName( row.getString( COLUMN_NAME ) );
                 ingredient.setPricePerGramm( row.getFloat( COLUMN_PRICE_PER_GRAM ) );
             } );

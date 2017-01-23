@@ -11,9 +11,7 @@ public class Address
     private String city;
     private String country;
 
-    public Address()
-    {
-    }
+    public Address() {}
 
     public String getStreet()
     {

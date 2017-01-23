@@ -14,9 +14,7 @@ public class Customer
     private boolean locked;
     private Date lockedUntil;
 
-    public Customer()
-    {
-    }
+    public Customer() {}
 
     public long getId()
     {

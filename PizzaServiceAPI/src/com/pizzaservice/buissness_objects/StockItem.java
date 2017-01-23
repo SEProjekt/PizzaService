@@ -9,9 +9,7 @@ public class StockItem
     private double currentQuantityInGrams;
     private double criticalQuantityInGrams;
 
-    public StockItem()
-    {
-    }
+    public StockItem() {}
 
     public Ingredient getIngredient()
     {

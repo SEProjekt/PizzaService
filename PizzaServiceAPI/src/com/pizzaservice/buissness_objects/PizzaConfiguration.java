@@ -14,9 +14,7 @@ public class PizzaConfiguration
     private PizzaVariation pizzaVariation2;
     private Collection<Topping> toppings;
 
-    public PizzaConfiguration()
-    {
-    }
+    public PizzaConfiguration() {}
 
     public long getId()
     {

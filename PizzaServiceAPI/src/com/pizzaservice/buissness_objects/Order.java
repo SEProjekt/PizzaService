@@ -17,9 +17,7 @@ public class Order
     private Address customerAddress;
     private Date timeAtStartOfDelivering;
 
-    public Order()
-    {
-    }
+    public Order() {}
 
     public long getId()
     {
