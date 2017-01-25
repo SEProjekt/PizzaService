@@ -5,10 +5,21 @@ package com.pizzaservice.buissness_objects;
  */
 public class RecipeEntry
 {
+    private Recipe recipe;
     private Ingredient ingredient;
     private float quantityInGrams;
 
     public RecipeEntry() {}
+
+    public Recipe getRecipe()
+    {
+        return recipe;
+    }
+
+    public void setRecipe( Recipe recipe )
+    {
+        this.recipe = recipe;
+    }
 
     public Ingredient getIngredient()
     {

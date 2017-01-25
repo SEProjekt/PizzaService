@@ -67,4 +67,14 @@ public class Row
     {
         return rs.getTime( columnLabel );
     }
+
+    public boolean getBoolean( int columnIndex ) throws SQLException
+    {
+        return rs.getBoolean( columnIndex );
+    }
+
+    public boolean getBoolean( String columnLabel ) throws SQLException
+    {
+        return rs.getBoolean( columnLabel );
+    }
 }

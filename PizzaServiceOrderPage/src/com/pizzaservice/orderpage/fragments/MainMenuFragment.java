@@ -25,9 +25,6 @@ public class MainMenuFragment extends Fragment
         super( FragmentURLs.MAIN_MENU, oldFragment );
     }
 
-    @Override
-    protected void onLoadFinished() {}
-
     @FXML
     public void actionAddPizza( ActionEvent actionEvent ) throws IOException
     {
@@ -37,24 +34,31 @@ public class MainMenuFragment extends Fragment
     @FXML
     public void actionShowCart( ActionEvent actionEvent ) throws IOException
     {
-        if( session.getOrder().getPizzaConfigurations().isEmpty() )
-        {
-            Utils.showErrorMessage( "Es befindet sich keine Pizza im Warenkorb!" );
-            return;
-        }
-
-        setNewFragment( new ShowCartFragment( this ) );
+        if( checkNonEmptyCard() )
+            setNewFragment( new ShowCartFragment( this ) );
     }
 
     @FXML
     public void actionFinishOrder( ActionEvent actionEvent ) throws IOException
     {
-        setNewFragment( new FinishOrderFragment( this ) );
+        if( checkNonEmptyCard() )
+            setNewFragment( new FinishOrderFragment( this ) );
     }
 
     @FXML
     public void actionAbortOrder( ActionEvent actionEvent )
     {
         System.exit( 0 );
+    }
+
+    private boolean checkNonEmptyCard()
+    {
+        if( session.getOrder().getPizzaConfigurations().isEmpty() )
+        {
+            Utils.showInputErrorMessage( "Es befindet sich keine Pizza im Warenkorb!" );
+            return false;
+        }
+
+        return true;
     }
 }

@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.control.Separator?>
+
 <fx:root xmlns:fx="http://javafx.com/fxml"
          type="CartItem" spacing="10" alignment="CENTER">
 

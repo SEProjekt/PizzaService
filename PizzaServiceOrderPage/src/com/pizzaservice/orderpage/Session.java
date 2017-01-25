@@ -1,9 +1,9 @@
 package com.pizzaservice.orderpage;
 
-import com.pizzaservice.buissness_objects.Order;
 import com.pizzaservice.buissness_objects.PizzaConfiguration;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by philipp on 17.01.17.
@@ -11,12 +11,11 @@ import java.util.ArrayList;
 public class Session
 {
     private PizzaConfiguration currentPizzaConfiguration;
-    private Order order;
+    private List<PizzaConfiguration> pizzaConfigurations;
 
     public Session()
     {
-        order = new Order();
-        order.setPizzaConfigurations( new ArrayList<>() );
+        pizzaConfigurations = new ArrayList<>();
     }
 
     public PizzaConfiguration getCurrentPizzaConfiguration()
@@ -29,8 +28,8 @@ public class Session
         this.currentPizzaConfiguration = currentPizzaConfiguration;
     }
 
-    public Order getOrder()
+    public List<PizzaConfiguration> getPizzaConfigurations()
     {
-        return order;
+        return pizzaConfigurations;
     }
 }

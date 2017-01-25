@@ -27,7 +27,7 @@ public class ChooseSplitFragment extends Fragment
     }
 
     @Override
-    protected void onLoadFinished()
+    public void setup()
     {
         splitGroup = new ToggleGroup();
         radSplitYes.setToggleGroup( splitGroup );

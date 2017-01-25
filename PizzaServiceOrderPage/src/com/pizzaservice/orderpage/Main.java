@@ -16,7 +16,7 @@ import java.io.IOException;
 public class Main extends Application
 {
     public static final String userName = "root";
-    public static final String password = ""; // enter it!
+    public static final String password = "m13u21m13PPILIHP"; // enter it!
     public static final String dbms = "mysql";
     public static final String serverName = "localhost";
     public static final String portNumber = "3306";
@@ -41,8 +41,12 @@ public class Main extends Application
         ConnectionParams params = new ConnectionParams( userName, password, dbms, serverName, portNumber, databaseName );
         Database db = new Database( params );
 
+        MainMenuFragment mainMenuFragment = new MainMenuFragment( rootPane, new Session(), db );
+
         rootPane.getChildren().clear();
-        rootPane.getChildren().add( new MainMenuFragment( rootPane, new Session(), db ) );
+        rootPane.getChildren().add( mainMenuFragment );
+
+        mainMenuFragment.setup();
     }
 
     public static void main( String[] args )

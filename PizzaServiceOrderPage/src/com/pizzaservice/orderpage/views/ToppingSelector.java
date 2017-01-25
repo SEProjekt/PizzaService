@@ -6,6 +6,7 @@ import com.pizzaservice.orderpage.view_fxml.ViewURLs;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 
 import java.util.List;
@@ -17,7 +18,7 @@ import java.util.List;
  * UI element to select a topping which contains a choice box of topping items and a delete button
  * to discard the topping selection.
  */
-public class ToppingSelector extends HBox
+public class ToppingSelector extends GridPane
 {
     public interface OnToppingItemChangedListener
     {

@@ -10,13 +10,9 @@ import com.pizzaservice.orderpage.Utils;
 import com.pizzaservice.orderpage.fragment_fxml.FragmentURLs;
 import com.pizzaservice.orderpage.items.ToppingItem;
 import com.pizzaservice.orderpage.views.ToppingSelector;
-import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.geometry.Pos;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 import java.io.IOException;
@@ -63,7 +59,7 @@ public class ChooseToppingsFragment extends Fragment
     }
 
     @Override
-    protected void onLoadFinished()
+    public void setup()
     {
         try
         {
@@ -79,7 +75,7 @@ public class ChooseToppingsFragment extends Fragment
         }
         catch( DataAccessException e )
         {
-            Utils.showErrorMessage( e.getMessage() );
+            Utils.handleDataAccessException( e, this );
         }
     }
 
@@ -101,7 +97,7 @@ public class ChooseToppingsFragment extends Fragment
             ToppingItem selectedToppingItem = toppingSelector.getSelectedToppingItem();
             if( selectedToppingItem == null )
             {
-                Utils.showErrorMessage( "Bitte wähle deine Toppings aus!" );
+                Utils.showInputErrorMessage( "Bitte wähle deine Toppings aus!" );
                 return;
             }
 
@@ -129,9 +125,9 @@ public class ChooseToppingsFragment extends Fragment
     private void setupMaxToppingCount()
     {
         PizzaConfiguration currentConfiguration = session.getCurrentPizzaConfiguration();
-        if( currentConfiguration.getSize() == PizzaSize.SMALL )
+        if( currentConfiguration.getPizzaSize() == PizzaSize.SMALL )
             maxToppingCount = 2;
-        else if( currentConfiguration.getSize() == PizzaSize.LARGE )
+        else if( currentConfiguration.getPizzaSize() == PizzaSize.LARGE )
             maxToppingCount = 3;
         else
             maxToppingCount = 5;

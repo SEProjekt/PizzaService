@@ -36,11 +36,11 @@ public class ShowCartFragment extends Fragment
     }
 
     @Override
-    protected void onLoadFinished()
+    public void setup()
     {
         cartItems = new ArrayList<>();
 
-        Collection<PizzaConfiguration> configurations = session.getOrder().getPizzaConfigurations();
+        Collection<PizzaConfiguration> configurations = session.getPizzaConfigurations();
         for( PizzaConfiguration configuration : configurations )
         {
             CartItem cartItem = new CartItem( configuration );
@@ -48,7 +48,7 @@ public class ShowCartFragment extends Fragment
             {
                 cartItems.remove( instance );
                 vbContainer.getChildren().remove( instance );
-                session.getOrder().getPizzaConfigurations().remove( configuration );
+                session.getPizzaConfigurations().remove( configuration );
                 updatePrice();
             } );
 
@@ -69,7 +69,7 @@ public class ShowCartFragment extends Fragment
     {
         float totalPrice = 0;
 
-        for( PizzaConfiguration configuration : session.getOrder().getPizzaConfigurations() )
+        for( PizzaConfiguration configuration : session.getPizzaConfigurations() )
         {
             PizzaConfigurationItem configurationItem = new PizzaConfigurationItem( configuration );
             totalPrice += configurationItem.getTotalPrice();

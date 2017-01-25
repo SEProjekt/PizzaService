@@ -30,7 +30,7 @@ public class ChoosePizzaSizeFragment extends Fragment
     }
 
     @Override
-    protected void onLoadFinished()
+    public void setup()
     {
         sizeGroup = new ToggleGroup();
         radSizeSmall.setToggleGroup( sizeGroup );
@@ -47,16 +47,16 @@ public class ChoosePizzaSizeFragment extends Fragment
 
         if( radSizeSmall.isSelected() )
         {
-            pizzaConfiguration.setSize( PizzaSize.SMALL );
+            pizzaConfiguration.setPizzaSize( PizzaSize.SMALL );
 
             setNewFragment( new ChoosePizzaVariationFragment( this, false ) );
         }
         else
         {
             if( radSizeLarge.isSelected() )
-                pizzaConfiguration.setSize( PizzaSize.LARGE );
+                pizzaConfiguration.setPizzaSize( PizzaSize.LARGE );
             else
-                pizzaConfiguration.setSize( PizzaSize.X_LARGE );
+                pizzaConfiguration.setPizzaSize( PizzaSize.X_LARGE );
 
             setNewFragment( new ChooseSplitFragment( this ) );
         }

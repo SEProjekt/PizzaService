@@ -32,7 +32,6 @@ public abstract class Fragment extends VBox
         loader.setController( this );
 
         Utils.load( url, this );
-        onLoadFinished();
     }
 
     public Fragment( URL url, Fragment oldFragment )
@@ -44,14 +43,14 @@ public abstract class Fragment extends VBox
         this.database = oldFragment.database;
 
         Utils.load( url, this );
-        onLoadFinished();
     }
 
-    protected abstract void onLoadFinished();
+    public void setup() {}
 
     public void setNewFragment( Fragment newFragment )
     {
         rootPane.getChildren().clear();
         rootPane.getChildren().add( newFragment );
+        newFragment.setup();
     }
 }

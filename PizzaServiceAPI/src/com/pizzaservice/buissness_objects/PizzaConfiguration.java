@@ -1,6 +1,7 @@
 package com.pizzaservice.buissness_objects;
 
 import java.util.Collection;
+import java.util.List;
 
 /**
  * Created by philipp on 10.01.17.
@@ -8,7 +9,8 @@ import java.util.Collection;
 public class PizzaConfiguration
 {
     private long id;
-    private PizzaSize size;
+    private Order order;
+    private PizzaSize pizzaSize;
     private boolean split;
     private PizzaVariation pizzaVariation1;
     private PizzaVariation pizzaVariation2;
@@ -26,14 +28,24 @@ public class PizzaConfiguration
         this.id = id;
     }
 
-    public PizzaSize getSize()
+    public Order getOrder()
     {
-        return size;
+        return order;
     }
 
-    public void setSize( PizzaSize size )
+    public void setOrder( Order order )
     {
-        this.size = size;
+        this.order = order;
+    }
+
+    public PizzaSize getPizzaSize()
+    {
+        return pizzaSize;
+    }
+
+    public void setPizzaSize( PizzaSize pizzaSize )
+    {
+        this.pizzaSize = pizzaSize;
     }
 
     public boolean isSplit()

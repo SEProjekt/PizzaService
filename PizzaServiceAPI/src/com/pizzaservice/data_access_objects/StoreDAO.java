@@ -15,9 +15,5 @@ public interface StoreDAO
 
     void updateStore( Store Store ) throws DataAccessException;
 
-    void updateStockItems( Store store ) throws DataAccessException;
-
-    void updateOrders( Store store ) throws DataAccessException;
-
     Collection<Store> getStores() throws DataAccessException;
 }

@@ -34,7 +34,7 @@ public class ChoosePizzaVariationFragment extends Fragment
     }
 
     @Override
-    protected void onLoadFinished()
+    public void setup()
     {
         try
         {
@@ -49,7 +49,7 @@ public class ChoosePizzaVariationFragment extends Fragment
         }
         catch( DataAccessException e )
         {
-            Utils.showErrorMessage( e.getMessage() );
+            Utils.handleDataAccessException( e, this );
         }
     }
 
@@ -65,7 +65,7 @@ public class ChoosePizzaVariationFragment extends Fragment
         PizzaVariationItem selectedItem1 = (PizzaVariationItem) cbPizzaVariation1.getSelectionModel().getSelectedItem();
         if( selectedItem1 == null )
         {
-            Utils.showErrorMessage( "Es wurde noch keine Variation ausgewählt!" );
+            Utils.showInputErrorMessage( "Es wurde noch keine Variation ausgewählt!" );
             return;
         }
 
@@ -77,7 +77,7 @@ public class ChoosePizzaVariationFragment extends Fragment
             PizzaVariationItem selectedItem2 = (PizzaVariationItem) cbPizzaVariation2.getSelectionModel().getSelectedItem();
             if( selectedItem2 == null )
             {
-                Utils.showErrorMessage( "Es wurde noch keine Variation ausgewählt!" );
+                Utils.showInputErrorMessage( "Es wurde noch keine Variation ausgewählt!" );
                 return;
             }
 
@@ -95,7 +95,7 @@ public class ChoosePizzaVariationFragment extends Fragment
         for( PizzaVariation variation : variations )
         {
             PizzaVariationItem variationItem = new PizzaVariationItem(
-                variation, session.getCurrentPizzaConfiguration().getSize() );
+                variation, session.getCurrentPizzaConfiguration().getPizzaSize() );
             variationItems.add( variationItem );
         }
 

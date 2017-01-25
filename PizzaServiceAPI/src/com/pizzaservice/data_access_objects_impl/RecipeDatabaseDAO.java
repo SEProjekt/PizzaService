@@ -27,6 +27,8 @@ public class RecipeDatabaseDAO extends DatabaseDAO implements RecipeDAO
     {
         try
         {
+            Recipe recipe = new Recipe();
+
             // find recipe with the given id
             String query = "SELECT * FROM recipes WHERE id = ?";
             List<Object> args = new ArrayList<>();
@@ -37,9 +39,9 @@ public class RecipeDatabaseDAO extends DatabaseDAO implements RecipeDAO
 
             // get recipe entries
             Collection<RecipeEntry> recipeEntries = new ArrayList<>();
-            query = "SELECT ingredients.id, ingredients.name, ingredients.price_per_gram, recipes_ingredients.quantity_in_grams " +
-                    "FROM recipes_ingredients " +
-                    "INNER JOIN ingredients ON recipes_ingredients.id_ingredient = ingredients.id " +
+            query = "SELECT ingredients.id, ingredients.name, ingredients.price_per_gram, recipe_entries.quantity_in_grams " +
+                    "FROM recipe_entries " +
+                    "INNER JOIN ingredients ON recipe_entries.id_ingredient = ingredients.id " +
                     "WHERE id_recipe = ?";
             args = new ArrayList<>();
             args.add( id );
@@ -51,6 +53,7 @@ public class RecipeDatabaseDAO extends DatabaseDAO implements RecipeDAO
                 ingredient.setPricePerGramm( row.getFloat( 3 ) );
 
                 RecipeEntry recipeEntry = new RecipeEntry();
+                recipeEntry.setRecipe( recipe );
                 recipeEntry.setIngredient( ingredient );
                 recipeEntry.setQuantityInGrams( row.getFloat( 4 ) );
 
@@ -58,7 +61,6 @@ public class RecipeDatabaseDAO extends DatabaseDAO implements RecipeDAO
             } );
 
             // finally the complete recipe
-            Recipe recipe = new Recipe();
             recipe.setId( id );
             recipe.setEntries( recipeEntries );
             return recipe;

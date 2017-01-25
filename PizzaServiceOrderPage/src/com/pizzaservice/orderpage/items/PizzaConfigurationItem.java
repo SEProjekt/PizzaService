@@ -27,7 +27,7 @@ public class PizzaConfigurationItem
         String text = "";
         float totalPrice = 0;
 
-        PizzaSize size = pizzaConfiguration.getSize();
+        PizzaSize size = pizzaConfiguration.getPizzaSize();
         PizzaVariationItem variation1 = new PizzaVariationItem( pizzaConfiguration.getPizzaVariation1(), size );
         PizzaVariationItem variation2 = new PizzaVariationItem( pizzaConfiguration.getPizzaVariation2(), size );
 
@@ -71,7 +71,7 @@ public class PizzaConfigurationItem
     {
         float totalPrice = 0;
 
-        PizzaSize size = pizzaConfiguration.getSize();
+        PizzaSize size = pizzaConfiguration.getPizzaSize();
         PizzaVariationItem variation1 = new PizzaVariationItem( pizzaConfiguration.getPizzaVariation1(), size );
         PizzaVariationItem variation2 = new PizzaVariationItem( pizzaConfiguration.getPizzaVariation2(), size );
 

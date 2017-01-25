@@ -22,7 +22,7 @@ public class FinishPizzaConfigurationFragment extends Fragment
     }
 
     @Override
-    protected void onLoadFinished()
+    public void setup()
     {
         PizzaConfigurationItem configurationItem = new PizzaConfigurationItem( session.getCurrentPizzaConfiguration() );
         lbConfiguration.setText( configurationItem.toString() );
@@ -37,7 +37,7 @@ public class FinishPizzaConfigurationFragment extends Fragment
     @FXML
     public void actionFinish( ActionEvent actionEvent ) throws IOException
     {
-        session.getOrder().getPizzaConfigurations().add( session.getCurrentPizzaConfiguration() );
+        session.getPizzaConfigurations().add( session.getCurrentPizzaConfiguration() );
         setNewFragment( new MainMenuFragment( this ) );
     }
 }
