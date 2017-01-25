@@ -23,7 +23,7 @@ public enum OrderState
         return value;
     }
 
-    public OrderState fromInt( int value )
+    public static OrderState fromInt( int value )
     {
         if( value == 0 ) return NEW;
         else if( value == 1 ) return COOKING;

@@ -23,10 +23,10 @@ import java.util.Collection;
 public class ChoosePizzaVariationFragment extends Fragment
 {
     @FXML
-    ChoiceBox cbPizzaVariation1;
+    ChoiceBox<PizzaVariationItem> cbPizzaVariation1;
 
     @FXML
-    ChoiceBox cbPizzaVariation2;
+    ChoiceBox<PizzaVariationItem> cbPizzaVariation2;
 
     public ChoosePizzaVariationFragment( Fragment oldFragment, boolean split )
     {
@@ -62,7 +62,7 @@ public class ChoosePizzaVariationFragment extends Fragment
     @FXML
     public void actionNext( ActionEvent actionEvent ) throws IOException
     {
-        PizzaVariationItem selectedItem1 = (PizzaVariationItem) cbPizzaVariation1.getSelectionModel().getSelectedItem();
+        PizzaVariationItem selectedItem1 = cbPizzaVariation1.getSelectionModel().getSelectedItem();
         if( selectedItem1 == null )
         {
             Utils.showInputErrorMessage( "Es wurde noch keine Variation ausgewählt!" );
@@ -74,7 +74,7 @@ public class ChoosePizzaVariationFragment extends Fragment
 
         if( currentConfiguration.isSplit() )
         {
-            PizzaVariationItem selectedItem2 = (PizzaVariationItem) cbPizzaVariation2.getSelectionModel().getSelectedItem();
+            PizzaVariationItem selectedItem2 = cbPizzaVariation2.getSelectionModel().getSelectedItem();
             if( selectedItem2 == null )
             {
                 Utils.showInputErrorMessage( "Es wurde noch keine Variation ausgewählt!" );

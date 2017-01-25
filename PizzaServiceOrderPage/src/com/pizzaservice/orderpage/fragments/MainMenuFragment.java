@@ -53,7 +53,7 @@ public class MainMenuFragment extends Fragment
 
     private boolean checkNonEmptyCard()
     {
-        if( session.getOrder().getPizzaConfigurations().isEmpty() )
+        if( session.getPizzaConfigurations().isEmpty() )
         {
             Utils.showInputErrorMessage( "Es befindet sich keine Pizza im Warenkorb!" );
             return false;

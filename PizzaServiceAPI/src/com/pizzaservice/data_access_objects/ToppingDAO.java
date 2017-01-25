@@ -9,11 +9,7 @@ import java.util.Collection;
  */
 public interface ToppingDAO
 {
-    void addTopping( Topping Topping ) throws DataAccessException;
-
-    void deleteTopping( Topping Topping ) throws DataAccessException;
-
-    void updateTopping( Topping Topping ) throws DataAccessException;
+    Topping findToppingById( long id ) throws DataAccessException;
 
     Collection<Topping> getToppings() throws DataAccessException;
 }

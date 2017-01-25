@@ -73,4 +73,15 @@ public class Utils
             throw new RuntimeException( e );
         }
     }
+
+    public static boolean containsOnlyLetters( String str )
+    {
+        for( char c : str.toCharArray() )
+        {
+            if( !Character.isLetter( c ) )
+                return false;
+        }
+
+        return true;
+    }
 }

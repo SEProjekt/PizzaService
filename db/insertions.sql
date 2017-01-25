@@ -19,3 +19,7 @@ insert into toppings (name, price, id_recipe) values ('Pilze', 2.00, 1);
 insert into toppings (name, price, id_recipe) values ('Scharfe Peperoni', 2.00, 1);
 insert into toppings (name, price, id_recipe) values ('Milde Peperoni', 2.00, 1);
 insert into toppings (name, price, id_recipe) values ('Oliven', 2.00, 1);
+
+insert into stores (street, house_number, postcode, city, country) values ('Glienicker Straße', '13', '15806', 'Dabendorf', 'Deutschland');
+insert into stores (street, house_number, postcode, city, country) values ('Brückenstraße', '24', '13235', 'Helsenkirchen', 'Deutschland');
+insert into stores (street, house_number, postcode, city, country) values ('Am Bergsteig', '34a', '23562', 'Wien', 'Österreich');

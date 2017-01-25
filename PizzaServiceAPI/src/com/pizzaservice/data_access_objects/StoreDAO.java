@@ -9,11 +9,5 @@ import java.util.Collection;
  */
 public interface StoreDAO
 {
-    void addStore( Store Store ) throws DataAccessException;
-
-    void deleteStore( Store Store ) throws DataAccessException;
-
-    void updateStore( Store Store ) throws DataAccessException;
-
     Collection<Store> getStores() throws DataAccessException;
 }

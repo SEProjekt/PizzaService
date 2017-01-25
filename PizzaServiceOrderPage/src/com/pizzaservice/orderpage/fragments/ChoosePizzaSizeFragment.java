@@ -15,8 +15,6 @@ import java.io.IOException;
  */
 public class ChoosePizzaSizeFragment extends Fragment
 {
-    private ToggleGroup sizeGroup;
-
     @FXML
     RadioButton radSizeSmall;
     @FXML
@@ -32,7 +30,7 @@ public class ChoosePizzaSizeFragment extends Fragment
     @Override
     public void setup()
     {
-        sizeGroup = new ToggleGroup();
+        ToggleGroup sizeGroup = new ToggleGroup();
         radSizeSmall.setToggleGroup( sizeGroup );
         radSizeLarge.setToggleGroup( sizeGroup );
         radSizeXLarge.setToggleGroup( sizeGroup );

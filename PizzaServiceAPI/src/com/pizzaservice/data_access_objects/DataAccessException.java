@@ -1,7 +1,5 @@
 package com.pizzaservice.data_access_objects;
 
-import com.mysql.jdbc.MySQLConnection;
-
 import java.sql.SQLException;
 
 /**

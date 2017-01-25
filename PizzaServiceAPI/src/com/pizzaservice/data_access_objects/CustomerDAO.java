@@ -15,5 +15,7 @@ public interface CustomerDAO
      */
     boolean addCustomer( Customer customer ) throws DataAccessException;
 
-    Customer getCustomerByPhoneNumber( String phoneNumber ) throws DataAccessException;
+    Customer findCustomerByPhoneNumber( String phoneNumber ) throws DataAccessException;
+
+    Customer findCustomerById( long id ) throws DataAccessException;
 }

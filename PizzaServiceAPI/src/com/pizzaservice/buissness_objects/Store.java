@@ -9,10 +9,11 @@ public class Store
 {
     private long id;
     private Address address;
-    private Collection<StockItem> stockItems;
-    private Collection<Order> order;
 
-    private Store() {}
+    private Collection<StockItem> stockItems;
+    private Collection<Order> orders;
+
+    public Store() {}
 
     public long getId()
     {
@@ -44,13 +45,13 @@ public class Store
         this.stockItems = stockItems;
     }
 
-    public Collection<Order> getOrder()
+    public Collection<Order> getOrders()
     {
-        return order;
+        return orders;
     }
 
-    public void setOrder( Collection<Order> order )
+    public void setOrders( Collection<Order> orders )
     {
-        this.order = order;
+        this.orders = orders;
     }
 }

@@ -19,7 +19,6 @@ public class CartItem extends VBox
         void onDelete( CartItem instance );
     }
 
-    private PizzaConfiguration configuration;
     private boolean expanded = false;
     private OnDeleteListener onDeleteListener = null;
 
@@ -31,8 +30,6 @@ public class CartItem extends VBox
 
     public CartItem( PizzaConfiguration configuration )
     {
-        this.configuration = configuration;
-
         Utils.load( ViewURLs.CART_ITEM, this );
 
         String headerText = configuration.getPizzaVariation1().getName();

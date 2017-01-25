@@ -9,10 +9,15 @@
 
 <?import com.pizzaservice.orderpage.fragments.Fragment?>
 
+<?import javafx.scene.layout.ColumnConstraints?>
 <fx:root xmlns:fx="http://javafx.com/fxml"
          type="Fragment" spacing="20" alignment="CENTER">
     <Label text="Bitte fülle die folgenden Angaben über dich aus." />
     <GridPane alignment="CENTER" vgap="10" hgap="10">
+        <columnConstraints>
+            <ColumnConstraints minWidth="120" />
+        </columnConstraints>
+
         <Label text="Vorname:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
         <TextField fx:id="tfFirstName" GridPane.rowIndex="0" GridPane.columnIndex="1" />
 

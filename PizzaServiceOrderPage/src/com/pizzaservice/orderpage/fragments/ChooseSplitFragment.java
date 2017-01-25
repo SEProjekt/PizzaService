@@ -13,8 +13,6 @@ import java.io.IOException;
  */
 public class ChooseSplitFragment extends Fragment
 {
-    private ToggleGroup splitGroup;
-
     @FXML
     RadioButton radSplitYes;
 
@@ -29,7 +27,7 @@ public class ChooseSplitFragment extends Fragment
     @Override
     public void setup()
     {
-        splitGroup = new ToggleGroup();
+        ToggleGroup splitGroup = new ToggleGroup();
         radSplitYes.setToggleGroup( splitGroup );
         radSplitNo.setToggleGroup( splitGroup );
         radSplitNo.setSelected( true );

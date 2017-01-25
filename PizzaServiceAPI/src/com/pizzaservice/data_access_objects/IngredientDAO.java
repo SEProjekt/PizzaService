@@ -9,13 +9,5 @@ import java.util.Collection;
  */
 public interface IngredientDAO
 {
-    void addIngredient( Ingredient ingredient ) throws DataAccessException;
-
-    void deleteIngredient( Ingredient ingredient ) throws DataAccessException;
-
-    void updateIngredient( Ingredient ingredient ) throws DataAccessException;
-
     Ingredient findIngredientById( long id ) throws DataAccessException;
-
-    Collection<Ingredient> getIngredients() throws DataAccessException;
 }

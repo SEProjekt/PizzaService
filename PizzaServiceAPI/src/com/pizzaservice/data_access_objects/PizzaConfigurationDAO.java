@@ -1,5 +1,6 @@
 package com.pizzaservice.data_access_objects;
 
+import com.pizzaservice.buissness_objects.Order;
 import com.pizzaservice.buissness_objects.PizzaConfiguration;
 
 /**
@@ -8,4 +9,6 @@ import com.pizzaservice.buissness_objects.PizzaConfiguration;
 public interface PizzaConfigurationDAO
 {
     void addPizzaConfiguration( PizzaConfiguration pizzaConfiguration ) throws DataAccessException;
+
+    void getPizzaConfigurationsOfOrder( Order order ) throws DataAccessException;
 }

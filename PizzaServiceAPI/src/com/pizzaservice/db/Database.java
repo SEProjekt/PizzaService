@@ -1,5 +1,6 @@
 package com.pizzaservice.db;
 
+import javax.xml.transform.Result;
 import java.sql.*;
 import java.util.List;
 import java.util.Properties;
@@ -17,7 +18,7 @@ public class Database
     }
 
     /**
-     * Executes a sql query by connecting to the database given with the connection parameters.
+     * Executes an SQL GET by connecting to the database given by the connection parameters.
      * Arguments to the query can be passed by specifying a "?"-placeholder in the query.
      * The returned rows will be each processed by an onRowProcessedListener.
      *
@@ -42,19 +43,58 @@ public class Database
             connection = connect();
             pstmt = connection.prepareStatement( query );
             fillPreparedStatement( pstmt, args );
-            pstmt.execute();
+            pstmt.executeQuery();
 
+            // get the rows to process
             rs = pstmt.getResultSet();
+            if( rs == null || !rs.next() )
+                return false;
+
+            processRows( rs, onRowProcessedListener );
+            return true;
+        }
+        finally
+        {
+            closeQuietly( rs );
+            closeQuietly( pstmt );
+            closeQuietly( connection );
+        }
+    }
+
+    /**
+     * Executes an SQL INSERT, UPDATE or DELETE by connecting to the database given by the connection parameters.
+     * Arguments to the query can be passed by specifying a "?"-placeholder in the query.
+     * The generated keys will be each processed by an onRowProcessedListener.
+     *
+     * This function throws standard SQLException for all code related to SQL, however it might throw a
+     * custom Exception depending on the implementation of the OnRowProcessedListener callback.
+     * Any exception thrown by this method (including the callback) gets thrown to the caller.
+     *
+     * @param update the SQL query code
+     * @param args list of arguments which correspond to the "?"-placeholders
+     * @param onRowProcessedListener callback to process generated keys
+     * @return true if there was at least one generated key returned from the database
+     * @throws Exception, SQLException
+     */
+    public boolean update( String update, List<Object> args, OnRowProcessedListener onRowProcessedListener ) throws Exception
+    {
+        Connection connection = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+
+        try
+        {
+            connection = connect();
+            pstmt = connection.prepareStatement( update, Statement.RETURN_GENERATED_KEYS );
+            fillPreparedStatement( pstmt, args );
+            pstmt.executeUpdate();
+
+            // get generated keys (e.g. auto generated ids) to process
+            rs = pstmt.getGeneratedKeys();
             if( !rs.next() )
                 return false;
 
-            do
-            {
-                Row row = new Row( rs );
-                onRowProcessedListener.onRowProcessed( row );   // may throw custom exception
-            }
-            while( rs.next() );
-
+            processRows( rs, onRowProcessedListener );
             return true;
         }
         finally
@@ -108,6 +148,16 @@ public class Database
             Object o = args.get( i );
             pstmt.setObject( i + 1, o );
         }
+    }
+
+    private void processRows( ResultSet rs, OnRowProcessedListener onRowProcessedListener ) throws Exception
+    {
+        do
+        {
+            Row row = new Row( rs );
+            onRowProcessedListener.onRowProcessed( row );   // may throw custom exception
+        }
+        while( rs.next() );
     }
 
     private void closeQuietly( Connection connection )

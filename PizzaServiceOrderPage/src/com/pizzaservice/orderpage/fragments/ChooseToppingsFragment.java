@@ -137,8 +137,7 @@ public class ChooseToppingsFragment extends Fragment
     {
         ToppingSelector nextToppingSelector = new ToppingSelector( toppingItems );
 
-        nextToppingSelector.setOnToppingItemChangedListener( ( oldItem, newItem, instance ) ->
-            updateToppingSelectors( oldItem, newItem, instance ) );
+        nextToppingSelector.setOnToppingItemChangedListener( this::updateToppingSelectors );
 
         nextToppingSelector.setOnDeleteListener( instance ->
         {

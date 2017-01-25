@@ -1,14 +1,10 @@
 package com.pizzaservice.data_access_objects_impl;
 
-import com.mysql.fabric.xmlrpc.base.Data;
+import com.pizzaservice.buissness_objects.Ingredient;
 import com.pizzaservice.data_access_objects.DataAccessException;
 import com.pizzaservice.data_access_objects.IngredientDAO;
-import com.pizzaservice.buissness_objects.Ingredient;
 import com.pizzaservice.db.Database;
-import com.pizzaservice.db.OnRowProcessedListener;
-import com.pizzaservice.db.Row;
 
-import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -27,32 +23,6 @@ public class IngredientDatabaseDAO extends DatabaseDAO implements IngredientDAO
     public IngredientDatabaseDAO( Database database )
     {
         super( database );
-    }
-
-    @Override
-    public void addIngredient( Ingredient ingredient ) throws DataAccessException
-    {
-        try
-        {
-            String query = "INSERT INTO " + TABLE_NAME + " (name, price_per_gram) VALUES (?, ?)";
-            List<Object> args = new ArrayList<>();
-            args.add( ingredient.getName() );
-            args.add( ingredient.getPricePerGramm() );
-            database.query( query, args, row -> ingredient.setId( row.getLong( 1 ) ) );
-        }
-        catch( Exception e ) { throw handleException( e ); }
-    }
-
-    @Override
-    public void deleteIngredient( Ingredient ingredient )
-    {
-
-    }
-
-    @Override
-    public void updateIngredient( Ingredient ingredient )
-    {
-
     }
 
     @Override
@@ -76,11 +46,5 @@ public class IngredientDatabaseDAO extends DatabaseDAO implements IngredientDAO
             return ingredient;
         }
         catch( Exception e ) { throw handleException( e ); }
-    }
-
-    @Override
-    public Collection<Ingredient> getIngredients()
-    {
-        return null;
     }
 }

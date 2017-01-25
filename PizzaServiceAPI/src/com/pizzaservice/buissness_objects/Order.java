@@ -12,10 +12,11 @@ public class Order
     private Customer customer;
     private Store store;
     private OrderState state;
-    private Collection<PizzaConfiguration> pizzaConfigurations;
     private boolean delivering;
     private Address customerAddress;
     private Date timeAtStartOfDelivering;
+
+    private Collection<PizzaConfiguration> pizzaConfigurations;
 
     public Order() {}
 
@@ -59,16 +60,6 @@ public class Order
         this.state = state;
     }
 
-    public Collection<PizzaConfiguration> getPizzaConfigurations()
-    {
-        return pizzaConfigurations;
-    }
-
-    public void setPizzaConfigurations( Collection<PizzaConfiguration> pizzaConfigurations )
-    {
-        this.pizzaConfigurations = pizzaConfigurations;
-    }
-
     public boolean isDelivering()
     {
         return delivering;
@@ -97,5 +88,15 @@ public class Order
     public void setTimeAtStartOfDelivering( Date timeAtStartOfDelivering )
     {
         this.timeAtStartOfDelivering = timeAtStartOfDelivering;
+    }
+
+    public Collection<PizzaConfiguration> getPizzaConfigurations()
+    {
+        return pizzaConfigurations;
+    }
+
+    public void setPizzaConfigurations( Collection<PizzaConfiguration> pizzaConfigurations )
+    {
+        this.pizzaConfigurations = pizzaConfigurations;
     }
 }

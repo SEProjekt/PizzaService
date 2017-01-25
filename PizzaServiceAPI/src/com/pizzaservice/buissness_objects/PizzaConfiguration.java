@@ -1,7 +1,6 @@
 package com.pizzaservice.buissness_objects;
 
 import java.util.Collection;
-import java.util.List;
 
 /**
  * Created by philipp on 10.01.17.

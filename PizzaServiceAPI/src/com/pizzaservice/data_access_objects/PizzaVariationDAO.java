@@ -9,11 +9,7 @@ import java.util.Collection;
  */
 public interface PizzaVariationDAO
 {
-    void addPizzaVariation( PizzaVariation pizzaVariation ) throws DataAccessException;
-
-    void deletePizzaVariation( PizzaVariation pizzaVariation ) throws DataAccessException;
-
-    void updatePizzaVariation( PizzaVariation pizzaVariation ) throws DataAccessException;
+    PizzaVariation findPizzaVariationById( long id ) throws DataAccessException;
 
     Collection<PizzaVariation> getPizzaVariations() throws DataAccessException;
 }

@@ -7,7 +7,6 @@ import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
 
 import java.util.List;
 
@@ -34,7 +33,7 @@ public class ToppingSelector extends GridPane
     private OnDeleteListener onDeleteListener;
 
     @FXML
-    ChoiceBox cbTopping;
+    ChoiceBox<ToppingItem> cbTopping;
 
     public ToppingSelector( List<ToppingItem> toppingItems )
     {
@@ -87,7 +86,7 @@ public class ToppingSelector extends GridPane
 
     public ToppingItem getSelectedToppingItem()
     {
-        return (ToppingItem) cbTopping.getSelectionModel().getSelectedItem();
+        return cbTopping.getSelectionModel().getSelectedItem();
     }
 
     public List<ToppingItem> getToppingItems()
