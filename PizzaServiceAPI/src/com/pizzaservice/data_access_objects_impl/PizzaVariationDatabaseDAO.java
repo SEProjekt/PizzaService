@@ -41,7 +41,10 @@ public class PizzaVariationDatabaseDAO extends DatabaseDAO implements PizzaVaria
 
             String query = "SELECT * FROM pizza_variations WHERE id = ?";
             List<Object> args = new ArrayList<>();
-            database.query( query, args, row -> createPizzaVariationFromRow( pizzaVariation, row ) );
+            args.add( id );
+            boolean found = database.query( query, args, row -> processPizzaVariation( pizzaVariation, row ) );
+            if( !found )
+                return null;
 
             return pizzaVariation;
         }
@@ -59,7 +62,7 @@ public class PizzaVariationDatabaseDAO extends DatabaseDAO implements PizzaVaria
             database.query( query, new ArrayList<>(), row ->
             {
                 PizzaVariation pizzaVariation = new PizzaVariation();
-                createPizzaVariationFromRow( pizzaVariation, row );
+                processPizzaVariation( pizzaVariation, row );
                 pizzaVariations.add( pizzaVariation );
             } );
 
@@ -68,11 +71,18 @@ public class PizzaVariationDatabaseDAO extends DatabaseDAO implements PizzaVaria
         catch( Exception e ) { throw handleException( e ); }
     }
 
-    private void createPizzaVariationFromRow( PizzaVariation pizzaVariation, Row row ) throws SQLException, DataAccessException
+    private void processPizzaVariation( PizzaVariation pizzaVariation, Row row ) throws SQLException, DataAccessException
     {
         pizzaVariation.setId( row.getLong( COLUMN_ID ) );
         pizzaVariation.setName( row.getString( COLUMN_NAME ) );
+        processRecipes( pizzaVariation, row );
+        pizzaVariation.setPriceSmall( row.getFloat( COLUMN_PRICE_SMALL ) );
+        pizzaVariation.setPriceLarge( row.getFloat( COLUMN_PRICE_LARGE ) );
+        pizzaVariation.setPriceXLarge( row.getFloat( COLUMN_PRICE_X_LARGE ) );
+    }
 
+    private void processRecipes( PizzaVariation pizzaVariation, Row row ) throws SQLException, DataAccessException
+    {
         long idRecipeSmall = row.getLong( COLUMN_ID_RECIPE_SMALL );
         long idRecipeLarge = row.getLong( COLUMN_ID_RECIPE_LARGE );
         long idRecipeXLarge = row.getLong( COLUMN_ID_RECIPE_X_LARGE );
@@ -82,20 +92,19 @@ public class PizzaVariationDatabaseDAO extends DatabaseDAO implements PizzaVaria
         Recipe recipeSmall = recipeDAO.findRecipeById( idRecipeSmall );
         if( recipeSmall == null )
             throw new DataAccessException( this, "Cannot find recipe small with id: " + idRecipeSmall + " !" );
+
         pizzaVariation.setRecipeSmall( recipeSmall );
 
         Recipe recipeLarge = recipeDAO.findRecipeById( idRecipeLarge );
         if( recipeLarge == null )
             throw new DataAccessException( this, "Cannot find recipe large with id: " + idRecipeLarge + " !" );
+
         pizzaVariation.setRecipeLarge( recipeLarge );
 
         Recipe recipeXLarge = recipeDAO.findRecipeById( idRecipeXLarge );
         if( recipeXLarge == null )
             throw new DataAccessException( this, "Cannot find recipe x-large with id: " + idRecipeXLarge + " !" );
-        pizzaVariation.setRecipeXLarge( recipeXLarge );
 
-        pizzaVariation.setPriceSmall( row.getFloat( COLUMN_PRICE_SMALL ) );
-        pizzaVariation.setPriceLarge( row.getFloat( COLUMN_PRICE_LARGE ) );
-        pizzaVariation.setPriceXLarge( row.getFloat( COLUMN_PRICE_X_LARGE ) );
+        pizzaVariation.setRecipeXLarge( recipeXLarge );
     }
 }

@@ -1,6 +1,5 @@
 package com.pizzaservice.db;
 
-import javax.xml.transform.Result;
 import java.sql.*;
 import java.util.List;
 import java.util.Properties;

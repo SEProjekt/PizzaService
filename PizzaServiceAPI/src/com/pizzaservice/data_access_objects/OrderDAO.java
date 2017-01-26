@@ -10,5 +10,7 @@ public interface OrderDAO
 {
     void addOrder( Order order ) throws DataAccessException;
 
+    void updateOrder( Order order ) throws DataAccessException;
+
     void getOrdersOfStore( Store store ) throws DataAccessException;
 }

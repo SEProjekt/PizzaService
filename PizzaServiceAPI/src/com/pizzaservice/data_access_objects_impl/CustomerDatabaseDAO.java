@@ -19,7 +19,6 @@ public class CustomerDatabaseDAO extends DatabaseDAO implements CustomerDAO
     public static final int COLUMN_LOCKED = 5;
     public static final int COLUMN_LOCKED_UNTIL = 6;
 
-
     public CustomerDatabaseDAO( Database database )
     {
         super( database );

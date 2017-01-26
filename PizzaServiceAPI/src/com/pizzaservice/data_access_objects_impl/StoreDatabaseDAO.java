@@ -5,7 +5,9 @@ import com.pizzaservice.data_access_objects.DataAccessException;
 import com.pizzaservice.data_access_objects.StoreDAO;
 import com.pizzaservice.buissness_objects.Store;
 import com.pizzaservice.db.Database;
+import com.pizzaservice.db.Row;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -41,15 +43,7 @@ public class StoreDatabaseDAO extends DatabaseDAO implements StoreDAO
                 Store store = new Store();
 
                 store.setId( row.getLong( COLUMN_ID ) );
-
-                Address address = new Address();
-                address.setStreet( row.getString( COLUMN_STREET ) );
-                address.setHouseNumber( row.getString( COLUMN_HOUSE_NUMBER ) );
-                address.setPostcode( row.getString( COLUMN_POST_CODE ) );
-                address.setCity( row.getString( COLUMN_CITY ) );
-                address.setCountry( row.getString( COLUMN_COUNTRY ) );
-                store.setAddress( address );
-
+                processAddress( store, row );
                 // get these ones later because they may be large
                 store.setStockItems( new ArrayList<>() );
                 store.setOrders( new ArrayList<>() );
@@ -60,5 +54,17 @@ public class StoreDatabaseDAO extends DatabaseDAO implements StoreDAO
             return stores;
         }
         catch( Exception e ) { throw handleException( e ); }
+    }
+
+    private void processAddress( Store store, Row row ) throws SQLException
+    {
+        Address address = new Address();
+        address.setStreet( row.getString( COLUMN_STREET ) );
+        address.setHouseNumber( row.getString( COLUMN_HOUSE_NUMBER ) );
+        address.setPostcode( row.getString( COLUMN_POST_CODE ) );
+        address.setCity( row.getString( COLUMN_CITY ) );
+        address.setCountry( row.getString( COLUMN_COUNTRY ) );
+
+        store.setAddress( address );
     }
 }

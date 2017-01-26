@@ -6,7 +6,9 @@ import com.pizzaservice.data_access_objects.PizzaConfigurationDAO;
 import com.pizzaservice.data_access_objects.PizzaVariationDAO;
 import com.pizzaservice.data_access_objects.ToppingDAO;
 import com.pizzaservice.db.Database;
+import com.pizzaservice.db.Row;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -45,30 +47,11 @@ public class PizzaConfigurationDatabaseDAO extends DatabaseDAO implements PizzaC
                 "id_topping_1, id_topping_2, id_topping_3, id_topping_4, id_topping_5) " +
                 "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-            List<Object> args = new ArrayList<>();
-            args.add( pizzaConfiguration.getOrder().getId() );
-            args.add( pizzaConfiguration.getPizzaSize().toInt() );
-            args.add( pizzaConfiguration.isSplit() );
-            args.add( pizzaConfiguration.getPizzaVariation1().getId() );
-
-            PizzaVariation pizzaVariation2 = pizzaConfiguration.getPizzaVariation2();
-            if( pizzaVariation2 != null )
-                args.add( pizzaVariation2.getId() );
-            else
-                args.add( null );
-
-            Iterator it = pizzaConfiguration.getToppings().iterator();
-            for( int i = 0; i < 5; i++ )
-            {
-                if( it.hasNext() )
-                {
-                    Topping topping = ( Topping ) it.next();
-                    args.add( topping.getId() );
-                }
-                else args.add( null );
-            }
-
-            database.update( insert, args, row -> pizzaConfiguration.setId( row.getLong( 1 ) ) );
+            database.update(
+                insert,
+                makeInsertArgs( pizzaConfiguration ),
+                row -> pizzaConfiguration.setId( row.getLong( 1 ) )
+            );
 
             pizzaConfiguration.getOrder().getPizzaConfigurations().add( pizzaConfiguration );
         }
@@ -84,42 +67,17 @@ public class PizzaConfigurationDatabaseDAO extends DatabaseDAO implements PizzaC
 
             String query = "SELECT * FROM pizza_configurations WHERE id_order = ?";
             List<Object> args = new ArrayList<>();
+            args.add( order.getId() );
             database.query( query, args, row ->
             {
                 PizzaConfiguration pizzaConfiguration = new PizzaConfiguration();
+
+                pizzaConfiguration.setId( row.getLong( COLUMN_ID ) );
                 pizzaConfiguration.setOrder( order );
                 pizzaConfiguration.setPizzaSize( PizzaSize.fromInt( row.getInt( COLUMN_SIZE ) ) );
-                boolean split = row.getBoolean( COLUMN_SPLIT );
-                pizzaConfiguration.setSplit( split );
-
-                long idPizzaVariation1 = row.getLong( COLUMN_ID_PIZZA_VARIATION_1 );
-                long idPizzaVariation2 = row.getLong( COLUMN_ID_PIZZA_VARIATION_1 );
-
-                PizzaVariationDAO pizzaVariationDAO = new PizzaVariationDatabaseDAO( database );
-
-                PizzaVariation pizzaVariation1 = pizzaVariationDAO.findPizzaVariationById( idPizzaVariation1 );
-                if( pizzaVariation1 == null )
-                    throw new DataAccessException( this, "Cannot find id_pizza_variation_1: " + idPizzaVariation1 + "!" );
-                pizzaConfiguration.setPizzaVariation1( pizzaVariation1 );
-
-                PizzaVariation pizzaVariation2 = pizzaVariationDAO.findPizzaVariationById( idPizzaVariation2 );
-                if( split && pizzaVariation2 == null )
-                    throw new DataAccessException( this, "Cannot find id_pizza_variation_2: " + idPizzaVariation1 + "!" );
-                pizzaConfiguration.setPizzaVariation2( pizzaVariation2 );
-
-                long idTopping1 = row.getLong( COLUMN_ID_TOPPING_1 );
-                long idTopping2 = row.getLong( COLUMN_ID_TOPPING_2 );
-                long idTopping3 = row.getLong( COLUMN_ID_TOPPING_3 );
-                long idTopping4 = row.getLong( COLUMN_ID_TOPPING_4 );
-                long idTopping5 = row.getLong( COLUMN_ID_TOPPING_5 );
-                ToppingDAO toppingDAO = new ToppingDatabaseDAO( database );
-                Collection<Topping> toppings = new ArrayList<>();
-                toppings.add( toppingDAO.findToppingById( idTopping1 ) );
-                toppings.add( toppingDAO.findToppingById( idTopping2 ) );
-                toppings.add( toppingDAO.findToppingById( idTopping3 ) );
-                toppings.add( toppingDAO.findToppingById( idTopping4 ) );
-                toppings.add( toppingDAO.findToppingById( idTopping5 ) );
-                pizzaConfiguration.setToppings( toppings );
+                pizzaConfiguration.setSplit( row.getBoolean( COLUMN_SPLIT ) );
+                processPizzaVariations( pizzaConfiguration, row );
+                processToppings( pizzaConfiguration, row );
 
                 pizzaConfigurations.add( pizzaConfiguration );
             } );
@@ -127,5 +85,81 @@ public class PizzaConfigurationDatabaseDAO extends DatabaseDAO implements PizzaC
             order.setPizzaConfigurations( pizzaConfigurations );
         }
         catch( Exception e ) { throw handleException( e ); }
+    }
+
+    private List<Object> makeInsertArgs( PizzaConfiguration pizzaConfiguration )
+    {
+        List<Object> args = new ArrayList<>();
+        args.add( pizzaConfiguration.getOrder().getId() );
+        args.add( pizzaConfiguration.getPizzaSize().toInt() );
+        args.add( pizzaConfiguration.isSplit() );
+        args.add( pizzaConfiguration.getPizzaVariation1().getId() );
+
+        PizzaVariation pizzaVariation2 = pizzaConfiguration.getPizzaVariation2();
+        if( pizzaVariation2 != null )
+            args.add( pizzaVariation2.getId() );
+        else
+            args.add( null );
+
+        Iterator it = pizzaConfiguration.getToppings().iterator();
+        for( int i = 0; i < 5; i++ )
+        {
+            if( it.hasNext() )
+            {
+                Topping topping = ( Topping ) it.next();
+                args.add( topping.getId() );
+            }
+            else args.add( null );
+        }
+
+        return args;
+    }
+
+    private void processToppings( PizzaConfiguration pizzaConfiguration, Row row ) throws SQLException, DataAccessException
+    {
+        long idTopping1 = row.getLong( COLUMN_ID_TOPPING_1 );
+        long idTopping2 = row.getLong( COLUMN_ID_TOPPING_2 );
+        long idTopping3 = row.getLong( COLUMN_ID_TOPPING_3 );
+        long idTopping4 = row.getLong( COLUMN_ID_TOPPING_4 );
+        long idTopping5 = row.getLong( COLUMN_ID_TOPPING_5 );
+
+        ToppingDAO toppingDAO = new ToppingDatabaseDAO( database );
+
+        Collection<Topping> toppings = new ArrayList<>();
+        Topping topping1 = toppingDAO.findToppingById( idTopping1 );
+        Topping topping2 = toppingDAO.findToppingById( idTopping2 );
+        Topping topping3 = toppingDAO.findToppingById( idTopping3 );
+        Topping topping4 = toppingDAO.findToppingById( idTopping4 );
+        Topping topping5 = toppingDAO.findToppingById( idTopping5 );
+
+        if( topping1 != null ) toppings.add( topping1 );
+        if( topping2 != null ) toppings.add( topping2 );
+        if( topping3 != null ) toppings.add( topping3 );
+        if( topping4 != null ) toppings.add( topping4 );
+        if( topping5 != null ) toppings.add( topping5 );
+
+        pizzaConfiguration.setToppings( toppings );
+    }
+
+    private void processPizzaVariations( PizzaConfiguration pizzaConfiguration, Row row ) throws SQLException, DataAccessException
+    {
+        long idPizzaVariation1 = row.getLong( COLUMN_ID_PIZZA_VARIATION_1 );
+        long idPizzaVariation2 = row.getLong( COLUMN_ID_PIZZA_VARIATION_2 );
+        boolean split = row.getBoolean( COLUMN_SPLIT );
+
+        PizzaVariationDAO pizzaVariationDAO = new PizzaVariationDatabaseDAO( database );
+
+        PizzaVariation pizzaVariation1 = pizzaVariationDAO.findPizzaVariationById( idPizzaVariation1 );
+        if( pizzaVariation1 == null )
+            throw new DataAccessException( this, "Cannot find id_pizza_variation_1: " + idPizzaVariation1 + "!" );
+
+        pizzaConfiguration.setPizzaVariation1( pizzaVariation1 );
+
+        PizzaVariation pizzaVariation2 = pizzaVariationDAO.findPizzaVariationById( idPizzaVariation2 );
+        if( split && pizzaVariation2 == null )
+            throw new DataAccessException( this, "Cannot find id_pizza_variation_2: " + idPizzaVariation2 + "!" );
+
+        if( pizzaVariation2 != null )
+            pizzaConfiguration.setPizzaVariation2( pizzaVariation2 );
     }
 }

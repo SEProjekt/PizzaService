@@ -5,7 +5,9 @@ import com.pizzaservice.data_access_objects.CustomerDAO;
 import com.pizzaservice.data_access_objects.DataAccessException;
 import com.pizzaservice.data_access_objects.OrderDAO;
 import com.pizzaservice.db.Database;
+import com.pizzaservice.db.Row;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -42,30 +44,39 @@ public class OrderDatabaseDAO extends DatabaseDAO implements OrderDAO
                 "(id_customer, id_store, state, delivering, street, house_number, postcode, city, country, time_at_start_of_delivering) " +
                 "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-            List<Object> args = new ArrayList<>();
-            args.add( order.getCustomer().getId() );
-            args.add( order.getStore().getId() );
-            args.add( order.getState().toInt() );
-            args.add( order.isDelivering() );
-            if( order.getCustomerAddress() == null )
-            {
-                args.add( null );
-                args.add( null );
-                args.add( null );
-                args.add( null );
-                args.add( null );
-            }
-            else
-            {
-                args.add( order.getCustomerAddress().getStreet() );
-                args.add( order.getCustomerAddress().getHouseNumber() );
-                args.add( order.getCustomerAddress().getPostcode() );
-                args.add( order.getCustomerAddress().getCity() );
-                args.add( order.getCustomerAddress().getCountry() );
-            }
-            args.add( order.getTimeAtStartOfDelivering() );
+            database.update(
+                insert,
+                makeInsertArgs( order ),
+                row -> order.setId( row.getLong( 1 ) )
+            );
+        }
+        catch( Exception e ) { throw handleException( e ); }
+    }
 
-            database.update( insert, args, row -> order.setId( row.getLong( 1 ) ) );
+    @Override
+    public void updateOrder( Order order ) throws DataAccessException
+    {
+        try
+        {
+            String update =
+                "UPDATE orders " +
+                "SET " +
+                "id_customer = ?, " +
+                "id_store = ?, " +
+                "state = ?, " +
+                "delivering = ?, " +
+                "street = ?, " +
+                "house_number = ?, " +
+                "postcode = ?, " +
+                "city = ?, " +
+                "country = ?, " +
+                "time_at_start_of_delivering = ? " +
+                "WHERE id = ?";
+
+            List<Object> args = makeInsertArgs( order );
+            args.add( order.getId() );
+
+            database.update( update, args, row -> {} );
         }
         catch( Exception e ) { throw handleException( e ); }
     }
@@ -84,25 +95,12 @@ public class OrderDatabaseDAO extends DatabaseDAO implements OrderDAO
             {
                 Order order = new Order();
 
-                long idCustomer = row.getLong( COLUMN_ID_CUSTOMER );
-                CustomerDAO customerDAO = new CustomerDatabaseDAO( database );
-                Customer customer = customerDAO.findCustomerById( idCustomer );
-                if( customer == null )
-                    throw new DataAccessException( this, "Cannot find id_customer: " + idCustomer + "!" );
-
-                order.setCustomer( customer );
+                order.setId( row.getLong( COLUMN_ID ) );
+                processCustomer( order, row );
                 order.setStore( store );
                 order.setState( OrderState.fromInt( row.getInt( COLUMN_STATE ) ) );
                 order.setDelivering( row.getBoolean( COLUMN_DELIVERING ) );
-
-                Address address = new Address();
-                address.setStreet( row.getString( COLUMN_STREET ) );
-                address.setHouseNumber( row.getString( COLUMN_HOUSE_NUMBER ) );
-                address.setPostcode( row.getString( COLUMN_POSTCODE ) );
-                address.setCity( row.getString( COLUMN_CITY ) );
-                address.setCountry( row.getString( COLUMN_COUNTRY ) );
-
-                order.setCustomerAddress( address );
+                processAddress( order, row );
                 order.setTimeAtStartOfDelivering( row.getTime( COLUMN_TIME_AT_START_OF_DELIVERING ) );
 
                 new PizzaConfigurationDatabaseDAO( database ).getPizzaConfigurationsOfOrder( order );
@@ -113,5 +111,53 @@ public class OrderDatabaseDAO extends DatabaseDAO implements OrderDAO
             store.setOrders( orders );
         }
         catch( Exception e ) { throw handleException( e ); }
+    }
+
+    private List<Object> makeInsertArgs( Order order )
+    {
+        List<Object> args = new ArrayList<>();
+        args.add( order.getCustomer().getId() );
+        args.add( order.getStore().getId() );
+        args.add( order.getState().toInt() );
+        args.add( order.isDelivering() );
+        if( order.getCustomerAddress() == null )
+        {
+            for( int i = 0; i < 5; i++ )
+                args.add( null );
+        }
+        else
+        {
+            args.add( order.getCustomerAddress().getStreet() );
+            args.add( order.getCustomerAddress().getHouseNumber() );
+            args.add( order.getCustomerAddress().getPostcode() );
+            args.add( order.getCustomerAddress().getCity() );
+            args.add( order.getCustomerAddress().getCountry() );
+        }
+        args.add( order.getTimeAtStartOfDelivering() );
+
+        return args;
+    }
+
+    private void processAddress( Order order, Row row ) throws SQLException
+    {
+        Address address = new Address();
+        address.setStreet( row.getString( COLUMN_STREET ) );
+        address.setHouseNumber( row.getString( COLUMN_HOUSE_NUMBER ) );
+        address.setPostcode( row.getString( COLUMN_POSTCODE ) );
+        address.setCity( row.getString( COLUMN_CITY ) );
+        address.setCountry( row.getString( COLUMN_COUNTRY ) );
+
+        order.setCustomerAddress( address );
+    }
+
+    private void processCustomer( Order order, Row row ) throws SQLException, DataAccessException
+    {
+        long idCustomer = row.getLong( COLUMN_ID_CUSTOMER );
+        CustomerDAO customerDAO = new CustomerDatabaseDAO( database );
+        Customer customer = customerDAO.findCustomerById( idCustomer );
+        if( customer == null )
+            throw new DataAccessException( this, "Cannot find id_customer: " + idCustomer + "!" );
+
+        order.setCustomer( customer );
     }
 }

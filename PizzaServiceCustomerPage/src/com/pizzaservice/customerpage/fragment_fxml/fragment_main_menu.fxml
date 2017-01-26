@@ -1,0 +1,14 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<?import com.pizzaservice.customerpage.fragments.Fragment?>
+
+<fx:root xmlns:fx="http://javafx.com/fxml"
+         type="Fragment" spacing="20" alignment="CENTER">
+
+    <Label id="lab-main-menu" text="Hauptmenü" />
+    <Button text="Pizza hinzufügen" maxWidth="Infinity" onAction="#actionAddPizza" />
+    <Button text="Warenkorb anschauen" maxWidth="Infinity" onAction="#actionShowCart" />
+    <Button text="Bestellung abschließen" maxWidth="Infinity" onAction="#actionFinishOrder" />
+    <Button text="Bestellung abbrechen" maxWidth="Infinity" onAction="#actionAbortOrder" />
+</fx:root>

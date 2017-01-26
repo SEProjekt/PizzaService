@@ -1,0 +1,41 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.text.Text?>
+
+<?import com.pizzaservice.customerpage.fragments.Fragment?>
+
+<?import javafx.scene.layout.ColumnConstraints?>
+<fx:root xmlns:fx="http://javafx.com/fxml"
+         type="Fragment" spacing="20" alignment="CENTER">
+    <Label text="Bitte fülle die folgenden Angaben über dich aus." />
+    <GridPane alignment="CENTER" vgap="10" hgap="10">
+        <columnConstraints>
+            <ColumnConstraints minWidth="120" />
+        </columnConstraints>
+
+        <Label text="Vorname:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+        <TextField fx:id="tfFirstName" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+        <Label text="Nachname:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+        <TextField fx:id="tfSecondName" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+        <Label text="Telefonnummer:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+        <TextField fx:id="tfPhoneNumber" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+        <Label text="Abholfiliale:" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+        <ChoiceBox fx:id="cbStore" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+    </GridPane>
+
+    <Button text="Rechnung ansehen" onAction="#actionShowBill" />
+    <Text fx:id="txtBill" />
+    <Separator />
+    <HBox alignment="CENTER" spacing="10">
+        <Button text="Abbrechen" onAction="#actionAbort" />
+        <Button text="Bestellung absenden" onAction="#actionSubmitOrder" />
+    </HBox>
+</fx:root>

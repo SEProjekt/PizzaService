@@ -35,7 +35,9 @@ public class ToppingDatabaseDAO extends DatabaseDAO implements ToppingDAO
             String query = "SELECT * FROM toppings WHERE id = ?";
             List<Object> args = new ArrayList<>();
             args.add( id );
-            database.query( query, args, row -> createToppingFromRow( topping, row ) );
+            boolean found = database.query( query, args, row -> processTopping( topping, row ) );
+            if( !found )
+                return null;
 
             return topping;
         }
@@ -53,7 +55,7 @@ public class ToppingDatabaseDAO extends DatabaseDAO implements ToppingDAO
             database.query( query, new ArrayList<>(), row ->
             {
                 Topping topping = new Topping();
-                createToppingFromRow( topping, row );
+                processTopping( topping, row );
                 toppings.add( topping );
             } );
 
@@ -62,12 +64,16 @@ public class ToppingDatabaseDAO extends DatabaseDAO implements ToppingDAO
         catch( Exception e ) { throw handleException( e ); }
     }
 
-    private void createToppingFromRow( Topping topping, Row row ) throws SQLException, DataAccessException
+    private void processTopping( Topping topping, Row row ) throws SQLException, DataAccessException
     {
         topping.setId( row.getLong( COLUMN_ID ) );
         topping.setName( row.getString( COLUMN_NAME ) );
         topping.setPrice( row.getFloat( COLUMN_PRICE ) );
+        processRecipe( topping, row );
+    }
 
+    private void processRecipe( Topping topping, Row row ) throws SQLException, DataAccessException
+    {
         long idRecipe = row.getLong( COLUMN_ID_RECIPE );
 
         RecipeDAO recipeDAO = new RecipeDatabaseDAO( database );
@@ -75,6 +81,7 @@ public class ToppingDatabaseDAO extends DatabaseDAO implements ToppingDAO
         Recipe recipe = recipeDAO.findRecipeById( idRecipe );
         if( recipe == null )
             throw new DataAccessException( this, "Could not find id_recipe: " + idRecipe + "!" );
+
         topping.setRecipe( recipe );
     }
 }

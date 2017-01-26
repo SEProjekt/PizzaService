@@ -3,9 +3,14 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PizzaServiceAPI/PizzaServiceAPI.iml" filepath="$PROJECT_DIR$/PizzaServiceAPI/PizzaServiceAPI.iml" />
-      <module fileurl="file://$PROJECT_DIR$/PizzaServiceOrderPage/PizzaServiceOrderPage.iml" filepath="$PROJECT_DIR$/PizzaServiceOrderPage/PizzaServiceOrderPage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PizzaServiceCommon/PizzaServiceCommon.iml" filepath="$PROJECT_DIR$/PizzaServiceCommon/PizzaServiceCommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PizzaServiceCustomerPage/PizzaServiceCustomerPage.iml" filepath="$PROJECT_DIR$/PizzaServiceCustomerPage/PizzaServiceCustomerPage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PizzaServiceCustomerPageTest/PizzaServiceCustomerPageTest.iml" filepath="$PROJECT_DIR$/PizzaServiceCustomerPageTest/PizzaServiceCustomerPageTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PizzaServiceKitchenPage/PizzaServiceKitchenPage.iml" filepath="$PROJECT_DIR$/PizzaServiceKitchenPage/PizzaServiceKitchenPage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PizzaServiceKitchenPageTest/PizzaServiceKitchenPageTest.iml" filepath="$PROJECT_DIR$/PizzaServiceKitchenPageTest/PizzaServiceKitchenPageTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PizzaServiceCustomerPage/PizzaServiceOrderPage.iml" filepath="$PROJECT_DIR$/PizzaServiceCustomerPage/PizzaServiceOrderPage.iml" />
       <module fileurl="file://$PROJECT_DIR$/../PizzaServiceOrderPage/PizzaServiceOrderPage.iml" filepath="$PROJECT_DIR$/../PizzaServiceOrderPage/PizzaServiceOrderPage.iml" />
-      <module fileurl="file://$PROJECT_DIR$/PizzaServiceOrderPageTest/PizzaServiceOrderPageTest.iml" filepath="$PROJECT_DIR$/PizzaServiceOrderPageTest/PizzaServiceOrderPageTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PizzaServiceCustomerPageTest/PizzaServiceOrderPageTest.iml" filepath="$PROJECT_DIR$/PizzaServiceCustomerPageTest/PizzaServiceOrderPageTest.iml" />
     </modules>
   </component>
 </project>

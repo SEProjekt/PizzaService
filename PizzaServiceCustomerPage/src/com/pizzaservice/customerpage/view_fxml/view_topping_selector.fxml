@@ -1,0 +1,11 @@
+<?import javafx.scene.control.Button?>
+<?import com.pizzaservice.customerpage.views.ToppingSelectorView?>
+
+<?import javafx.scene.control.ChoiceBox?>
+
+<?import javafx.scene.layout.GridPane?>
+<fx:root xmlns:fx="http://javafx.com/fxml"
+         type="ToppingSelectorView" hgap="10" alignment="CENTER">
+    <ChoiceBox fx:id="cbTopping" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" maxWidth="Infinity" />
+    <Button text="Entfernen" onAction="#actionDelete" GridPane.columnIndex="1" />
+</fx:root>
