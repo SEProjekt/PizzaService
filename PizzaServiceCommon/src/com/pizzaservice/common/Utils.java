@@ -76,7 +76,7 @@ public class Utils
     {
         return new ConnectionParams(
             "root",
-            "m13u21m13PPILIHP",
+            "...",
             "mysql",
             "localhost",
             "3306",
