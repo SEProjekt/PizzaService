@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
@@ -19,7 +20,7 @@ import java.io.IOException;
 public class Main extends Application
 {
     @FXML
-    StackPane rootPane;
+    Pane rootPane;
 
     @Override
     public void start( Stage primaryStage ) throws Exception
