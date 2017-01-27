@@ -1,0 +1,19 @@
+// root project name
+rootProject.name = 'pizzaservice'
+
+// list of projects
+include 'pizzaservice-api'
+include 'pizzaservice-common'
+include 'pizzaservice-customerpage'
+include 'pizzaservice-kitchenpage'
+
+// location of the build files.
+rootProject.children.each { project ->
+    def projectDir = new File(project.name)
+    project.name = projectDir.name
+    project.projectDir = projectDir
+    project.buildFileName = "${projectDir.name}.gradle"
+    assert project.projectDir.isDirectory()
+    assert project.buildFile.isFile()
+}
+

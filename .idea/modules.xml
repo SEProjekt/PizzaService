@@ -2,15 +2,19 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PizzaServiceAPI/PizzaServiceAPI.iml" filepath="$PROJECT_DIR$/PizzaServiceAPI/PizzaServiceAPI.iml" />
-      <module fileurl="file://$PROJECT_DIR$/PizzaServiceCommon/PizzaServiceCommon.iml" filepath="$PROJECT_DIR$/PizzaServiceCommon/PizzaServiceCommon.iml" />
-      <module fileurl="file://$PROJECT_DIR$/PizzaServiceCustomerPage/PizzaServiceCustomerPage.iml" filepath="$PROJECT_DIR$/PizzaServiceCustomerPage/PizzaServiceCustomerPage.iml" />
-      <module fileurl="file://$PROJECT_DIR$/PizzaServiceCustomerPageTest/PizzaServiceCustomerPageTest.iml" filepath="$PROJECT_DIR$/PizzaServiceCustomerPageTest/PizzaServiceCustomerPageTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/PizzaServiceKitchenPage/PizzaServiceKitchenPage.iml" filepath="$PROJECT_DIR$/PizzaServiceKitchenPage/PizzaServiceKitchenPage.iml" />
-      <module fileurl="file://$PROJECT_DIR$/PizzaServiceKitchenPageTest/PizzaServiceKitchenPageTest.iml" filepath="$PROJECT_DIR$/PizzaServiceKitchenPageTest/PizzaServiceKitchenPageTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/PizzaServiceCustomerPage/PizzaServiceOrderPage.iml" filepath="$PROJECT_DIR$/PizzaServiceCustomerPage/PizzaServiceOrderPage.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../PizzaServiceOrderPage/PizzaServiceOrderPage.iml" filepath="$PROJECT_DIR$/../PizzaServiceOrderPage/PizzaServiceOrderPage.iml" />
-      <module fileurl="file://$PROJECT_DIR$/PizzaServiceCustomerPageTest/PizzaServiceOrderPageTest.iml" filepath="$PROJECT_DIR$/PizzaServiceCustomerPageTest/PizzaServiceOrderPageTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pizzaservice.iml" filepath="$PROJECT_DIR$/.idea/modules/pizzaservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pizzaservice-api/pizzaservice-api.iml" filepath="$PROJECT_DIR$/.idea/modules/pizzaservice-api/pizzaservice-api.iml" group="pizzaservice-api" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pizzaservice-api/pizzaservice-api_main.iml" filepath="$PROJECT_DIR$/.idea/modules/pizzaservice-api/pizzaservice-api_main.iml" group="pizzaservice-api" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pizzaservice-api/pizzaservice-api_test.iml" filepath="$PROJECT_DIR$/.idea/modules/pizzaservice-api/pizzaservice-api_test.iml" group="pizzaservice-api" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pizzaservice-common/pizzaservice-common.iml" filepath="$PROJECT_DIR$/.idea/modules/pizzaservice-common/pizzaservice-common.iml" group="pizzaservice-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pizzaservice-common/pizzaservice-common_main.iml" filepath="$PROJECT_DIR$/.idea/modules/pizzaservice-common/pizzaservice-common_main.iml" group="pizzaservice-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pizzaservice-common/pizzaservice-common_test.iml" filepath="$PROJECT_DIR$/.idea/modules/pizzaservice-common/pizzaservice-common_test.iml" group="pizzaservice-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pizzaservice-customerpage/pizzaservice-customerpage.iml" filepath="$PROJECT_DIR$/.idea/modules/pizzaservice-customerpage/pizzaservice-customerpage.iml" group="pizzaservice-customerpage" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pizzaservice-customerpage/pizzaservice-customerpage_main.iml" filepath="$PROJECT_DIR$/.idea/modules/pizzaservice-customerpage/pizzaservice-customerpage_main.iml" group="pizzaservice-customerpage" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pizzaservice-customerpage/pizzaservice-customerpage_test.iml" filepath="$PROJECT_DIR$/.idea/modules/pizzaservice-customerpage/pizzaservice-customerpage_test.iml" group="pizzaservice-customerpage" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pizzaservice-kitchenpage/pizzaservice-kitchenpage.iml" filepath="$PROJECT_DIR$/.idea/modules/pizzaservice-kitchenpage/pizzaservice-kitchenpage.iml" group="pizzaservice-kitchenpage" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pizzaservice-kitchenpage/pizzaservice-kitchenpage_main.iml" filepath="$PROJECT_DIR$/.idea/modules/pizzaservice-kitchenpage/pizzaservice-kitchenpage_main.iml" group="pizzaservice-kitchenpage" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pizzaservice-kitchenpage/pizzaservice-kitchenpage_test.iml" filepath="$PROJECT_DIR$/.idea/modules/pizzaservice-kitchenpage/pizzaservice-kitchenpage_test.iml" group="pizzaservice-kitchenpage" />
     </modules>
   </component>
 </project>

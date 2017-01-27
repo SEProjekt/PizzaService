@@ -18,5 +18,17 @@
         <processorPath useClasspath="true" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="pizzaservice-api_main" target="1.8" />
+      <module name="pizzaservice-api_test" target="1.8" />
+      <module name="pizzaservice-common_main" target="1.8" />
+      <module name="pizzaservice-common_test" target="1.8" />
+      <module name="pizzaservice-customerpage_main" target="1.8" />
+      <module name="pizzaservice-customerpage_test" target="1.8" />
+      <module name="pizzaservice-kitchenpage_main" target="1.8" />
+      <module name="pizzaservice-kitchenpage_test" target="1.8" />
+      <module name="pizzaservice_main" target="1.8" />
+      <module name="pizzaservice_test" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
