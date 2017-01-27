@@ -1,7 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="787d9f83-9fbd-406f-b1f8-f69bf527ccdc" name="Default" comment="" />
+    <list default="true" id="787d9f83-9fbd-406f-b1f8-f69bf527ccdc" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_guava_14_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_all_1_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_loadui_testFx_3_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pizzaservice-common/src/main/java/com/pizzaservice/common/test/DummyFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pizzaservice-common/src/main/java/com/pizzaservice/common/test/TestUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pizzaservice-customerpage/src/test/java/com/pizzaservice/customerpage/CustomerPageTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pizzaservice-kitchenpage/src/test/java/com/pizzaservice/kitchenpage/KitchenPageTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/fragments/show_card.fxml" afterPath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/fragments/show_cart.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/outputFileStates.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/pizzaservice-common/pizzaservice-common_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/pizzaservice-common/pizzaservice-common_main.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/pizzaservice-customerpage/pizzaservice-customerpage_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/pizzaservice-customerpage/pizzaservice-customerpage_main.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/pizzaservice-customerpage/pizzaservice-customerpage_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/pizzaservice-customerpage/pizzaservice-customerpage_test.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/pizzaservice-kitchenpage/pizzaservice-kitchenpage_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/pizzaservice-kitchenpage/pizzaservice-kitchenpage_main.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/pizzaservice-kitchenpage/pizzaservice-kitchenpage_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/pizzaservice-kitchenpage/pizzaservice-kitchenpage_test.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-common/pizzaservice-common.gradle" afterPath="$PROJECT_DIR$/pizzaservice-common/pizzaservice-common.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-common/src/main/java/com/pizzaservice/common/Utils.java" afterPath="$PROJECT_DIR$/pizzaservice-common/src/main/java/com/pizzaservice/common/Utils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-customerpage/pizzaservice-customerpage.gradle" afterPath="$PROJECT_DIR$/pizzaservice-customerpage/pizzaservice-customerpage.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/Main.java" afterPath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ChoosePizzaSizeFragment.java" afterPath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ChoosePizzaSizeFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ChoosePizzaVariationFragment.java" afterPath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ChoosePizzaVariationFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ChooseSplitFragment.java" afterPath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ChooseSplitFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ChooseToppingsFragment.java" afterPath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ChooseToppingsFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/FinishOrderFragment.java" afterPath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/FinishOrderFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/FinishPizzaConfigurationFragment.java" afterPath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/FinishPizzaConfigurationFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/Fragment.java" afterPath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/Fragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/MainMenuFragment.java" afterPath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/MainMenuFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ShowCartFragment.java" afterPath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ShowCartFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/views/CartItemView.java" afterPath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/views/CartItemView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/views/ToppingSelectorView.java" afterPath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/views/ToppingSelectorView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/fragments/choose_pizza_size.fxml" afterPath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/fragments/choose_pizza_size.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/fragments/choose_pizza_variation.fxml" afterPath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/fragments/choose_pizza_variation.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/fragments/choose_pizza_variations.fxml" afterPath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/fragments/choose_pizza_variations.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/fragments/choose_split.fxml" afterPath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/fragments/choose_split.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/fragments/choose_toppings.fxml" afterPath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/fragments/choose_toppings.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/fragments/finish_order.fxml" afterPath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/fragments/finish_order.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/fragments/finish_pizza_configuration.fxml" afterPath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/fragments/finish_pizza_configuration.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/fragments/main_menu.fxml" afterPath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/fragments/main_menu.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/main.fxml" afterPath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/main.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/views/cart_item.fxml" afterPath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/views/cart_item.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/views/topping_selector.fxml" afterPath="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/views/topping_selector.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-kitchenpage/pizzaservice-kitchenpage.gradle" afterPath="$PROJECT_DIR$/pizzaservice-kitchenpage/pizzaservice-kitchenpage.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/Main.java" afterPath="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/fragments/ChooseStoreFragment.java" afterPath="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/fragments/ChooseStoreFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/fragments/Fragment.java" afterPath="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/fragments/Fragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/fragments/ShowOrdersFragment.java" afterPath="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/fragments/ShowOrdersFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/views/OrderView.java" afterPath="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/views/OrderView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/resources/com/pizzaservice/kitchenpage/fragments/choose_store.fxml" afterPath="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/resources/com/pizzaservice/kitchenpage/fragments/choose_store.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/resources/com/pizzaservice/kitchenpage/fragments/show_orders.fxml" afterPath="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/resources/com/pizzaservice/kitchenpage/fragments/show_orders.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/resources/com/pizzaservice/kitchenpage/main.fxml" afterPath="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/resources/com/pizzaservice/kitchenpage/main.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/resources/com/pizzaservice/kitchenpage/views/order.fxml" afterPath="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/resources/com/pizzaservice/kitchenpage/views/order.fxml" />
+    </list>
     <ignored path="pizzaservice.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -77,6 +134,60 @@
                 <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
               </PATH_ELEMENT>
             </PATH>
+            <PATH>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="pizzaservice" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value=":pizzaservice-customerpage" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ModuleNode" />
+              </PATH_ELEMENT>
+            </PATH>
+            <PATH>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="pizzaservice" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value=":pizzaservice-customerpage" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ModuleNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="Tasks" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode" />
+              </PATH_ELEMENT>
+            </PATH>
+            <PATH>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="pizzaservice" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value=":pizzaservice-customerpage" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ModuleNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="Tasks" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="build" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode$1" />
+              </PATH_ELEMENT>
+            </PATH>
           </tree_state>
         </projects_view>
       </state>
@@ -86,32 +197,12 @@
     <favorites_list name="pizzaservice" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="ChooseStoreFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/fragments/ChooseStoreFragment.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="CustomerPageTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/test/java/com/pizzaservice/customerpage/CustomerPageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShowOrdersFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/fragments/ShowOrdersFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/views/OrderView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+            <state relative-caret-position="81">
+              <caret line="69" column="39" selection-start-line="69" selection-start-column="39" selection-end-line="69" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -119,83 +210,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FinishOrderFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/FinishOrderFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pizzaservice-kitchenpage.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pizzaservice-kitchenpage/pizzaservice-kitchenpage.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pizzaservice-common/src/main/java/com/pizzaservice/common/Utils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/resources/com/pizzaservice/kitchenpage/main.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="order.fxml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/resources/com/pizzaservice/kitchenpage/views/order.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Fragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/fragments/Fragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="38" column="63" selection-start-line="38" selection-start-column="63" selection-end-line="38" selection-end-column="63" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="availableProjects">
@@ -851,195 +876,11 @@
             </list>
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/pizzaservice.api">
-          <value>
-            <list>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays a help message." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.api" />
-                <option name="name" value="help" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the components produced by project ':pizzaservice.api'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.api" />
-                <option name="name" value="components" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the sub-projects of project ':pizzaservice.api'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.api" />
-                <option name="name" value="projects" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the insight into a specific dependency in project ':pizzaservice.api'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.api" />
-                <option name="name" value="dependencyInsight" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the configuration model of project ':pizzaservice.api'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.api" />
-                <option name="name" value="model" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the properties of project ':pizzaservice.api'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.api" />
-                <option name="name" value="properties" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the tasks runnable from project ':pizzaservice.api'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.api" />
-                <option name="name" value="tasks" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays all dependencies declared in project ':pizzaservice.api'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.api" />
-                <option name="name" value="dependencies" />
-              </ExternalTaskPojo>
-            </list>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/pizzaservice.common">
-          <value>
-            <list>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays a help message." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.common" />
-                <option name="name" value="help" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the components produced by project ':pizzaservice.common'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.common" />
-                <option name="name" value="components" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the sub-projects of project ':pizzaservice.common'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.common" />
-                <option name="name" value="projects" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the insight into a specific dependency in project ':pizzaservice.common'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.common" />
-                <option name="name" value="dependencyInsight" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the configuration model of project ':pizzaservice.common'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.common" />
-                <option name="name" value="model" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the properties of project ':pizzaservice.common'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.common" />
-                <option name="name" value="properties" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the tasks runnable from project ':pizzaservice.common'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.common" />
-                <option name="name" value="tasks" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays all dependencies declared in project ':pizzaservice.common'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.common" />
-                <option name="name" value="dependencies" />
-              </ExternalTaskPojo>
-            </list>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/pizzaservice.customerpage">
-          <value>
-            <list>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays a help message." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.customerpage" />
-                <option name="name" value="help" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the components produced by project ':pizzaservice.customerpage'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.customerpage" />
-                <option name="name" value="components" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the sub-projects of project ':pizzaservice.customerpage'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.customerpage" />
-                <option name="name" value="projects" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the insight into a specific dependency in project ':pizzaservice.customerpage'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.customerpage" />
-                <option name="name" value="dependencyInsight" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the configuration model of project ':pizzaservice.customerpage'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.customerpage" />
-                <option name="name" value="model" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the properties of project ':pizzaservice.customerpage'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.customerpage" />
-                <option name="name" value="properties" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the tasks runnable from project ':pizzaservice.customerpage'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.customerpage" />
-                <option name="name" value="tasks" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays all dependencies declared in project ':pizzaservice.customerpage'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.customerpage" />
-                <option name="name" value="dependencies" />
-              </ExternalTaskPojo>
-            </list>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/pizzaservice.kitchenpage">
-          <value>
-            <list>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays a help message." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.kitchenpage" />
-                <option name="name" value="help" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the components produced by project ':pizzaservice.kitchenpage'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.kitchenpage" />
-                <option name="name" value="components" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the sub-projects of project ':pizzaservice.kitchenpage'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.kitchenpage" />
-                <option name="name" value="projects" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the insight into a specific dependency in project ':pizzaservice.kitchenpage'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.kitchenpage" />
-                <option name="name" value="dependencyInsight" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the configuration model of project ':pizzaservice.kitchenpage'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.kitchenpage" />
-                <option name="name" value="model" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the properties of project ':pizzaservice.kitchenpage'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.kitchenpage" />
-                <option name="name" value="properties" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the tasks runnable from project ':pizzaservice.kitchenpage'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.kitchenpage" />
-                <option name="name" value="tasks" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays all dependencies declared in project ':pizzaservice.kitchenpage'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/pizzaservice.kitchenpage" />
-                <option name="name" value="dependencies" />
-              </ExternalTaskPojo>
-            </list>
-          </value>
-        </entry>
       </map>
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="8913080116156" />
+        <entry key="$PROJECT_DIR$" value="8913168087900" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1246,37 +1087,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/settings.gradle" />
-        <option value="$PROJECT_DIR$/pizzaservice-api/pizzaservice-api.gradle" />
-        <option value="$PROJECT_DIR$/pizzaservice-common/pizzaservice-common.gradle" />
-        <option value="$PROJECT_DIR$/pizzaservice-customerpage/pizzaservice-customerpage.gradle" />
-        <option value="$PROJECT_DIR$/pizzaservice-kitchenpage/pizzaservice-kitchenpage.gradle" />
-        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/FragmentURLs.java" />
-        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/ViewURLs.java" />
-        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/Main.java" />
-        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/Fragment.java" />
-        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ChoosePizzaSizeFragment.java" />
-        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ChoosePizzaVariationFragment.java" />
-        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ChooseSplitFragment.java" />
-        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ChooseToppingsFragment.java" />
-        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/FinishPizzaConfigurationFragment.java" />
-        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/MainMenuFragment.java" />
-        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ShowCartFragment.java" />
-        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/views/CartItemView.java" />
-        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/views/ToppingSelectorView.java" />
-        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/main.fxml" />
-        <option value="$PROJECT_DIR$/pizzaservice-common/src/main/java/com/pizzaservice/api/common/Utils.java" />
-        <option value="$PROJECT_DIR$/pizzaservice-common/src/main/java/com/pizzaservice/common/Utils.java" />
-        <option value="$PROJECT_DIR$/pizzaservice-api/src/main/java/com/pizzaservice/api/data_access_objects_impl/PizzaConfigurationDatabaseDAO.java" />
         <option value="$PROJECT_DIR$/pizzaservice-api/src/main/java/com/pizzaservice/api/data_access_objects_impl/OrderDatabaseDAO.java" />
+        <option value="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/resources/com.pizzaservice.kitchenpage/main.fxml" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/test/java/com/pizzaservice/customerpage/test/MainMenuTest.java" />
+        <option value="$PROJECT_DIR$/pizzaservice-common/src/main/java/com/pizzaservice/common/Utils.java" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/fragments/choose_pizza_variation.fxml" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/fragments/choose_pizza_variations.fxml" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/fragments/choose_split.fxml" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/fragments/choose_toppings.fxml" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/fragments/finish_order.fxml" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/fragments/finish_pizza_configuration.fxml" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/fragments/main_menu.fxml" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/fragments/choose_pizza_size.fxml" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/main.fxml" />
+        <option value="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/resources/com/pizzaservice/kitchenpage/fragments/choose_store.fxml" />
+        <option value="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/resources/com/pizzaservice/kitchenpage/fragments/show_orders.fxml" />
+        <option value="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/resources/com/pizzaservice/kitchenpage/views/order.fxml" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/views/cart_item.fxml" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/views/topping_selector.fxml" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/fragments/show_card.fxml" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/views/ToppingSelectorView.java" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/views/CartItemView.java" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ShowCartFragment.java" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/MainMenuFragment.java" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/FinishPizzaConfigurationFragment.java" />
         <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/FinishOrderFragment.java" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ChooseToppingsFragment.java" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ChooseSplitFragment.java" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ChoosePizzaVariationFragment.java" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ChoosePizzaSizeFragment.java" />
         <option value="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/fragments/ChooseStoreFragment.java" />
         <option value="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/fragments/ShowOrdersFragment.java" />
-        <option value="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/fragments/Fragment.java" />
         <option value="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/views/OrderView.java" />
-        <option value="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/resources/com.pizzaservice.kitchenpage/main.fxml" />
-        <option value="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/resources/com/pizzaservice/kitchenpage/views/order.fxml" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/test/java/com/pizzaservice/customerpage/MainMenuTest.java" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/Main.java" />
+        <option value="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/Main.java" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/test/java/com/pizzaservice/customerpage/DummyFactory.java" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/test/java/com/pizzaservice/customerpage/TestResult.java" />
+        <option value="$PROJECT_DIR$/pizzaservice-common/src/test/java/com/pizzaservice/common/TestResult.java" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/pizzaservice-customerpage.gradle" />
+        <option value="$PROJECT_DIR$/pizzaservice-common/src/main/java/com/pizzaservice/common/test/TestResult.java" />
+        <option value="$PROJECT_DIR$/pizzaservice-common/src/main/java/com/pizzaservice/common/test/TestOk.java" />
+        <option value="$PROJECT_DIR$/pizzaservice-common/src/main/java/com/pizzaservice/common/test/Result.java" />
+        <option value="$PROJECT_DIR$/pizzaservice-common/pizzaservice-common.gradle" />
+        <option value="$PROJECT_DIR$/pizzaservice-common/src/main/java/com/pizzaservice/common/TestUtils.java" />
+        <option value="$PROJECT_DIR$/pizzaservice-kitchenpage/pizzaservice-kitchenpage.gradle" />
+        <option value="$PROJECT_DIR$/pizzaservice-kitchenpage/src/test/java/com/pizzaservice/kitchenpage/KitchenPageTest.java" />
+        <option value="$PROJECT_DIR$/pizzaservice-common/src/main/java/com/pizzaservice/common/test/TestUtils.java" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/Fragment.java" />
+        <option value="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/fragments/Fragment.java" />
+        <option value="$PROJECT_DIR$/pizzaservice-customerpage/src/test/java/com/pizzaservice/customerpage/CustomerPageTest.java" />
       </list>
     </option>
   </component>
@@ -1294,9 +1155,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1919" />
-    <option name="width" value="1922" />
-    <option name="height" value="1081" />
+    <option name="x" value="1920" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -1305,7 +1166,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -1346,6 +1207,10 @@
               <option name="myItemId" value="pizzaservice" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1354,6 +1219,314 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pizzaservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice-kitchenpage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice-kitchenpage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice-kitchenpage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kitchenpage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice-kitchenpage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice-kitchenpage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kitchenpage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice-kitchenpage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kitchenpage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fragments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice-customerpage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice-customerpage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice-customerpage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="customerpage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice-customerpage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice-customerpage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="customerpage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzaservice-customerpage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="customerpage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fragments" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1384,44 +1557,8 @@
       <recent name="$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/resources/com.pizzaservice.kitchenpage" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.kitchenpage">
-    <configuration default="false" name="pizzaservice:pizzaservice-api [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/pizzaservice-api" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="false" name="pizzaservice [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="false" name="pizzaservice:pizzaservice-customerpage [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager">
+    <configuration default="false" name="pizzaservice:pizzaservice-customerpage [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/pizzaservice-customerpage" />
@@ -1432,11 +1569,89 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="false" name="pizzaservice:pizzaservice-customerpage [testClasses]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/pizzaservice-customerpage" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="testClasses" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="false" name="CustomerPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pizzaservice-customerpage_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.pizzaservice.customerpage" />
+      <option name="MAIN_CLASS_NAME" value="com.pizzaservice.customerpage.CustomerPageTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/pizzaservice-customerpage" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="CustomerPageTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pizzaservice-customerpage_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.pizzaservice.customerpage" />
+      <option name="MAIN_CLASS_NAME" value="com.pizzaservice.customerpage.CustomerPageTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/pizzaservice-customerpage" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="CustomerPageTest.clickShowCartWithNonEmptyCartTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pizzaservice-customerpage_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.pizzaservice.customerpage" />
+      <option name="MAIN_CLASS_NAME" value="com.pizzaservice.customerpage.CustomerPageTest" />
+      <option name="METHOD_NAME" value="clickShowCartWithNonEmptyCartTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/pizzaservice-customerpage" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -1617,6 +1832,7 @@
       <setting name="cmdLine" value="run-app" />
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
+      <setting name="depsClasspath" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
@@ -1727,6 +1943,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -1770,18 +1992,22 @@
       <envs />
       <method />
     </configuration>
-    <list size="5">
+    <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Application.customerpage" />
       <item index="1" class="java.lang.String" itemvalue="Application.kitchenpage" />
-      <item index="2" class="java.lang.String" itemvalue="Gradle.pizzaservice:pizzaservice-api [build]" />
-      <item index="3" class="java.lang.String" itemvalue="Gradle.pizzaservice [build]" />
-      <item index="4" class="java.lang.String" itemvalue="Gradle.pizzaservice:pizzaservice-customerpage [build]" />
+      <item index="2" class="java.lang.String" itemvalue="Gradle.pizzaservice:pizzaservice-customerpage [clean]" />
+      <item index="3" class="java.lang.String" itemvalue="Gradle.pizzaservice:pizzaservice-customerpage [testClasses]" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.CustomerPageTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.CustomerPageTest (1)" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.CustomerPageTest.clickShowCartWithNonEmptyCartTest" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Gradle.pizzaservice:pizzaservice-customerpage [build]" />
-        <item index="1" class="java.lang.String" itemvalue="Gradle.pizzaservice [build]" />
-        <item index="2" class="java.lang.String" itemvalue="Gradle.pizzaservice:pizzaservice-api [build]" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.CustomerPageTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.CustomerPageTest.clickShowCartWithNonEmptyCartTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CustomerPageTest (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Gradle.pizzaservice:pizzaservice-customerpage [testClasses]" />
+        <item index="4" class="java.lang.String" itemvalue="Gradle.pizzaservice:pizzaservice-customerpage [clean]" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
@@ -1805,41 +2031,74 @@
       <option name="presentableId" value="Default" />
       <updated>1485510551648</updated>
       <workItem from="1485510557242" duration="6770000" />
+      <workItem from="1485517521031" duration="25033000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="CustomerPageTest - 2017.01.27 at 19h 07m 53s.xml">
+      <configuration name="CustomerPageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerPageTest - 2017.01.27 at 19h 27m 44s.xml">
+      <configuration name="CustomerPageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerPageTest - 2017.01.27 at 19h 28m 34s.xml">
+      <configuration name="CustomerPageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerPageTest - 2017.01.27 at 19h 29m 43s.xml">
+      <configuration name="CustomerPageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerPageTest - 2017.01.27 at 19h 29m 57s.xml">
+      <configuration name="CustomerPageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerPageTest - 2017.01.27 at 19h 30m 11s.xml">
+      <configuration name="CustomerPageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerPageTest - 2017.01.27 at 19h 32m 33s.xml">
+      <configuration name="CustomerPageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerPageTest - 2017.01.27 at 20h 09m 45s.xml">
+      <configuration name="CustomerPageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerPageTest - 2017.01.27 at 20h 10m 18s.xml">
+      <configuration name="CustomerPageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerPageTest - 2017.01.27 at 20h 33m 35s.xml">
+      <configuration name="CustomerPageTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6770000" />
+    <option name="totallyTimeSpent" value="31803000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1919" y="0" width="1922" height="1081" extended-state="6" />
-    <editor active="false" />
+    <frame x="1920" y="0" width="1920" height="1080" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39270833" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22044729" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22044729" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1863,294 +2122,456 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/gradle.xml">
+    <entry file="jar:///usr/local/java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/control/ChoiceBox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pizzaservice-api/src/main/java/com/pizzaservice/api/buissness_objects/Address.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pizzaservice-api/pizzaservice-api.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pizzaservice-common/pizzaservice-common.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/pizzaservice-customerpage.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/ViewURLs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/FragmentURLs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/MainMenuFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/Fragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="39" column="63" selection-start-line="39" selection-start-column="63" selection-end-line="39" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/FinishPizzaConfigurationFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ChooseToppingsFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ChooseSplitFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ChoosePizzaVariationFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="32" column="101" selection-start-line="32" selection-start-column="101" selection-end-line="32" selection-end-column="101" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ShowCartFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/views/CartItemView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/views/cart_item.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="299">
+          <caret line="329" column="29" selection-start-line="329" selection-start-column="29" selection-end-line="329" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/views/ToppingSelectorView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="22" column="88" selection-start-line="22" selection-start-column="88" selection-end-line="22" selection-end-column="89" />
+        <state relative-caret-position="271">
+          <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+          <folding>
+            <element signature="e#1476#1477#0" expanded="false" />
+            <element signature="e#1537#1538#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/views/CartItemView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+          <folding>
+            <element signature="e#1504#1505#0" expanded="false" />
+            <element signature="e#1544#1545#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/MainMenuFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="19" column="83" selection-start-line="19" selection-start-column="83" selection-end-line="19" selection-end-column="83" />
+          <folding>
+            <element signature="e#1025#1026#0" expanded="false" />
+            <element signature="e#1101#1102#0" expanded="false" />
+            <element signature="e#1477#1478#0" expanded="false" />
+            <element signature="e#1509#1510#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/FinishPizzaConfigurationFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+          <folding>
+            <element signature="e#1151#1152#0" expanded="false" />
+            <element signature="e#1220#1221#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/FinishOrderFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+          <folding>
+            <element signature="e#2715#2716#0" expanded="false" />
+            <element signature="e#2784#2785#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ChooseToppingsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/Main.java">
+    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ChooseSplitFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        <state relative-caret-position="76">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/main.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ChoosePizzaVariationFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pizzaservice-api/src/main/java/com/pizzaservice/api/data_access_objects_impl/PizzaConfigurationDatabaseDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1011">
-          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pizzaservice-api/src/main/java/com/pizzaservice/api/data_access_objects_impl/OrderDatabaseDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+        <state relative-caret-position="171">
+          <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ChoosePizzaSizeFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-          <folding>
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#689#690#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/fragments/ChooseStoreFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        <state relative-caret-position="38">
+          <caret line="21" column="73" selection-start-line="21" selection-start-column="73" selection-end-line="21" selection-end-column="73" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/fragments/Fragment.java">
+    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/screenshot1485525068637.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/screenshot1485525070013.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/screenshot1485525419688.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/screenshot1485525421005.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/screenshot1485525474411.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/screenshot1485525549216.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/screenshot1485533498344.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/fragments/ChooseStoreFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="38" column="63" selection-start-line="38" selection-start-column="63" selection-end-line="38" selection-end-column="63" />
+        <state relative-caret-position="328">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/fragments/ShowOrdersFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+        <state relative-caret-position="-660">
+          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+          <folding>
+            <element signature="e#951#952#0" expanded="false" />
+            <element signature="e#1007#1008#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.loadui/testFx/3.1.2/757dc5d357396290e1e2f3286d9e1157972d36de/testFx-3.1.2-sources.jar!/org/loadui/testfx/utils/UserInputDetector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/FinishOrderFragment.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/14.0.1/169f11e28e3ed9a64e9fa895eaafb579e6a5aa6c/guava-14.0.1-sources.jar!/com/google/common/util/concurrent/SettableFuture.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        <state relative-caret-position="271">
+          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+          <folding>
+            <element signature="e#1101#1102#0" expanded="false" />
+            <element signature="e#1141#1142#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/1dc37250fbc78e23a65a67fbbaf71d2e9cbc3c0b/hamcrest-core-1.3-sources.jar!/org/hamcrest/Matcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/Main.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/14.0.1/169f11e28e3ed9a64e9fa895eaafb579e6a5aa6c/guava-14.0.1-sources.jar!/com/google/common/base/Predicate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="19">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pizzaservice-kitchenpage/pizzaservice-kitchenpage.gradle">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.loadui/testFx/3.1.2/757dc5d357396290e1e2f3286d9e1157972d36de/testFx-3.1.2-sources.jar!/org/loadui/testfx/utils/TestUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        <state relative-caret-position="304">
+          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pizzaservice-common/src/main/java/com/pizzaservice/common/Utils.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.loadui/testFx/3.1.2/757dc5d357396290e1e2f3286d9e1157972d36de/testFx-3.1.2-sources.jar!/org/loadui/testfx/ScreenController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        <state relative-caret-position="252">
+          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_65/src.zip!/java/awt/peer/RobotPeer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1126">
+          <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_65/jre/lib/rt.jar!/sun/awt/ComponentFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="51" column="100" selection-start-line="51" selection-start-column="86" selection-end-line="51" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_65/src.zip!/java/awt/Robot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="467" column="7" selection-start-line="467" selection-start-column="7" selection-end-line="467" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.loadui/testFx/3.1.2/757dc5d357396290e1e2f3286d9e1157972d36de/testFx-3.1.2-sources.jar!/org/loadui/testfx/FXScreenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="99" column="9" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/14.0.1/169f11e28e3ed9a64e9fa895eaafb579e6a5aa6c/guava-14.0.1-sources.jar!/com/google/common/util/concurrent/AbstractFuture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="268" column="22" selection-start-line="268" selection-start-column="22" selection-end-line="268" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.loadui/testFx/3.1.2/757dc5d357396290e1e2f3286d9e1157972d36de/testFx-3.1.2-sources.jar!/org/loadui/testfx/GuiTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="555" column="35" selection-start-line="555" selection-start-column="35" selection-end-line="555" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/views/OrderView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+        <state relative-caret-position="-38">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/main/resources/com/pizzaservice/customerpage/main.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-api/src/main/java/com/pizzaservice/api/buissness_objects/PizzaConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-api/src/main/java/com/pizzaservice/api/buissness_objects/PizzaVariation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-common/src/main/java/com/pizzaservice/common/test/DummyFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/resources/com/pizzaservice/kitchenpage/main.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-common/src/main/java/com/pizzaservice/common/test/Result.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="95">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/resources/com/pizzaservice/kitchenpage/views/order.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
-          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+          <caret line="13" column="66" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-common/pizzaservice-common.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="58" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_65/javafx-src.zip!/com/sun/javafx/application/PlatformImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="266" column="23" selection-start-line="266" selection-start-column="23" selection-end-line="266" selection-end-column="23" />
+          <folding>
+            <element signature="e#9485#9486#0" expanded="false" />
+            <element signature="e#9519#9520#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_65/javafx-src.zip!/javafx/application/Platform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="82" column="27" selection-start-line="82" selection-start-column="27" selection-end-line="82" selection-end-column="27" />
+          <folding>
+            <element signature="e#2657#2658#0" expanded="false" />
+            <element signature="e#2704#2705#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-kitchenpage/src/test/java/com/pizzaservice/kitchenpage/KitchenPageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-common/src/main/java/com/pizzaservice/common/test/TestUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/ShowCartFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="69" column="9" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/main/java/com/pizzaservice/customerpage/fragments/Fragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="75" column="24" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
+          <folding>
+            <element signature="e#1362#1363#0" expanded="true" />
+            <element signature="e#1393#1394#0" expanded="true" />
+            <element signature="e#1445#1446#0" expanded="true" />
+            <element signature="e#1485#1486#0" expanded="true" />
+            <element signature="e#1524#1525#0" expanded="true" />
+            <element signature="e#1554#1555#0" expanded="true" />
+            <element signature="e#1607#1608#0" expanded="true" />
+            <element signature="e#1645#1646#0" expanded="true" />
+            <element signature="e#1686#1687#0" expanded="true" />
+            <element signature="e#1717#1718#0" expanded="true" />
+            <element signature="e#1773#1774#0" expanded="true" />
+            <element signature="e#1813#1814#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-kitchenpage/src/main/java/com/pizzaservice/kitchenpage/fragments/Fragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding>
+            <element signature="e#1373#1374#0" expanded="true" />
+            <element signature="e#1404#1405#0" expanded="true" />
+            <element signature="e#1456#1457#0" expanded="true" />
+            <element signature="e#1496#1497#0" expanded="true" />
+            <element signature="e#1535#1536#0" expanded="true" />
+            <element signature="e#1565#1566#0" expanded="true" />
+            <element signature="e#1618#1619#0" expanded="true" />
+            <element signature="e#1656#1657#0" expanded="true" />
+            <element signature="e#1697#1698#0" expanded="true" />
+            <element signature="e#1728#1729#0" expanded="true" />
+            <element signature="e#1784#1785#0" expanded="true" />
+            <element signature="e#1824#1825#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/pizzaservice-customerpage.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="69" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-kitchenpage/pizzaservice-kitchenpage.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="69" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pizzaservice-customerpage/src/test/java/com/pizzaservice/customerpage/CustomerPageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="69" column="39" selection-start-line="69" selection-start-column="39" selection-end-line="69" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2206,7 +2627,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>pizzaservice-kitchenpage_main|pizzaservice-kitchenpage</last-edited>
+          <last-edited>pizzaservice-kitchenpage_test|pizzaservice-kitchenpage</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

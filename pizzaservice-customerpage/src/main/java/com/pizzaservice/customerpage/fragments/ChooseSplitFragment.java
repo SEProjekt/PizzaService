@@ -12,11 +12,12 @@ import java.io.IOException;
  */
 public class ChooseSplitFragment extends Fragment
 {
-    @FXML
-    RadioButton radSplitYes;
+    @FXML RadioButton radSplitYes;
 
-    @FXML
-    RadioButton radSplitNo;
+    @FXML RadioButton radSplitNo;
+
+    @FXML public void actionNext( ActionEvent actionEvent ) { next(); }
+    @FXML public void actionAbort( ActionEvent actionEvent ) { abort(); }
 
     public ChooseSplitFragment( Fragment oldFragment )
     {
@@ -32,24 +33,32 @@ public class ChooseSplitFragment extends Fragment
         radSplitNo.setSelected( true );
     }
 
-    @FXML
-    public void actionNext( ActionEvent actionEvent ) throws IOException
+    public ChooseSplitFragment choose( boolean split )
+    {
+        if( split )
+            radSplitYes.setSelected( true );
+        else
+            radSplitNo.setSelected( true );
+
+        return this;
+    }
+
+    public Fragment next()
     {
         if( radSplitYes.isSelected() )
         {
             session.getCurrentPizzaConfiguration().setSplit( true );
-            setNewFragment( new ChoosePizzaVariationFragment( this, true ) );
+            return setNewFragment( new ChoosePizzaVariationFragment( this, true ) );
         }
         else
         {
             session.getCurrentPizzaConfiguration().setSplit( false );
-            setNewFragment( new ChoosePizzaVariationFragment( this, false ) );
+            return setNewFragment( new ChoosePizzaVariationFragment( this, false ) );
         }
     }
 
-    @FXML
-    public void actionAbort( ActionEvent actionEvent ) throws IOException
+    public Fragment abort()
     {
-        setNewFragment( new MainMenuFragment( this ) );
+        return setNewFragment( new MainMenuFragment( this ) );
     }
 }

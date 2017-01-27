@@ -6,14 +6,14 @@
 <?import com.pizzaservice.customerpage.fragments.Fragment?>
 
 <fx:root xmlns:fx="http://javafx.com/fxml"
-         type="Fragment" spacing="20" alignment="CENTER">
+         type="Fragment" fx:id="fragChoosePizzaVariation" spacing="20" alignment="CENTER">
 
     <Label text="Wähle die Pizza Variation aus:" />
 
     <ChoiceBox fx:id="cbPizzaVariation1" />
 
     <HBox spacing="10" alignment="BOTTOM_CENTER" >
-        <Button text="Abbrechen" onAction="#actionAbort" />
-        <Button text="Weiter" onAction="#actionNext" />
+        <Button fx:id="btnAbort" text="Abbrechen" onAction="#actionAbort" />
+        <Button fx:id="btnNext" text="Weiter" onAction="#actionNext" />
     </HBox>
 </fx:root >

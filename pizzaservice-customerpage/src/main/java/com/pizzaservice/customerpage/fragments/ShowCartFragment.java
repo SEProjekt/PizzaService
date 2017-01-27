@@ -18,17 +18,16 @@ import java.util.List;
  */
 public class ShowCartFragment extends Fragment
 {
+    @FXML VBox vbContainer;
+    @FXML Label lbTotalPrice;
+
+    @FXML public void actionFinish( ActionEvent actionEvent ) { finish(); }
+
     private List<CartItemView> cartItemViews;
-
-    @FXML
-    VBox vbContainer;
-
-    @FXML
-    Label lbTotalPrice;
 
     public ShowCartFragment( Fragment oldFragment )
     {
-        super( "show_card.fxml", oldFragment );
+        super( "show_cart.fxml", oldFragment );
     }
 
     @Override
@@ -55,10 +54,9 @@ public class ShowCartFragment extends Fragment
         updatePrice();
     }
 
-    @FXML
-    public void actionFinished( ActionEvent actionEvent ) throws IOException
+    public Fragment finish()
     {
-        setNewFragment( new MainMenuFragment( this ) );
+        return setNewFragment( new MainMenuFragment( this ) );
     }
 
     private void updatePrice()

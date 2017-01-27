@@ -14,6 +14,11 @@ import java.io.IOException;
  */
 public class MainMenuFragment extends Fragment
 {
+    @FXML public void actionAddPizza( ActionEvent actionEvent ) { addPizza(); }
+    @FXML public void actionShowCart( ActionEvent actionEvent ) { showCart(); }
+    @FXML public void actionFinishOrder( ActionEvent actionEvent ) { finishOrder(); }
+    @FXML public void actionAbortOrder( ActionEvent actionEvent ) { abortOrder(); }
+
     public MainMenuFragment( Pane rootPane, Session session, Database database )
     {
         super( "main_menu.fxml", rootPane, session, database );
@@ -24,28 +29,28 @@ public class MainMenuFragment extends Fragment
         super( "main_menu.fxml", oldFragment );
     }
 
-    @FXML
-    public void actionAddPizza( ActionEvent actionEvent ) throws IOException
+    public Fragment addPizza()
     {
-        setNewFragment( new ChoosePizzaSizeFragment( this ) );
+        return setNewFragment( new ChoosePizzaSizeFragment( this ) );
     }
 
-    @FXML
-    public void actionShowCart( ActionEvent actionEvent ) throws IOException
+    public Fragment showCart()
     {
         if( checkNonEmptyCard() )
-            setNewFragment( new ShowCartFragment( this ) );
+            return setNewFragment( new ShowCartFragment( this ) );
+
+        return null;
     }
 
-    @FXML
-    public void actionFinishOrder( ActionEvent actionEvent ) throws IOException
+    public Fragment finishOrder()
     {
         if( checkNonEmptyCard() )
-            setNewFragment( new FinishOrderFragment( this ) );
+            return setNewFragment( new FinishOrderFragment( this ) );
+
+        return null;
     }
 
-    @FXML
-    public void actionAbortOrder( ActionEvent actionEvent )
+    public void abortOrder()
     {
         System.exit( 0 );
     }

@@ -27,14 +27,13 @@ public class FinishOrderFragment extends Fragment
 {
     public static final int MAX_CHARACTERS = 45;
 
-    @FXML
-    TextField tfFirstName, tfSecondName, tfPhoneNumber;
+    @FXML TextField tfFirstName, tfSecondName, tfPhoneNumber;
+    @FXML ChoiceBox<StoreItem> cbStore;
+    @FXML Text txtBill;
 
-    @FXML
-    ChoiceBox<StoreItem> cbStore;
-
-    @FXML
-    Text txtBill;
+    @FXML public void actionShowBill( ActionEvent actionEvent ) { toggleBill(); }
+    @FXML public void actionSubmitOrder( ActionEvent actionEvent ) { submitOrder(); }
+    @FXML public void actionAbort( ActionEvent actionEvent ) { abort(); }
 
     private boolean billShowing;
 
@@ -50,14 +49,13 @@ public class FinishOrderFragment extends Fragment
         setupBill();
     }
 
-    @FXML
-    public void actionShowBill( ActionEvent actionEvent )
+    public FinishOrderFragment toggleBill()
     {
         showBill( !billShowing );
+        return this;
     }
 
-    @FXML
-    public void actionSubmitOrder( ActionEvent actionEvent )
+    public void submitOrder()
     {
         String firstName = tfFirstName.getText();
         String secondName = tfSecondName.getText();
@@ -82,6 +80,11 @@ public class FinishOrderFragment extends Fragment
         {
             MyUtils.handleDataAccessException( e, this );
         }
+    }
+
+    public Fragment abort()
+    {
+        return setNewFragment( new MainMenuFragment( this ) );
     }
 
     private boolean checkInputs( String firstName, String secondName, String phoneNumber, Store store )
@@ -174,12 +177,6 @@ public class FinishOrderFragment extends Fragment
             pizzaConfiguration.setOrder( order );
             pizzaConfigurationDAO.addPizzaConfiguration( pizzaConfiguration );
         }
-    }
-
-    @FXML
-    public void actionAbort( ActionEvent actionEvent )
-    {
-        setNewFragment( new MainMenuFragment( this ) );
     }
 
     private void setupStoreChoiceBox()

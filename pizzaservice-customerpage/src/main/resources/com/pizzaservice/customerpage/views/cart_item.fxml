@@ -7,12 +7,12 @@
 <?import javafx.scene.control.Separator?>
 
 <fx:root xmlns:fx="http://javafx.com/fxml"
-         type="CartItemView" spacing="10" alignment="CENTER">
+         type="CartItemView" fx:id="viewCartItem" spacing="10" alignment="CENTER">
 
     <GridPane hgap="10">
         <Label fx:id="lbHeader" wrapText="true" style="-fx-font-weight: bold" GridPane.hgrow="ALWAYS" GridPane.columnIndex="0" />
-        <Button text="Info" onAction="#actionToggleExpand" GridPane.columnIndex="1" />
-        <Button text="Entfernen" onAction="#actionDelete" GridPane.columnIndex="2" />
+        <Button fx:id="btnToggleExpand" text="Info" onAction="#actionToggleExpand" GridPane.columnIndex="1" />
+        <Button fx:id="btnDelete" text="Entfernen" onAction="#actionDelete" GridPane.columnIndex="2" />
     </GridPane>
 
     <Text fx:id="txtInfo" />

@@ -46,13 +46,13 @@ public class Utils
      */
     public static void load( URL resource, Object object )
     {
-        FXMLLoader loader = new FXMLLoader( resource );
-
-        loader.setRoot( object );
-        loader.setController( object );
-
         try
         {
+            FXMLLoader loader = new FXMLLoader( resource );
+
+            loader.setRoot( object );
+            loader.setController( object );
+
             loader.load();
         }
         catch( IOException e )

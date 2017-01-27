@@ -6,7 +6,7 @@
 <?import com.pizzaservice.customerpage.fragments.Fragment?>
 
 <fx:root xmlns:fx="http://javafx.com/fxml"
-         type="Fragment" spacing="20" alignment="CENTER">
+         type="Fragment" fx:id="fragFinishPizzaConfiguration" spacing="20" alignment="CENTER">
     <padding><Insets top="10" bottom="10" left="10" right="10" /></padding>
 
     <Label text="Deine Pizza Konfiguration:" />
@@ -14,7 +14,7 @@
     <Label fx:id="lbConfiguration" wrapText="true" />
 
     <HBox spacing="10" alignment="BOTTOM_CENTER" maxWidth="Infinity">
-        <Button text="Abbrechen" onAction="#actionAbort" />
-        <Button text="Fertig" onAction="#actionFinish" />
+        <Button fx:id="btnAbort" text="Abbrechen" onAction="#actionAbort" />
+        <Button fx:id="btnFinish" text="Fertig" onAction="#actionFinish" />
     </HBox>
 </fx:root>

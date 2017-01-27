@@ -18,14 +18,14 @@ public class CartItemView extends VBox
         void onDelete( CartItemView instance );
     }
 
+    @FXML Label lbHeader;
+    @FXML Text txtInfo;
+
+    @FXML public void actionToggleExpand() { toggleExpanded(); }
+    @FXML public void actionDelete() { delete(); }
+
     private boolean expanded = false;
     private OnDeleteListener onDeleteListener = null;
-
-    @FXML
-    Label lbHeader;
-
-    @FXML
-    Text txtInfo;
 
     public CartItemView( PizzaConfiguration configuration )
     {
@@ -42,13 +42,13 @@ public class CartItemView extends VBox
         setExpanded( false );
     }
 
-    public void setOnDeleteListener( OnDeleteListener onDeleteListener )
+    public void delete()
     {
-        this.onDeleteListener = onDeleteListener;
+        if( onDeleteListener != null )
+            onDeleteListener.onDelete( this );
     }
 
-    @FXML
-    public void actionToggleExpand()
+    public void toggleExpanded()
     {
         setExpanded( !expanded );
     }
@@ -61,10 +61,8 @@ public class CartItemView extends VBox
         this.expanded = expanded;
     }
 
-    @FXML
-    public void actionDelete()
+    public void setOnDeleteListener( OnDeleteListener onDeleteListener )
     {
-        if( onDeleteListener != null )
-            onDeleteListener.onDelete( this );
+        this.onDeleteListener = onDeleteListener;
     }
 }

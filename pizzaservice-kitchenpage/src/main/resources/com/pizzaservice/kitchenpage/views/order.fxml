@@ -6,7 +6,7 @@
 <?import com.pizzaservice.kitchenpage.views.OrderView?>
 
 <fx:root xmlns:fx="http://javafx.com/fxml"
-         type="OrderView" spacing="10" alignment="CENTER">
+         type="OrderView" fx:id="viewOrder" spacing="10" alignment="CENTER">
     <Separator />
     <Label fx:id="lbOrderId" />
     <Button fx:id="btnChangeState" onAction="#actionChangeState" />

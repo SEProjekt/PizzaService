@@ -14,12 +14,12 @@ import java.io.IOException;
  */
 public class ChoosePizzaSizeFragment extends Fragment
 {
-    @FXML
-    RadioButton radSizeSmall;
-    @FXML
-    RadioButton radSizeLarge;
-    @FXML
-    RadioButton radSizeXLarge;
+    @FXML RadioButton radSizeSmall;
+    @FXML RadioButton radSizeLarge;
+    @FXML RadioButton radSizeXLarge;
+
+    @FXML public void actionNext( ActionEvent actionEvent ) { next(); }
+    @FXML public void actionAbort( ActionEvent actionEvent ) { abort(); }
 
     public ChoosePizzaSizeFragment( Fragment oldFragment )
     {
@@ -36,8 +36,19 @@ public class ChoosePizzaSizeFragment extends Fragment
         radSizeSmall.setSelected( true );
     }
 
-    @FXML
-    public void actionNext( ActionEvent actionEvent ) throws IOException
+    public ChoosePizzaSizeFragment choose( PizzaSize pizzaSize )
+    {
+        if( pizzaSize == PizzaSize.SMALL )
+            radSizeSmall.setSelected( true );
+        else if( pizzaSize == PizzaSize.LARGE )
+            radSizeLarge.setSelected( true );
+        else
+            radSizeXLarge.setSelected( true );
+
+        return this;
+    }
+
+    public Fragment next()
     {
         PizzaConfiguration pizzaConfiguration = new PizzaConfiguration();
         session.setCurrentPizzaConfiguration( pizzaConfiguration );
@@ -46,7 +57,7 @@ public class ChoosePizzaSizeFragment extends Fragment
         {
             pizzaConfiguration.setPizzaSize( PizzaSize.SMALL );
 
-            setNewFragment( new ChoosePizzaVariationFragment( this, false ) );
+            return setNewFragment( new ChoosePizzaVariationFragment( this, false ) );
         }
         else
         {
@@ -55,13 +66,12 @@ public class ChoosePizzaSizeFragment extends Fragment
             else
                 pizzaConfiguration.setPizzaSize( PizzaSize.X_LARGE );
 
-            setNewFragment( new ChooseSplitFragment( this ) );
+            return setNewFragment( new ChooseSplitFragment( this ) );
         }
     }
 
-    @FXML
-    public void actionAbort( ActionEvent actionEvent ) throws IOException
+    public Fragment abort()
     {
-        setNewFragment( new MainMenuFragment( this ) );
+        return setNewFragment( new MainMenuFragment( this ) );
     }
 }

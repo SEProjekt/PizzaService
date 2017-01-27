@@ -19,7 +19,7 @@ import java.io.IOException;
 public class Main extends Application
 {
     @FXML
-    Pane rootPane;
+    Pane contentPane;
 
     @Override
     public void start( Stage primaryStage ) throws Exception
@@ -32,14 +32,14 @@ public class Main extends Application
     }
 
     @FXML
-    public void initialize() throws IOException
+    public void initialize()
     {
         Database db = new Database( Utils.getConnectionParams() );
 
-        ChooseStoreFragment chooseStoreFragment = new ChooseStoreFragment( rootPane, new Session(), db );
+        ChooseStoreFragment chooseStoreFragment = new ChooseStoreFragment( contentPane, new Session(), db );
 
-        rootPane.getChildren().clear();
-        rootPane.getChildren().add( chooseStoreFragment );
+        contentPane.getChildren().clear();
+        contentPane.getChildren().add( chooseStoreFragment );
 
         chooseStoreFragment.setup();
     }

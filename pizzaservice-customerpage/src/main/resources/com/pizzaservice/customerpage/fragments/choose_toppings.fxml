@@ -6,7 +6,7 @@
 <?import javafx.geometry.Insets?>
 <?import com.pizzaservice.customerpage.fragments.Fragment?>
 <fx:root xmlns:fx="http://javafx.com/fxml"
-         type="Fragment" spacing="20" alignment="CENTER">
+         type="Fragment" fx:id="fragChooseToppings" spacing="20" alignment="CENTER">
     <padding><Insets top="10" bottom="10" left="10" right="10" /></padding>
 
     <Label text="Wähle deine Topppings:" />
@@ -16,7 +16,7 @@
     </VBox>
 
     <HBox spacing="10" alignment="BOTTOM_CENTER" maxWidth="Infinity">
-        <Button text="Abbrechen" onAction="#actionAbort" />
-        <Button text="Weiter" onAction="#actionNext" />
+        <Button fx:id="btnAbort" text="Abbrechen" onAction="#actionAbort" />
+        <Button fx:id="btnNext" text="Weiter" onAction="#actionNext" />
     </HBox>
 </fx:root>

@@ -1,6 +1,7 @@
 package com.pizzaservice.customerpage.fragments;
 
 import com.pizzaservice.api.buissness_objects.PizzaConfiguration;
+import com.pizzaservice.api.buissness_objects.PizzaSize;
 import com.pizzaservice.api.buissness_objects.PizzaVariation;
 import com.pizzaservice.customerpage.MyUtils;
 import com.pizzaservice.api.data_access_objects.DataAccessException;
@@ -22,11 +23,11 @@ import java.util.Collection;
  */
 public class ChoosePizzaVariationFragment extends Fragment
 {
-    @FXML
-    ChoiceBox<PizzaVariationItem> cbPizzaVariation1;
+    @FXML ChoiceBox<PizzaVariationItem> cbPizzaVariation1;
+    @FXML ChoiceBox<PizzaVariationItem> cbPizzaVariation2;
 
-    @FXML
-    ChoiceBox<PizzaVariationItem> cbPizzaVariation2;
+    @FXML public void actionNext( ActionEvent actionEvent ) { next(); }
+    @FXML public void actionAbort( ActionEvent actionEvent ) { abort(); }
 
     public ChoosePizzaVariationFragment( Fragment oldFragment, boolean split )
     {
@@ -45,7 +46,6 @@ public class ChoosePizzaVariationFragment extends Fragment
             // if split - set items for second choice box
             if( session.getCurrentPizzaConfiguration().isSplit() )
                 cbPizzaVariation2.setItems( FXCollections.observableArrayList( variationItems ) );
-
         }
         catch( DataAccessException e )
         {
@@ -53,20 +53,26 @@ public class ChoosePizzaVariationFragment extends Fragment
         }
     }
 
-    @FXML
-    public void actionAbort( ActionEvent actionEvent ) throws IOException
+    public ChoosePizzaVariationFragment choose( int pizzaVariationIndex )
     {
-        setNewFragment( new MainMenuFragment( this ) );
+        cbPizzaVariation1.getSelectionModel().select( pizzaVariationIndex );
+        return this;
     }
 
-    @FXML
-    public void actionNext( ActionEvent actionEvent ) throws IOException
+    public ChoosePizzaVariationFragment choose( int pizzaVariationIndex1, int pizzaVariationIndex2 )
+    {
+        cbPizzaVariation1.getSelectionModel().select( pizzaVariationIndex1 );
+        cbPizzaVariation2.getSelectionModel().select( pizzaVariationIndex2 );
+        return this;
+    }
+
+    public Fragment next()
     {
         PizzaVariationItem selectedItem1 = cbPizzaVariation1.getValue();
         if( selectedItem1 == null )
         {
             Utils.showInputErrorMessage( "Es wurde noch keine Variation ausgewählt!" );
-            return;
+            return null;
         }
 
         PizzaConfiguration currentConfiguration = session.getCurrentPizzaConfiguration();
@@ -78,13 +84,18 @@ public class ChoosePizzaVariationFragment extends Fragment
             if( selectedItem2 == null )
             {
                 Utils.showInputErrorMessage( "Es wurde noch keine Variation ausgewählt!" );
-                return;
+                return null;
             }
 
             currentConfiguration.setPizzaVariation2( selectedItem2.getPizzaVariation() );
         }
 
-        setNewFragment( new ChooseToppingsFragment( this ) );
+        return setNewFragment( new ChooseToppingsFragment( this ) );
+    }
+
+    public Fragment abort()
+    {
+        return setNewFragment( new MainMenuFragment( this ) );
     }
 
     private Collection<PizzaVariationItem> getPizzaVariationItems() throws DataAccessException

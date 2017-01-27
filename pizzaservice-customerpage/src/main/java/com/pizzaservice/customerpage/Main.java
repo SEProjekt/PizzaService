@@ -16,7 +16,7 @@ import java.io.IOException;
 public class Main extends Application
 {
     @FXML
-    Pane rootPane;
+    Pane contentPane;
 
     @Override
     public void start( Stage primaryStage ) throws Exception
@@ -29,21 +29,16 @@ public class Main extends Application
     }
 
     @FXML
-    public void initialize() throws IOException
+    public void initialize()
     {
         Database db = new Database( Utils.getConnectionParams() );
 
-        MainMenuFragment mainMenuFragment = new MainMenuFragment( rootPane, new Session(), db );
+        MainMenuFragment mainMenuFragment = new MainMenuFragment( contentPane, new Session(), db );
 
-        rootPane.getChildren().clear();
-        rootPane.getChildren().add( mainMenuFragment );
+        contentPane.getChildren().clear();
+        contentPane.getChildren().add( mainMenuFragment );
 
         mainMenuFragment.setup();
-    }
-
-    public Pane getRootPane()
-    {
-        return rootPane;
     }
 
     public static void main( String[] args )

@@ -1,5 +1,6 @@
 package com.pizzaservice.customerpage.views;
 
+import com.pizzaservice.api.buissness_objects.Topping;
 import com.pizzaservice.common.Utils;
 import com.pizzaservice.common.items.ToppingItem;
 import javafx.collections.FXCollections;
@@ -28,11 +29,12 @@ public class ToppingSelectorView extends GridPane
         void onDelete( ToppingSelectorView instance );
     }
 
+    @FXML ChoiceBox<ToppingItem> cbTopping;
+
+    @FXML public void actionDelete() { delete(); }
+
     private OnToppingItemChangedListener onToppingItemChangedListener;
     private OnDeleteListener onDeleteListener;
-
-    @FXML
-    ChoiceBox<ToppingItem> cbTopping;
 
     public ToppingSelectorView( List<ToppingItem> toppingItems )
     {
@@ -43,11 +45,28 @@ public class ToppingSelectorView extends GridPane
         setupToppingChoiceBox( toppingItems );
     }
 
-    public void setOnToppingItemChangedListener( OnToppingItemChangedListener onToppingItemChangedListener )
+    public void delete()
     {
-        this.onToppingItemChangedListener = onToppingItemChangedListener;
+        if( onDeleteListener != null )
+            onDeleteListener.onDelete( this );
     }
 
+    public void select( int index )
+    {
+        cbTopping.getSelectionModel().select( index );
+    }
+
+    public ToppingItem getSelectedToppingItem()
+    {
+        return cbTopping.getValue();
+    }
+
+    public List<ToppingItem> getToppingItems()
+    {
+        return cbTopping.getItems();
+    }
+
+    public void setOnToppingItemChangedListener( OnToppingItemChangedListener onToppingItemChangedListener ) { this.onToppingItemChangedListener = onToppingItemChangedListener; }
     public void setOnDeleteListener( OnDeleteListener onDeleteListener )
     {
         this.onDeleteListener = onDeleteListener;
@@ -61,22 +80,5 @@ public class ToppingSelectorView extends GridPane
             if( onToppingItemChangedListener != null )
                 onToppingItemChangedListener.onToppingItemChanged( oldItem, newItem, this );
         } );
-    }
-
-    @FXML
-    public void actionDelete()
-    {
-        if( onDeleteListener != null )
-            onDeleteListener.onDelete( this );
-    }
-
-    public ToppingItem getSelectedToppingItem()
-    {
-        return cbTopping.getValue();
-    }
-
-    public List<ToppingItem> getToppingItems()
-    {
-        return cbTopping.getItems();
     }
 }

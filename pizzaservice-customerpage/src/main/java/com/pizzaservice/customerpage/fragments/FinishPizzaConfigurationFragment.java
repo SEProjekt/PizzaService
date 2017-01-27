@@ -12,8 +12,13 @@ import java.io.IOException;
  */
 public class FinishPizzaConfigurationFragment extends Fragment
 {
-    @FXML
-    Label lbConfiguration;
+    @FXML Label lbConfiguration;
+
+    @FXML public void actionFinish( ActionEvent actionEvent ) { finish(); }
+    @FXML public void actionAbort( ActionEvent actionEvent )
+    {
+        abort();
+    }
 
     public FinishPizzaConfigurationFragment( Fragment oldFragment )
     {
@@ -27,16 +32,14 @@ public class FinishPizzaConfigurationFragment extends Fragment
         lbConfiguration.setText( configurationItem.toString() );
     }
 
-    @FXML
-    public void actionAbort( ActionEvent actionEvent ) throws IOException
-    {
-        setNewFragment( new MainMenuFragment( this ) );
-    }
-
-    @FXML
-    public void actionFinish( ActionEvent actionEvent ) throws IOException
+    public Fragment finish()
     {
         session.getPizzaConfigurations().add( session.getCurrentPizzaConfiguration() );
-        setNewFragment( new MainMenuFragment( this ) );
+        return setNewFragment( new MainMenuFragment( this ) );
+    }
+
+    public Fragment abort()
+    {
+        return setNewFragment( new MainMenuFragment( this ) );
     }
 }

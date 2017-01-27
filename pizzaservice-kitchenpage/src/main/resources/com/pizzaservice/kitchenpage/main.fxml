@@ -4,7 +4,7 @@
 
 <ScrollPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.pizzaservice.kitchenpage.Main"
             fitToWidth="true" fitToHeight="true">
-    <StackPane fx:id="rootPane">
+    <StackPane fx:id="contentPane">
         <padding><Insets top="10" bottom="10" left="10" right="10"/></padding>
     </StackPane>
 </ScrollPane>

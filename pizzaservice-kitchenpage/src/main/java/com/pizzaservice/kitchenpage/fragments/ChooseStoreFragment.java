@@ -15,8 +15,9 @@ import javafx.scene.layout.Pane;
  */
 public class ChooseStoreFragment extends Fragment
 {
-    @FXML
-    ChoiceBox<StoreItem> cbStore;
+    @FXML ChoiceBox<StoreItem> cbStore;
+
+    @FXML public void actionShowOrders() { showOrders(); }
 
     public ChooseStoreFragment( Pane rootPane, Session session, Database database )
     {
@@ -36,18 +37,17 @@ public class ChooseStoreFragment extends Fragment
         }
     }
 
-    @FXML
-    public void actionShowOrders()
+    public Fragment showOrders()
     {
         StoreItem selectedStoreItem = cbStore.getValue();
         if( selectedStoreItem == null )
         {
             Utils.showInputErrorMessage( "Bitte wählen Sie eine Filiale!" );
-            return;
+            return null;
         }
 
         session.setStore( selectedStoreItem.getStore() );
 
-        setNewFragment( new ShowOrdersFragment( this ) );
+        return setNewFragment( new ShowOrdersFragment( this ) );
     }
 }

@@ -4,8 +4,8 @@
 <?import com.pizzaservice.customerpage.fragments.Fragment?>
 
 <fx:root xmlns:fx="http://javafx.com/fxml"
-         type="Fragment" spacing="20" alignment="CENTER">
+         type="Fragment" fx:id="fragShowCart" spacing="20" alignment="CENTER">
     <VBox fx:id="vbContainer" alignment="CENTER" spacing="10" />
     <Label fx:id="lbTotalPrice" style="-fx-font-weight: bold" />
-    <Button text="Fertig" onAction="#actionFinished" />
+    <Button fx:id="btnFinish" text="Fertig" onAction="#actionFinish" />
 </fx:root>

@@ -15,7 +15,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -25,6 +24,11 @@ import java.util.List;
  */
 public class ChooseToppingsFragment extends Fragment
 {
+    @FXML VBox vbContainer;
+
+    @FXML public void actionNext( ActionEvent actionEvent ) { next(); }
+    @FXML public void actionAbort( ActionEvent actionEvent ) { abort(); }
+
     /**
      * Button to add a topping selector. This button will be displayed under the list of topping selectors
      * and not be displayed when the maximum number of toppings is reached.
@@ -49,9 +53,6 @@ public class ChooseToppingsFragment extends Fragment
      * and must also be updated whenever a topping is selected.
      */
     private List<ToppingItem> toppingItems;
-
-    @FXML
-    VBox vbContainer;
 
     public ChooseToppingsFragment( Fragment oldFragment )
     {
@@ -79,14 +80,24 @@ public class ChooseToppingsFragment extends Fragment
         }
     }
 
-    @FXML
-    public void actionAbort( ActionEvent actionEvent ) throws IOException
+    public ChooseToppingsFragment addToppingSelector( int toppingIndex )
     {
-        setNewFragment( new MainMenuFragment( this ) );
+        ToppingSelectorView selector = addToppingSelector();
+        if( selector == null )
+            return this;
+
+        selector.select( toppingIndex );
+
+        return this;
     }
 
-    @FXML
-    public void actionNext( ActionEvent actionEvent ) throws IOException
+    public ChooseToppingsFragment deleteToppingSelector( int selectorIndex )
+    {
+        deleteToppingSelector( toppingSelectorViews.get( selectorIndex ) );
+        return this;
+    }
+
+    public Fragment next()
     {
         PizzaConfiguration currentConfiguration = session.getCurrentPizzaConfiguration();
 
@@ -98,7 +109,7 @@ public class ChooseToppingsFragment extends Fragment
             if( selectedToppingItem == null )
             {
                 Utils.showInputErrorMessage( "Bitte wähle deine Toppings aus!" );
-                return;
+                return null;
             }
 
             toppings.add( selectedToppingItem.getTopping() );
@@ -106,7 +117,12 @@ public class ChooseToppingsFragment extends Fragment
 
         currentConfiguration.setToppings( toppings );
 
-        setNewFragment( new FinishPizzaConfigurationFragment( this ) );
+        return setNewFragment( new FinishPizzaConfigurationFragment( this ) );
+    }
+
+    public Fragment abort()
+    {
+        return setNewFragment( new MainMenuFragment( this ) );
     }
 
     private void setupToppingItems() throws DataAccessException
@@ -133,26 +149,15 @@ public class ChooseToppingsFragment extends Fragment
             maxToppingCount = 5;
     }
 
-    private void addToppingSelector()
+    private ToppingSelectorView addToppingSelector()
     {
+        if( toppingSelectorViews.size() >= maxToppingCount )
+            return null;
+
         ToppingSelectorView nextToppingSelectorView = new ToppingSelectorView( toppingItems );
 
         nextToppingSelectorView.setOnToppingItemChangedListener( this::updateToppingSelectors );
-
-        nextToppingSelectorView.setOnDeleteListener( instance ->
-        {
-            // selected item becomes available now -> update
-            ToppingItem selectedItem = instance.getSelectedToppingItem();
-            if( selectedItem != null )
-                updateToppingSelectors( selectedItem, null, instance );
-
-            // if we reached the max number of toppings we have to add the "add topping" button back again
-            if( toppingSelectorViews.size() == maxToppingCount )
-                vbContainer.getChildren().add( btnAddToppingSelector );
-
-            toppingSelectorViews.remove( instance );
-            vbContainer.getChildren().remove( instance );
-        } );
+        nextToppingSelectorView.setOnDeleteListener( this::deleteToppingSelector );
 
         toppingSelectorViews.add( nextToppingSelectorView );
         vbContainer.getChildren().add( vbContainer.getChildren().size() - 1, nextToppingSelectorView );
@@ -161,6 +166,8 @@ public class ChooseToppingsFragment extends Fragment
         int selectorCount = toppingSelectorViews.size();
         if( selectorCount == maxToppingCount )
             vbContainer.getChildren().remove( btnAddToppingSelector );
+
+        return nextToppingSelectorView;
     }
 
     /**
@@ -188,5 +195,20 @@ public class ChooseToppingsFragment extends Fragment
 
         if( oldItem != null ) toppingItems.add( oldItem );
         if( newItem != null ) toppingItems.remove( newItem );
+    }
+
+    private void deleteToppingSelector( ToppingSelectorView selector )
+    {
+        // selected item becomes available now -> update
+        ToppingItem selectedItem = selector.getSelectedToppingItem();
+        if( selectedItem != null )
+            updateToppingSelectors( selectedItem, null, selector );
+
+        // if we reached the max number of toppings we have to add the "add topping" button back again
+        if( toppingSelectorViews.size() == maxToppingCount )
+            vbContainer.getChildren().add( btnAddToppingSelector );
+
+        toppingSelectorViews.remove( selector );
+        vbContainer.getChildren().remove( selector );
     }
 }

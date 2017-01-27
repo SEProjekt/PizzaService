@@ -20,10 +20,14 @@ import java.util.List;
  */
 public class ShowOrdersFragment extends Fragment
 {
-    private List<OrderView> orderViews;
+    @FXML VBox vbContainer;
 
-    @FXML
-    VBox vbContainer;
+    @FXML public void actionUpdateOrders()
+    {
+        updateOrders();
+    }
+
+    private List<OrderView> orderViews;
 
     public ShowOrdersFragment( Fragment oldFragment )
     {
@@ -35,13 +39,7 @@ public class ShowOrdersFragment extends Fragment
         updateOrders();
     }
 
-    @FXML
-    public void actionUpdateOrders()
-    {
-        updateOrders();
-    }
-
-    private void updateOrders()
+    public ShowOrdersFragment updateOrders()
     {
         vbContainer.getChildren().clear();
         orderViews = new ArrayList<>();
@@ -71,6 +69,8 @@ public class ShowOrdersFragment extends Fragment
         {
             MyUtils.handleDataAccessException( e );
         }
+
+        return this;
     }
 
     private void orderStateChanged( OrderView orderView )

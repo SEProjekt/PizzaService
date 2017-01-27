@@ -3,7 +3,7 @@
 
 <?import javafx.scene.layout.VBox?>
 <fx:root xmlns:fx="http://javafx.com/fxml"
-         type="Fragment" spacing="20" alignment="CENTER">
-    <Button text="Aktualisieren" onAction="#actionUpdateOrders" />
+         type="Fragment" fx:id="fragShowOrders" spacing="20" alignment="CENTER">
+    <Button fx:id="btnUpdateOrders" text="Aktualisieren" onAction="#actionUpdateOrders" />
     <VBox fx:id="vbContainer" alignment="CENTER" spacing="10" />
 </fx:root>

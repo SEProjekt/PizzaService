@@ -32,19 +32,54 @@ public class Fragment extends VBox
     {
         super();
 
-        this.rootPane = oldFragment.rootPane;
-        this.session = oldFragment.session;
-        this.database = oldFragment.database;
+        this.rootPane = oldFragment.getRootPane();
+        this.session = oldFragment.getSession();
+        this.database = oldFragment.getDatabase();
 
         Utils.load( getClass().getResource( filename ), this );
     }
 
     public void setup() {}
 
-    public void setNewFragment( Fragment newFragment )
+    public Fragment setNewFragment( Fragment newFragment )
     {
+        if( newFragment == null )
+            return null;
+
         rootPane.getChildren().clear();
         rootPane.getChildren().add( newFragment );
         newFragment.setup();
+
+        return newFragment;
+    }
+
+    public Pane getRootPane()
+    {
+        return rootPane;
+    }
+
+    public void setRootPane( Pane rootPane )
+    {
+        this.rootPane = rootPane;
+    }
+
+    public Session getSession()
+    {
+        return session;
+    }
+
+    public void setSession( Session session )
+    {
+        this.session = session;
+    }
+
+    public Database getDatabase()
+    {
+        return database;
+    }
+
+    public void setDatabase( Database database )
+    {
+        this.database = database;
     }
 }

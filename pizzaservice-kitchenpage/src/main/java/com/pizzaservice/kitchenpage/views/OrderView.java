@@ -18,17 +18,14 @@ public class OrderView extends VBox
         void onOrderStateChanged( OrderView instance );
     }
 
+    @FXML Label lbOrderId;
+    @FXML Button btnChangeState;
+    @FXML Text txtOrderContent;
+
+    @FXML public void actionChangeState() { changeState(); }
+
     private Order order;
     private OnOrderStateChangedListener onOrderStateChangedListener = null;
-
-    @FXML
-    Label lbOrderId;
-
-    @FXML
-    Button btnChangeState;
-
-    @FXML
-    Text txtOrderContent;
 
     public OrderView( Order order )
     {
@@ -43,20 +40,21 @@ public class OrderView extends VBox
         setupOrderContentText();
     }
 
-    @FXML
-    public void actionChangeState()
+    public OrderView changeState()
     {
         OrderState state = order.getState();
         if( state == OrderState.NEW )
             order.setState( OrderState.COOKING );
         else if( state == OrderState.COOKING )
             order.setState( OrderState.FINISHED );
-        else return;
+        else return this;
 
         updateChangeStateButton();
 
         if( onOrderStateChangedListener != null )
             onOrderStateChangedListener.onOrderStateChanged( this );
+
+        return this;
     }
 
     public Order getOrder()
