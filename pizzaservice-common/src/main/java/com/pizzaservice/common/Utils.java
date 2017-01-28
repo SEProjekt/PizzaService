@@ -75,8 +75,8 @@ public class Utils
     public static ConnectionParams getConnectionParams()
     {
         return new ConnectionParams(
-            "root",
-            "m13u21m13PPILIHP",
+            "PizzaServiceUser",
+            "PizzaService",
             "mysql",
             "localhost",
             "3306",

@@ -43,9 +43,6 @@ public class Fragment extends VBox
 
     public Fragment setNewFragment( Fragment newFragment )
     {
-        if( newFragment == null )
-            return null;
-
         rootPane.getChildren().clear();
         rootPane.getChildren().add( newFragment );
         newFragment.setup();

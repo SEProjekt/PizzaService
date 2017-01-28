@@ -43,7 +43,7 @@ public class ChooseStoreFragment extends Fragment
         if( selectedStoreItem == null )
         {
             Utils.showInputErrorMessage( "Bitte wählen Sie eine Filiale!" );
-            return null;
+            return this;
         }
 
         session.setStore( selectedStoreItem.getStore() );

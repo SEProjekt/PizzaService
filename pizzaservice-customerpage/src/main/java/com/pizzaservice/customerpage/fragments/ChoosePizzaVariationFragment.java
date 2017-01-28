@@ -72,7 +72,7 @@ public class ChoosePizzaVariationFragment extends Fragment
         if( selectedItem1 == null )
         {
             Utils.showInputErrorMessage( "Es wurde noch keine Variation ausgewählt!" );
-            return null;
+            return this;
         }
 
         PizzaConfiguration currentConfiguration = session.getCurrentPizzaConfiguration();
@@ -84,7 +84,7 @@ public class ChoosePizzaVariationFragment extends Fragment
             if( selectedItem2 == null )
             {
                 Utils.showInputErrorMessage( "Es wurde noch keine Variation ausgewählt!" );
-                return null;
+                return this;
             }
 
             currentConfiguration.setPizzaVariation2( selectedItem2.getPizzaVariation() );

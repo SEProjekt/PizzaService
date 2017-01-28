@@ -39,7 +39,7 @@ public class MainMenuFragment extends Fragment
         if( checkNonEmptyCard() )
             return setNewFragment( new ShowCartFragment( this ) );
 
-        return null;
+        return this;
     }
 
     public Fragment finishOrder()
@@ -47,7 +47,7 @@ public class MainMenuFragment extends Fragment
         if( checkNonEmptyCard() )
             return setNewFragment( new FinishOrderFragment( this ) );
 
-        return null;
+        return this;
     }
 
     public void abortOrder()

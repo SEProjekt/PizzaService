@@ -109,7 +109,7 @@ public class ChooseToppingsFragment extends Fragment
             if( selectedToppingItem == null )
             {
                 Utils.showInputErrorMessage( "Bitte wähle deine Toppings aus!" );
-                return null;
+                return this;
             }
 
             toppings.add( selectedToppingItem.getTopping() );
