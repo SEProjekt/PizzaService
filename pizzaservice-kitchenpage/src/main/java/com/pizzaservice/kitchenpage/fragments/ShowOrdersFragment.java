@@ -48,7 +48,7 @@ public class ShowOrdersFragment extends Fragment
         {
             Store store = session.getStore();
 
-            OrderDAO orderDAO = new OrderDatabaseDAO( database );
+            OrderDAO orderDAO = daoBundle.getOrderDAO();
             orderDAO.getOrdersOfStore( store );
 
             Collection<Order> orders = store.getOrders();
@@ -79,7 +79,7 @@ public class ShowOrdersFragment extends Fragment
 
         try
         {
-            OrderDAO orderDAO = new OrderDatabaseDAO( database );
+            OrderDAO orderDAO = daoBundle.getOrderDAO();
             orderDAO.updateOrder( order );
         }
         catch( DataAccessException e )

@@ -1,5 +1,6 @@
 package com.pizzaservice.kitchenpage.fragments;
 
+import com.pizzaservice.api.data_access_objects.DAOBundle;
 import com.pizzaservice.common.Utils;
 import com.pizzaservice.common.items.StoreItem;
 import com.pizzaservice.api.data_access_objects.DataAccessException;
@@ -19,9 +20,9 @@ public class ChooseStoreFragment extends Fragment
 
     @FXML public void actionShowOrders() { showOrders(); }
 
-    public ChooseStoreFragment( Pane rootPane, Session session, Database database )
+    public ChooseStoreFragment( Pane rootPane, Session session, DAOBundle daoBundle )
     {
-        super( "choose_store.fxml", rootPane, session, database );
+        super( "choose_store.fxml", rootPane, session, daoBundle );
     }
 
     @Override
@@ -29,7 +30,7 @@ public class ChooseStoreFragment extends Fragment
     {
         try
         {
-            StoreItem.setupChoiceBox( cbStore, database );
+            StoreItem.setupChoiceBox( cbStore, daoBundle );
         }
         catch( DataAccessException e )
         {
@@ -43,7 +44,7 @@ public class ChooseStoreFragment extends Fragment
         if( selectedStoreItem == null )
         {
             Utils.showInputErrorMessage( "Bitte wählen Sie eine Filiale!" );
-            return null;
+            return this;
         }
 
         session.setStore( selectedStoreItem.getStore() );

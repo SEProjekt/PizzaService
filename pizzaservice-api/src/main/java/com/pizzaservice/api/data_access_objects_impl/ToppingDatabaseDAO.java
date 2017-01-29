@@ -2,6 +2,7 @@ package com.pizzaservice.api.data_access_objects_impl;
 
 import com.pizzaservice.api.buissness_objects.Topping;
 import com.pizzaservice.api.buissness_objects.Recipe;
+import com.pizzaservice.api.data_access_objects.DAOBundle;
 import com.pizzaservice.api.data_access_objects.DataAccessException;
 import com.pizzaservice.api.data_access_objects.RecipeDAO;
 import com.pizzaservice.api.data_access_objects.ToppingDAO;
@@ -9,9 +10,7 @@ import com.pizzaservice.api.db.Database;
 import com.pizzaservice.api.db.Row;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by philipp on 10.01.17.
@@ -23,13 +22,29 @@ public class ToppingDatabaseDAO extends DatabaseDAO implements ToppingDAO
     public static final int COLUMN_PRICE = 3;
     public static final int COLUMN_ID_RECIPE = 4;
 
-    public ToppingDatabaseDAO( Database database ) { super( database ); }
+    private static int queryCounter = 0;
+
+    private Hashtable<Long, Topping> cache = new Hashtable<>();
+
+    public ToppingDatabaseDAO( Database database, DAOBundle daoBundle )
+    {
+        super( database, daoBundle );
+    }
 
     @Override
     public Topping findToppingById( long id ) throws DataAccessException
     {
+        if( id == 0 )
+            return null;
+
+        Topping cachedTopping = cache.get( id );
+        if( cachedTopping != null )
+            return cachedTopping;
+
         try
         {
+            System.out.println( "Topping query number: " + ++queryCounter );
+
             Topping topping = new Topping();
 
             String query = "SELECT * FROM toppings WHERE id = ?";
@@ -39,6 +54,8 @@ public class ToppingDatabaseDAO extends DatabaseDAO implements ToppingDAO
             if( !found )
                 return null;
 
+            cache.put( topping.getId(), topping );
+
             return topping;
         }
         catch( Exception e ) { throw handleException( e ); }
@@ -47,8 +64,11 @@ public class ToppingDatabaseDAO extends DatabaseDAO implements ToppingDAO
     @Override
     public Collection<Topping> getToppings() throws DataAccessException
     {
+        System.out.println( "Topping query number: " + ++queryCounter );
+
         try
         {
+            cache = new Hashtable<>();
             Collection<Topping> toppings = new ArrayList<>();
 
             String query = "SELECT * FROM toppings";
@@ -56,7 +76,9 @@ public class ToppingDatabaseDAO extends DatabaseDAO implements ToppingDAO
             {
                 Topping topping = new Topping();
                 processTopping( topping, row );
+
                 toppings.add( topping );
+                cache.put( topping.getId(), topping );
             } );
 
             return toppings;
@@ -76,7 +98,7 @@ public class ToppingDatabaseDAO extends DatabaseDAO implements ToppingDAO
     {
         long idRecipe = row.getLong( COLUMN_ID_RECIPE );
 
-        RecipeDAO recipeDAO = new RecipeDatabaseDAO( database );
+        RecipeDAO recipeDAO = daoBundle.getRecipeDAO();
 
         Recipe recipe = recipeDAO.findRecipeById( idRecipe );
         if( recipe == null )

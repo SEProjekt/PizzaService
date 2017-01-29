@@ -1,10 +1,7 @@
 package com.pizzaservice.api.data_access_objects_impl;
 
 import com.pizzaservice.api.buissness_objects.*;
-import com.pizzaservice.api.data_access_objects.DataAccessException;
-import com.pizzaservice.api.data_access_objects.PizzaConfigurationDAO;
-import com.pizzaservice.api.data_access_objects.PizzaVariationDAO;
-import com.pizzaservice.api.data_access_objects.ToppingDAO;
+import com.pizzaservice.api.data_access_objects.*;
 import com.pizzaservice.api.db.Row;
 import com.pizzaservice.api.db.Database;
 
@@ -31,9 +28,11 @@ public class PizzaConfigurationDatabaseDAO extends DatabaseDAO implements PizzaC
     public static final int COLUMN_ID_TOPPING_4 = 10;
     public static final int COLUMN_ID_TOPPING_5 = 11;
 
-    public PizzaConfigurationDatabaseDAO( Database database )
+    private static int queryCounter = 0;
+
+    public PizzaConfigurationDatabaseDAO( Database database, DAOBundle daoBundle )
     {
-        super( database );
+        super( database, daoBundle );
     }
 
     @Override
@@ -61,6 +60,8 @@ public class PizzaConfigurationDatabaseDAO extends DatabaseDAO implements PizzaC
     @Override
     public void getPizzaConfigurationsOfOrder( Order order ) throws DataAccessException
     {
+        System.out.println( "PizzaConfiguration query number: " + ++queryCounter );
+
         try
         {
             Collection<PizzaConfiguration> pizzaConfigurations = new ArrayList<>();
@@ -123,7 +124,7 @@ public class PizzaConfigurationDatabaseDAO extends DatabaseDAO implements PizzaC
         long idTopping4 = row.getLong( COLUMN_ID_TOPPING_4 );
         long idTopping5 = row.getLong( COLUMN_ID_TOPPING_5 );
 
-        ToppingDAO toppingDAO = new ToppingDatabaseDAO( database );
+        ToppingDAO toppingDAO = daoBundle.getToppingDAO();
 
         Collection<Topping> toppings = new ArrayList<>();
         Topping topping1 = toppingDAO.findToppingById( idTopping1 );
@@ -147,7 +148,7 @@ public class PizzaConfigurationDatabaseDAO extends DatabaseDAO implements PizzaC
         long idPizzaVariation2 = row.getLong( COLUMN_ID_PIZZA_VARIATION_2 );
         boolean split = row.getBoolean( COLUMN_SPLIT );
 
-        PizzaVariationDAO pizzaVariationDAO = new PizzaVariationDatabaseDAO( database );
+        PizzaVariationDAO pizzaVariationDAO = daoBundle.getPizzaVariationDAO();
 
         PizzaVariation pizzaVariation1 = pizzaVariationDAO.findPizzaVariationById( idPizzaVariation1 );
         if( pizzaVariation1 == null )

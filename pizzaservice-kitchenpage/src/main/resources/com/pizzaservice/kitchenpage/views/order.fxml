@@ -10,5 +10,5 @@
     <Separator />
     <Label fx:id="lbOrderId" />
     <Button fx:id="btnChangeState" onAction="#actionChangeState" />
-    <Text fx:id="txtOrderContent" />
+    <Text fx:id="txtOrderContent" style="-fx-text-alignment: center" />
 </fx:root>

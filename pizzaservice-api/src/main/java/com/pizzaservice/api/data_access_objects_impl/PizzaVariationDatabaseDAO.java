@@ -2,6 +2,7 @@ package com.pizzaservice.api.data_access_objects_impl;
 
 import com.pizzaservice.api.buissness_objects.PizzaVariation;
 import com.pizzaservice.api.buissness_objects.Recipe;
+import com.pizzaservice.api.data_access_objects.DAOBundle;
 import com.pizzaservice.api.data_access_objects.DataAccessException;
 import com.pizzaservice.api.data_access_objects.PizzaVariationDAO;
 import com.pizzaservice.api.data_access_objects.RecipeDAO;
@@ -11,6 +12,7 @@ import com.pizzaservice.api.db.Row;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Hashtable;
 import java.util.List;
 
 /**
@@ -27,16 +29,29 @@ public class PizzaVariationDatabaseDAO extends DatabaseDAO implements PizzaVaria
     public static final int COLUMN_PRICE_LARGE = 7;
     public static final int COLUMN_PRICE_X_LARGE = 8;
 
-    public PizzaVariationDatabaseDAO( Database database )
+    private Hashtable<Long, PizzaVariation> cache = new Hashtable<>();
+
+    private static int queryCounter = 0;
+
+    public PizzaVariationDatabaseDAO( Database database, DAOBundle daoBundle )
     {
-        super( database );
+        super( database, daoBundle );
     }
 
     @Override
     public PizzaVariation findPizzaVariationById( long id ) throws DataAccessException
     {
+        if( id == 0 )
+            return null;
+
+        PizzaVariation cachedPizzaVariation = cache.get( id );
+        if( cachedPizzaVariation != null )
+            return cachedPizzaVariation;
+
         try
         {
+            System.out.println( "PizzaVariation query number: " + ++queryCounter );
+
             PizzaVariation pizzaVariation = new PizzaVariation();
 
             String query = "SELECT * FROM pizza_variations WHERE id = ?";
@@ -46,6 +61,8 @@ public class PizzaVariationDatabaseDAO extends DatabaseDAO implements PizzaVaria
             if( !found )
                 return null;
 
+            cache.put( pizzaVariation.getId(), pizzaVariation );
+
             return pizzaVariation;
         }
         catch( Exception e ) { throw handleException( e ); }
@@ -54,8 +71,11 @@ public class PizzaVariationDatabaseDAO extends DatabaseDAO implements PizzaVaria
     @Override
     public Collection<PizzaVariation> getPizzaVariations() throws DataAccessException
     {
+        System.out.println( "PizzaVariation query number: " + ++queryCounter );
+
         try
         {
+            cache = new Hashtable<>();
             Collection<PizzaVariation> pizzaVariations = new ArrayList<>();
 
             String query = "SELECT * FROM pizza_variations";
@@ -63,7 +83,9 @@ public class PizzaVariationDatabaseDAO extends DatabaseDAO implements PizzaVaria
             {
                 PizzaVariation pizzaVariation = new PizzaVariation();
                 processPizzaVariation( pizzaVariation, row );
+
                 pizzaVariations.add( pizzaVariation );
+                cache.put( pizzaVariation.getId(), pizzaVariation );
             } );
 
             return pizzaVariations;
@@ -87,7 +109,7 @@ public class PizzaVariationDatabaseDAO extends DatabaseDAO implements PizzaVaria
         long idRecipeLarge = row.getLong( COLUMN_ID_RECIPE_LARGE );
         long idRecipeXLarge = row.getLong( COLUMN_ID_RECIPE_X_LARGE );
 
-        RecipeDAO recipeDAO = new RecipeDatabaseDAO( database );
+        RecipeDAO recipeDAO = daoBundle.getRecipeDAO();
 
         Recipe recipeSmall = recipeDAO.findRecipeById( idRecipeSmall );
         if( recipeSmall == null )

@@ -1,12 +1,10 @@
 package com.pizzaservice.kitchenpage.fragments;
 
+import com.pizzaservice.api.data_access_objects.DAOBundle;
 import com.pizzaservice.common.Utils;
-import com.pizzaservice.api.db.Database;
 import com.pizzaservice.kitchenpage.Session;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
-
-import java.net.URL;
 
 /**
  * Created by philipp on 26.01.17.
@@ -15,15 +13,15 @@ public class Fragment extends VBox
 {
     protected Pane rootPane;
     protected Session session;
-    protected Database database;
+    protected DAOBundle daoBundle;
 
-    public Fragment( String filename, Pane rootPane, Session session, Database database )
+    public Fragment( String filename, Pane rootPane, Session session, DAOBundle daoBundle )
     {
         super();
 
         this.rootPane = rootPane;
         this.session = session;
-        this.database = database;
+        this.daoBundle = daoBundle;
 
         Utils.load( getClass().getResource( filename ), this );
     }
@@ -34,7 +32,7 @@ public class Fragment extends VBox
 
         this.rootPane = oldFragment.getRootPane();
         this.session = oldFragment.getSession();
-        this.database = oldFragment.getDatabase();
+        this.daoBundle = oldFragment.getDaoBundle();
 
         Utils.load( getClass().getResource( filename ), this );
     }
@@ -43,9 +41,6 @@ public class Fragment extends VBox
 
     public Fragment setNewFragment( Fragment newFragment )
     {
-        if( newFragment == null )
-            return null;
-
         rootPane.getChildren().clear();
         rootPane.getChildren().add( newFragment );
         newFragment.setup();
@@ -73,13 +68,13 @@ public class Fragment extends VBox
         this.session = session;
     }
 
-    public Database getDatabase()
+    public DAOBundle getDaoBundle()
     {
-        return database;
+        return daoBundle;
     }
 
-    public void setDatabase( Database database )
+    public void setDaoBundle( DAOBundle daoBundle )
     {
-        this.database = database;
+        this.daoBundle = daoBundle;
     }
 }

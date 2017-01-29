@@ -1,5 +1,6 @@
 package com.pizzaservice.customerpage.fragments;
 
+import com.pizzaservice.api.data_access_objects.DAOBundle;
 import com.pizzaservice.api.db.Database;
 import com.pizzaservice.customerpage.Session;
 import com.pizzaservice.common.Utils;
@@ -19,9 +20,9 @@ public class MainMenuFragment extends Fragment
     @FXML public void actionFinishOrder( ActionEvent actionEvent ) { finishOrder(); }
     @FXML public void actionAbortOrder( ActionEvent actionEvent ) { abortOrder(); }
 
-    public MainMenuFragment( Pane rootPane, Session session, Database database )
+    public MainMenuFragment( Pane rootPane, Session session, DAOBundle daoBundle )
     {
-        super( "main_menu.fxml", rootPane, session, database );
+        super( "main_menu.fxml", rootPane, session, daoBundle );
     }
 
     public MainMenuFragment( Fragment oldFragment )
@@ -39,7 +40,7 @@ public class MainMenuFragment extends Fragment
         if( checkNonEmptyCard() )
             return setNewFragment( new ShowCartFragment( this ) );
 
-        return null;
+        return this;
     }
 
     public Fragment finishOrder()
@@ -47,7 +48,7 @@ public class MainMenuFragment extends Fragment
         if( checkNonEmptyCard() )
             return setNewFragment( new FinishOrderFragment( this ) );
 
-        return null;
+        return this;
     }
 
     public void abortOrder()

@@ -1,5 +1,8 @@
 package com.pizzaservice.customerpage;
 
+import com.pizzaservice.api.data_access_objects.DAOBundle;
+import com.pizzaservice.api.data_access_objects.DataAccessException;
+import com.pizzaservice.api.data_access_objects_impl.DatabaseDAOBundle;
 import com.pizzaservice.common.Utils;
 import com.pizzaservice.api.db.Database;
 import com.pizzaservice.customerpage.fragments.MainMenuFragment;
@@ -12,6 +15,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class Main extends Application
 {
@@ -31,9 +35,10 @@ public class Main extends Application
     @FXML
     public void initialize()
     {
-        Database db = new Database( Utils.getConnectionParams() );
+        Database database = new Database( Utils.getConnectionParams() );
+        DAOBundle daoBundle = new DatabaseDAOBundle( database );
 
-        MainMenuFragment mainMenuFragment = new MainMenuFragment( contentPane, new Session(), db );
+        MainMenuFragment mainMenuFragment = new MainMenuFragment( contentPane, new Session(), daoBundle );
 
         contentPane.getChildren().clear();
         contentPane.getChildren().add( mainMenuFragment );

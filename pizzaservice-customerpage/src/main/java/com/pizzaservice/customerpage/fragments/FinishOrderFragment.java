@@ -126,7 +126,7 @@ public class FinishOrderFragment extends Fragment
 
     private Customer obtainCustomer( String firstName, String secondName, String phoneNumber ) throws DataAccessException
     {
-        CustomerDAO customerDAO = new CustomerDatabaseDAO( database );
+        CustomerDAO customerDAO = daoBundle.getCustomerDAO();
         Customer customer = customerDAO.findCustomerByPhoneNumber( phoneNumber );
         // there isn't any customer with the same phone number yet?
         if( customer == null )
@@ -166,11 +166,11 @@ public class FinishOrderFragment extends Fragment
         order.setPizzaConfigurations( new ArrayList<>() );
 
         // add the new order into the database
-        OrderDAO orderDAO = new OrderDatabaseDAO( database );
+        OrderDAO orderDAO = daoBundle.getOrderDAO();
         orderDAO.addOrder( order );
 
         // add the pizza configurations into the database
-        PizzaConfigurationDAO pizzaConfigurationDAO = new PizzaConfigurationDatabaseDAO( database );
+        PizzaConfigurationDAO pizzaConfigurationDAO = daoBundle.getPizzaConfigurationDAO();
 
         for( PizzaConfiguration pizzaConfiguration : session.getPizzaConfigurations() )
         {
@@ -183,7 +183,7 @@ public class FinishOrderFragment extends Fragment
     {
         try
         {
-            StoreItem.setupChoiceBox( cbStore, database );
+            StoreItem.setupChoiceBox( cbStore, daoBundle );
         }
         catch( DataAccessException e )
         {

@@ -8,16 +8,16 @@ public class ConnectionParams
     private String userName;
     private String password;
     private String dbms;
-    private String serverName;
+    private String host;
     private String portNumber;
     private String databaseName;
 
-    public ConnectionParams( String userName, String password, String dbms, String serverName, String portNumber, String databaseName )
+    public ConnectionParams( String userName, String password, String dbms, String host, String portNumber, String databaseName )
     {
         this.userName = userName;
         this.password = password;
         this.dbms = dbms;
-        this.serverName = serverName;
+        this.host = host;
         this.portNumber = portNumber;
         this.databaseName = databaseName;
     }
@@ -37,9 +37,9 @@ public class ConnectionParams
         return dbms;
     }
 
-    public String getServerName()
+    public String getHost()
     {
-        return serverName;
+        return host;
     }
 
     public String getPortNumber()

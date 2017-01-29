@@ -1,10 +1,16 @@
 package com.pizzaservice.api.data_access_objects_impl;
 
 import com.pizzaservice.api.data_access_objects.CustomerDAO;
+import com.pizzaservice.api.data_access_objects.DAOBundle;
 import com.pizzaservice.api.data_access_objects.DataAccessException;
 import com.pizzaservice.api.buissness_objects.Customer;
 import com.pizzaservice.api.db.Database;
+import com.pizzaservice.api.db.Row;
+
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Hashtable;
 import java.util.List;
 
 /**
@@ -19,9 +25,13 @@ public class CustomerDatabaseDAO extends DatabaseDAO implements CustomerDAO
     public static final int COLUMN_LOCKED = 5;
     public static final int COLUMN_LOCKED_UNTIL = 6;
 
-    public CustomerDatabaseDAO( Database database )
+    private static int queryCounter = 0;
+
+    private Hashtable<Long, Customer> cache = new Hashtable<>();
+
+    public CustomerDatabaseDAO( Database database, DAOBundle daoBundle )
     {
-        super( database );
+        super( database, daoBundle );
     }
 
     @Override
@@ -48,6 +58,31 @@ public class CustomerDatabaseDAO extends DatabaseDAO implements CustomerDAO
     }
 
     @Override
+    public Collection<Customer> getCustomers() throws DataAccessException
+    {
+        try
+        {
+            System.out.println( "Customer query number: " + ++queryCounter );
+
+            cache = new Hashtable<>();
+            Collection<Customer> customers = new ArrayList<>();
+
+            String query = "SELECT * FROM customers";
+            database.query( query, new ArrayList<>(), row ->
+            {
+                Customer customer = new Customer();
+                processCustomer( customer, row );
+
+                customers.add( customer );
+                cache.put( customer.getId(), customer );
+            } );
+
+            return customers;
+        }
+        catch( Exception e ) { throw handleException( e ); }
+    }
+
+    @Override
     public Customer findCustomerByPhoneNumber( String phoneNumber ) throws DataAccessException
     {
         // Note: It should always be the case that there is only one row with the given phone number at max
@@ -61,6 +96,13 @@ public class CustomerDatabaseDAO extends DatabaseDAO implements CustomerDAO
     @Override
     public Customer findCustomerById( long id ) throws DataAccessException
     {
+        if( id == 0 )
+            return null;
+
+        Customer cachedCustomer = cache.get( id );
+        if( cachedCustomer != null )
+            return cachedCustomer;
+
         String query = "SELECT * FROM customers where id = ?";
         List<Object> args = new ArrayList<>();
         args.add( id );
@@ -69,19 +111,13 @@ public class CustomerDatabaseDAO extends DatabaseDAO implements CustomerDAO
 
     private Customer findCustomerByQuery( String query, List<Object> args ) throws DataAccessException
     {
+        System.out.println( "Customer query number: " + ++queryCounter );
+
         try
         {
             Customer customer = new Customer();
 
-            boolean found = database.query( query, args, row ->
-            {
-                customer.setId( row.getLong( COLUMN_ID ) );
-                customer.setFirstName( row.getString( COLUMN_FIRST_NAME ) );
-                customer.setSecondName( row.getString( COLUMN_SECOND_NAME ) );
-                customer.setPhoneNumber( row.getString( COLUMN_PHONE_NUMBER ) );
-                customer.setLocked( row.getBoolean( COLUMN_LOCKED ) );
-                customer.setLockedUntil( row.getTime( COLUMN_LOCKED_UNTIL ) );
-            } );
+            boolean found = database.query( query, args, row -> processCustomer( customer, row ) );
 
             if( !found )
                 return null;
@@ -89,5 +125,15 @@ public class CustomerDatabaseDAO extends DatabaseDAO implements CustomerDAO
             return customer;
         }
         catch( Exception e ) { throw handleException( e ); }
+    }
+
+    private void processCustomer( Customer customer, Row row ) throws SQLException
+    {
+        customer.setId( row.getLong( COLUMN_ID ) );
+        customer.setFirstName( row.getString( COLUMN_FIRST_NAME ) );
+        customer.setSecondName( row.getString( COLUMN_SECOND_NAME ) );
+        customer.setPhoneNumber( row.getString( COLUMN_PHONE_NUMBER ) );
+        customer.setLocked( row.getBoolean( COLUMN_LOCKED ) );
+        customer.setLockedUntil( row.getTime( COLUMN_LOCKED_UNTIL ) );
     }
 }
