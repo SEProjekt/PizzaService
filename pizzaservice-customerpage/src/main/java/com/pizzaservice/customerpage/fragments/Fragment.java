@@ -1,5 +1,6 @@
 package com.pizzaservice.customerpage.fragments;
 
+import com.pizzaservice.api.data_access_objects.DAOBundle;
 import com.pizzaservice.api.db.Database;
 import com.pizzaservice.customerpage.Session;
 import com.pizzaservice.common.Utils;
@@ -13,15 +14,15 @@ public abstract class Fragment extends VBox
 {
     protected Pane rootPane;
     protected Session session;
-    protected Database database;
+    protected DAOBundle daoBundle;
 
-    public Fragment( String filename, Pane rootPane, Session session, Database database )
+    public Fragment( String filename, Pane rootPane, Session session, DAOBundle daoBundle )
     {
         super();
 
         this.rootPane = rootPane;
         this.session = session;
-        this.database = database;
+        this.daoBundle = daoBundle;
 
         Utils.load( getClass().getResource( filename ), this );
     }
@@ -32,7 +33,7 @@ public abstract class Fragment extends VBox
 
         this.rootPane = oldFragment.getRootPane();
         this.session = oldFragment.getSession();
-        this.database = oldFragment.getDatabase();
+        this.daoBundle = oldFragment.getDaoBundle();
 
         Utils.load( getClass().getResource( filename ), this );
     }
@@ -68,13 +69,13 @@ public abstract class Fragment extends VBox
         this.session = session;
     }
 
-    public Database getDatabase()
+    public DAOBundle getDaoBundle()
     {
-        return database;
+        return daoBundle;
     }
 
-    public void setDatabase( Database database )
+    public void setDaoBundle( DAOBundle daoBundle )
     {
-        this.database = database;
+        this.daoBundle = daoBundle;
     }
 }

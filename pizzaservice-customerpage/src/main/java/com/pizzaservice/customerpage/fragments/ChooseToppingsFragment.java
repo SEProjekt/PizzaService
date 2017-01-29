@@ -129,7 +129,7 @@ public class ChooseToppingsFragment extends Fragment
     {
         toppingItems = new ArrayList<>();
 
-        ToppingDAO toppingDAO = new ToppingDatabaseDAO( database );
+        ToppingDAO toppingDAO = daoBundle.getToppingDAO();
         Collection<Topping> toppings = toppingDAO.getToppings();
         for( Topping topping : toppings )
         {

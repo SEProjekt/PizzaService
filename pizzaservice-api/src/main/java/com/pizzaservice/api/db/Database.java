@@ -10,6 +10,7 @@ import java.util.Properties;
 public class Database
 {
     private ConnectionParams connectionParams;
+    private Connection connection = null;
 
     public Database( ConnectionParams connectionParams )
     {
@@ -33,13 +34,14 @@ public class Database
      */
     public boolean query( String query, List<Object> args, OnRowProcessedListener onRowProcessedListener ) throws Exception
     {
-        Connection connection = null;
+        if( connection == null )
+            connect();
+
         PreparedStatement pstmt = null;
         ResultSet rs = null;
 
         try
         {
-            connection = connect();
             pstmt = connection.prepareStatement( query );
             fillPreparedStatement( pstmt, args );
             pstmt.executeQuery();
@@ -56,7 +58,6 @@ public class Database
         {
             closeQuietly( rs );
             closeQuietly( pstmt );
-            closeQuietly( connection );
         }
     }
 
@@ -77,13 +78,14 @@ public class Database
      */
     public boolean update( String update, List<Object> args, OnRowProcessedListener onRowProcessedListener ) throws Exception
     {
-        Connection connection = null;
+        if( connection == null )
+            connect();
+
         PreparedStatement pstmt = null;
         ResultSet rs = null;
 
         try
         {
-            connection = connect();
             pstmt = connection.prepareStatement( update, Statement.RETURN_GENERATED_KEYS );
             fillPreparedStatement( pstmt, args );
             pstmt.executeUpdate();
@@ -100,7 +102,6 @@ public class Database
         {
             closeQuietly( rs );
             closeQuietly( pstmt );
-            closeQuietly( connection );
         }
     }
 
@@ -114,7 +115,7 @@ public class Database
         this.connectionParams = connectionParams;
     }
 
-    private Connection connect() throws SQLException
+    public void connect() throws SQLException
     {
         try
         {
@@ -122,9 +123,9 @@ public class Database
             connectionProps.put( "user", connectionParams.getUserName() );
             connectionProps.put( "password", connectionParams.getPassword() );
 
-            return DriverManager.getConnection(
+            connection = DriverManager.getConnection(
                 "jdbc:" + connectionParams.getDbms()
-                + "://" + connectionParams.getServerName()
+                + "://" + connectionParams.getHost()
                 + ":" + connectionParams.getPortNumber()
                 + "/" + connectionParams.getDatabaseName()
                 + "?autoReconnect=true&useSSL=false",
@@ -138,6 +139,11 @@ public class Database
 
             throw ex;
         }
+    }
+
+    public void close()
+    {
+        closeQuietly( connection );
     }
 
     private void fillPreparedStatement( PreparedStatement pstmt, List<Object> args ) throws SQLException

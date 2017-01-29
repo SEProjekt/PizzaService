@@ -74,11 +74,21 @@ public class Utils
 
     public static ConnectionParams getConnectionParams()
     {
+        // local test server
+//        return new ConnectionParams(
+//            "PizzaServiceUser",
+//            "PizzaService",
+//            "mysql",
+//            "localhost",
+//            "3306",
+//            "PizzaService"
+//        );
+
         return new ConnectionParams(
-            "PizzaServiceUser",
             "PizzaService",
+            "d4sG3h31m3SEP4ssw0rd",
             "mysql",
-            "localhost",
+            "37.120.168.33",
             "3306",
             "PizzaService"
         );

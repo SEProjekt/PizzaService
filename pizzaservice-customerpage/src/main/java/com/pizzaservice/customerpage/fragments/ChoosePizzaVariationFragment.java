@@ -100,7 +100,7 @@ public class ChoosePizzaVariationFragment extends Fragment
 
     private Collection<PizzaVariationItem> getPizzaVariationItems() throws DataAccessException
     {
-        PizzaVariationDAO pizzaVariationDAO = new PizzaVariationDatabaseDAO( database );
+        PizzaVariationDAO pizzaVariationDAO = daoBundle.getPizzaVariationDAO();
         Collection<PizzaVariation> variations = pizzaVariationDAO.getPizzaVariations();
         Collection<PizzaVariationItem> variationItems = new ArrayList<>();
         for( PizzaVariation variation : variations )

@@ -2,6 +2,8 @@ package com.pizzaservice.api.data_access_objects;
 
 import com.pizzaservice.api.buissness_objects.Customer;
 
+import java.util.Collection;
+
 /**
  * Created by philipp on 24.01.17.
  */
@@ -14,6 +16,8 @@ public interface CustomerDAO
      * @return true if a new customer could be inserted (no duplicate phone numbers)
      */
     boolean addCustomer( Customer customer ) throws DataAccessException;
+
+    Collection<Customer> getCustomers() throws DataAccessException;
 
     Customer findCustomerByPhoneNumber( String phoneNumber ) throws DataAccessException;
 

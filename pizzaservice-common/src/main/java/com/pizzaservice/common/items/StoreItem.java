@@ -2,6 +2,7 @@ package com.pizzaservice.common.items;
 
 import com.pizzaservice.api.buissness_objects.Address;
 import com.pizzaservice.api.buissness_objects.Store;
+import com.pizzaservice.api.data_access_objects.DAOBundle;
 import com.pizzaservice.api.data_access_objects.DataAccessException;
 import com.pizzaservice.api.data_access_objects.StoreDAO;
 import com.pizzaservice.api.data_access_objects_impl.StoreDatabaseDAO;
@@ -40,9 +41,9 @@ public class StoreItem
             + address.getCountry();
     }
 
-    public static void setupChoiceBox( ChoiceBox<StoreItem> choiceBox, Database database ) throws DataAccessException
+    public static void setupChoiceBox( ChoiceBox<StoreItem> choiceBox, DAOBundle daoBundle ) throws DataAccessException
     {
-        StoreDAO storeDAO = new StoreDatabaseDAO( database );
+        StoreDAO storeDAO = daoBundle.getStoreDAO();
         Collection<Store> stores = storeDAO.getStores();
 
         Collection<StoreItem> storeItems = new ArrayList<>();

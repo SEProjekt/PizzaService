@@ -1,6 +1,7 @@
 package com.pizzaservice.api.data_access_objects_impl;
 
 import com.pizzaservice.api.buissness_objects.Ingredient;
+import com.pizzaservice.api.data_access_objects.DAOBundle;
 import com.pizzaservice.api.data_access_objects.DataAccessException;
 import com.pizzaservice.api.data_access_objects.IngredientDAO;
 import com.pizzaservice.api.db.Database;
@@ -19,9 +20,9 @@ public class IngredientDatabaseDAO extends DatabaseDAO implements IngredientDAO
     public static final int COLUMN_NAME = 2;
     public static final int COLUMN_PRICE_PER_GRAM = 3;
 
-    public IngredientDatabaseDAO( Database database )
+    public IngredientDatabaseDAO( Database database, DAOBundle daoBundle )
     {
-        super( database );
+        super( database, daoBundle );
     }
 
     @Override

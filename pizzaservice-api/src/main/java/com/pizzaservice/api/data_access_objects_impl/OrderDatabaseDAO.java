@@ -2,6 +2,7 @@ package com.pizzaservice.api.data_access_objects_impl;
 
 import com.pizzaservice.api.buissness_objects.*;
 import com.pizzaservice.api.data_access_objects.CustomerDAO;
+import com.pizzaservice.api.data_access_objects.DAOBundle;
 import com.pizzaservice.api.data_access_objects.OrderDAO;
 import com.pizzaservice.api.db.Row;
 import com.pizzaservice.api.data_access_objects.DataAccessException;
@@ -29,9 +30,11 @@ public class OrderDatabaseDAO extends DatabaseDAO implements OrderDAO
     public static final int COLUMN_COUNTRY = 10;
     public static final int COLUMN_TIME_AT_START_OF_DELIVERING = 11;
 
-    public OrderDatabaseDAO( Database database )
+    private static int queryCounter = 0;
+
+    public OrderDatabaseDAO( Database database, DAOBundle daoBundle )
     {
-        super( database );
+        super( database, daoBundle );
     }
 
     @Override
@@ -84,6 +87,8 @@ public class OrderDatabaseDAO extends DatabaseDAO implements OrderDAO
     @Override
     public void getOrdersOfStore( Store store ) throws DataAccessException
     {
+        System.out.println( "Order query number: " + ++queryCounter );
+
         try
         {
             Collection<Order> orders = new ArrayList<>();
@@ -103,7 +108,7 @@ public class OrderDatabaseDAO extends DatabaseDAO implements OrderDAO
                 processAddress( order, row );
                 order.setTimeAtStartOfDelivering( row.getTime( COLUMN_TIME_AT_START_OF_DELIVERING ) );
 
-                new PizzaConfigurationDatabaseDAO( database ).getPizzaConfigurationsOfOrder( order );
+                daoBundle.getPizzaConfigurationDAO().getPizzaConfigurationsOfOrder( order );
 
                 orders.add( order );
             } );
@@ -153,7 +158,7 @@ public class OrderDatabaseDAO extends DatabaseDAO implements OrderDAO
     private void processCustomer( Order order, Row row ) throws SQLException, DataAccessException
     {
         long idCustomer = row.getLong( COLUMN_ID_CUSTOMER );
-        CustomerDAO customerDAO = new CustomerDatabaseDAO( database );
+        CustomerDAO customerDAO = daoBundle.getCustomerDAO();
         Customer customer = customerDAO.findCustomerById( idCustomer );
         if( customer == null )
             throw new DataAccessException( this, "Cannot find id_customer: " + idCustomer + "!" );
