@@ -1,8 +1,6 @@
 package com.pizzaservice.api.database_data_access_objects;
 
 import com.pizzaservice.api.buissness_objects.*;
-import com.pizzaservice.api.data_access_objects.CustomerDAO;
-import com.pizzaservice.api.data_access_objects.DAOBundle;
 import com.pizzaservice.api.data_access_objects.OrderDAO;
 import com.pizzaservice.api.db.Row;
 import com.pizzaservice.api.data_access_objects.DataAccessException;
@@ -38,7 +36,7 @@ public class OrderDatabaseDAO extends DatabaseDAO implements OrderDAO
 
             database.update(
                 insert,
-                makeInsertArgs( order ),
+                createInsertArgs( order ),
                 row -> order.setId( row.getLong( 1 ) )
             );
         }
@@ -65,7 +63,7 @@ public class OrderDatabaseDAO extends DatabaseDAO implements OrderDAO
                 "time_at_start_of_delivering = ? " +
                 "WHERE id = ?";
 
-            List<Object> args = makeInsertArgs( order );
+            List<Object> args = createInsertArgs( order );
             args.add( order.getId() );
 
             database.update( update, args, row -> {} );
@@ -133,7 +131,7 @@ public class OrderDatabaseDAO extends DatabaseDAO implements OrderDAO
         order.setPizzaConfigurations( pizzaConfigurations );
     }
 
-    private List<Object> makeInsertArgs( Order order )
+    private List<Object> createInsertArgs( Order order )
     {
         List<Object> args = new ArrayList<>();
         args.add( order.getCustomer().getId() );
