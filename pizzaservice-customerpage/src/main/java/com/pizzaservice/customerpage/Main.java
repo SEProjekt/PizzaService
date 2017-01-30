@@ -1,8 +1,7 @@
 package com.pizzaservice.customerpage;
 
 import com.pizzaservice.api.data_access_objects.DAOBundle;
-import com.pizzaservice.api.data_access_objects.DataAccessException;
-import com.pizzaservice.api.data_access_objects_impl.DatabaseDAOBundle;
+import com.pizzaservice.api.database_data_access_objects.DatabaseDAOBundle;
 import com.pizzaservice.common.Utils;
 import com.pizzaservice.api.db.Database;
 import com.pizzaservice.customerpage.fragments.MainMenuFragment;
@@ -13,9 +12,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-
-import java.io.IOException;
-import java.sql.SQLException;
 
 public class Main extends Application
 {

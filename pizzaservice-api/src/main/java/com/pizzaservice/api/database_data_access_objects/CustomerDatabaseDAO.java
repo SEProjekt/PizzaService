@@ -1,4 +1,4 @@
-package com.pizzaservice.api.data_access_objects_impl;
+package com.pizzaservice.api.database_data_access_objects;
 
 import com.pizzaservice.api.data_access_objects.CustomerDAO;
 import com.pizzaservice.api.data_access_objects.DAOBundle;
@@ -29,9 +29,9 @@ public class CustomerDatabaseDAO extends DatabaseDAO implements CustomerDAO
 
     private Hashtable<Long, Customer> cache = new Hashtable<>();
 
-    public CustomerDatabaseDAO( Database database, DAOBundle daoBundle )
+    public CustomerDatabaseDAO( Database database, DatabaseDAOBundle databaseDAOBundle )
     {
-        super( database, daoBundle );
+        super( database, databaseDAOBundle );
     }
 
     @Override

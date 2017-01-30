@@ -9,7 +9,6 @@ public class Store
 {
     private long id;
     private Address address;
-
     private Collection<StockItem> stockItems;
     private Collection<Order> orders;
 

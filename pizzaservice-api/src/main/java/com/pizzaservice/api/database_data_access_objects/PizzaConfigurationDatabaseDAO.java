@@ -1,4 +1,4 @@
-package com.pizzaservice.api.data_access_objects_impl;
+package com.pizzaservice.api.database_data_access_objects;
 
 import com.pizzaservice.api.buissness_objects.*;
 import com.pizzaservice.api.data_access_objects.*;
@@ -16,23 +16,11 @@ import java.util.List;
  */
 public class PizzaConfigurationDatabaseDAO extends DatabaseDAO implements PizzaConfigurationDAO
 {
-    public static final int COLUMN_ID = 1;
-    public static final int COLUMN_ID_ORDER = 2;
-    public static final int COLUMN_SIZE = 3;
-    public static final int COLUMN_SPLIT = 4;
-    public static final int COLUMN_ID_PIZZA_VARIATION_1 = 5;
-    public static final int COLUMN_ID_PIZZA_VARIATION_2 = 6;
-    public static final int COLUMN_ID_TOPPING_1 = 7;
-    public static final int COLUMN_ID_TOPPING_2 = 8;
-    public static final int COLUMN_ID_TOPPING_3 = 9;
-    public static final int COLUMN_ID_TOPPING_4 = 10;
-    public static final int COLUMN_ID_TOPPING_5 = 11;
-
     private static int queryCounter = 0;
 
-    public PizzaConfigurationDatabaseDAO( Database database, DAOBundle daoBundle )
+    public PizzaConfigurationDatabaseDAO( Database database, DatabaseDAOBundle databaseDAOBundle )
     {
-        super( database, daoBundle );
+        super( database, databaseDAOBundle );
     }
 
     @Override
@@ -48,7 +36,7 @@ public class PizzaConfigurationDatabaseDAO extends DatabaseDAO implements PizzaC
 
             database.update(
                 insert,
-                makeInsertArgs( pizzaConfiguration ),
+                createInsertArgs( pizzaConfiguration ),
                 row -> pizzaConfiguration.setId( row.getLong( 1 ) )
             );
 
@@ -72,14 +60,7 @@ public class PizzaConfigurationDatabaseDAO extends DatabaseDAO implements PizzaC
             database.query( query, args, row ->
             {
                 PizzaConfiguration pizzaConfiguration = new PizzaConfiguration();
-
-                pizzaConfiguration.setId( row.getLong( COLUMN_ID ) );
-                pizzaConfiguration.setOrder( order );
-                pizzaConfiguration.setPizzaSize( PizzaSize.fromInt( row.getInt( COLUMN_SIZE ) ) );
-                pizzaConfiguration.setSplit( row.getBoolean( COLUMN_SPLIT ) );
-                processPizzaVariations( pizzaConfiguration, row );
-                processToppings( pizzaConfiguration, row );
-
+                processPizzaConfiguration( pizzaConfiguration, order, row );
                 pizzaConfigurations.add( pizzaConfiguration );
             } );
 
@@ -88,7 +69,17 @@ public class PizzaConfigurationDatabaseDAO extends DatabaseDAO implements PizzaC
         catch( Exception e ) { throw handleException( e ); }
     }
 
-    private List<Object> makeInsertArgs( PizzaConfiguration pizzaConfiguration )
+    public void processPizzaConfiguration( PizzaConfiguration pizzaConfiguration, Order order, Row row ) throws SQLException, DataAccessException
+    {
+        pizzaConfiguration.setId( row.getLong( "pizza_configurations.id" ) );
+        pizzaConfiguration.setOrder( order );
+        pizzaConfiguration.setPizzaSize( PizzaSize.fromInt( row.getInt( "pizza_configurations.size" ) ) );
+        pizzaConfiguration.setSplit( row.getBoolean( "pizza_configurations.split" ) );
+        processPizzaVariations( pizzaConfiguration, row );
+        processToppings( pizzaConfiguration, row );
+    }
+
+    private List<Object> createInsertArgs( PizzaConfiguration pizzaConfiguration )
     {
         List<Object> args = new ArrayList<>();
         args.add( pizzaConfiguration.getOrder().getId() );
@@ -118,20 +109,20 @@ public class PizzaConfigurationDatabaseDAO extends DatabaseDAO implements PizzaC
 
     private void processToppings( PizzaConfiguration pizzaConfiguration, Row row ) throws SQLException, DataAccessException
     {
-        long idTopping1 = row.getLong( COLUMN_ID_TOPPING_1 );
-        long idTopping2 = row.getLong( COLUMN_ID_TOPPING_2 );
-        long idTopping3 = row.getLong( COLUMN_ID_TOPPING_3 );
-        long idTopping4 = row.getLong( COLUMN_ID_TOPPING_4 );
-        long idTopping5 = row.getLong( COLUMN_ID_TOPPING_5 );
+        long idTopping1 = row.getLong( "pizza_configurations.id_topping_1" );
+        long idTopping2 = row.getLong( "pizza_configurations.id_topping_2" );
+        long idTopping3 = row.getLong( "pizza_configurations.id_topping_3" );
+        long idTopping4 = row.getLong( "pizza_configurations.id_topping_4" );
+        long idTopping5 = row.getLong( "pizza_configurations.id_topping_5" );
 
-        ToppingDAO toppingDAO = daoBundle.getToppingDAO();
+        ToppingDatabaseDAO toppingDatabaseDAO = databaseDAOBundle.getToppingDatabaseDAO();
 
         Collection<Topping> toppings = new ArrayList<>();
-        Topping topping1 = toppingDAO.findToppingById( idTopping1 );
-        Topping topping2 = toppingDAO.findToppingById( idTopping2 );
-        Topping topping3 = toppingDAO.findToppingById( idTopping3 );
-        Topping topping4 = toppingDAO.findToppingById( idTopping4 );
-        Topping topping5 = toppingDAO.findToppingById( idTopping5 );
+        Topping topping1 = toppingDatabaseDAO.findToppingById( idTopping1 );
+        Topping topping2 = toppingDatabaseDAO.findToppingById( idTopping2 );
+        Topping topping3 = toppingDatabaseDAO.findToppingById( idTopping3 );
+        Topping topping4 = toppingDatabaseDAO.findToppingById( idTopping4 );
+        Topping topping5 = toppingDatabaseDAO.findToppingById( idTopping5 );
 
         if( topping1 != null ) toppings.add( topping1 );
         if( topping2 != null ) toppings.add( topping2 );
@@ -144,19 +135,19 @@ public class PizzaConfigurationDatabaseDAO extends DatabaseDAO implements PizzaC
 
     private void processPizzaVariations( PizzaConfiguration pizzaConfiguration, Row row ) throws SQLException, DataAccessException
     {
-        long idPizzaVariation1 = row.getLong( COLUMN_ID_PIZZA_VARIATION_1 );
-        long idPizzaVariation2 = row.getLong( COLUMN_ID_PIZZA_VARIATION_2 );
-        boolean split = row.getBoolean( COLUMN_SPLIT );
+        long idPizzaVariation1 = row.getLong( "pizza_configurations.id_pizza_variation_1" );
+        long idPizzaVariation2 = row.getLong( "pizza_configurations.id_pizza_variation_2" );
+        boolean split = row.getBoolean( "pizza_configurations.split" );
 
-        PizzaVariationDAO pizzaVariationDAO = daoBundle.getPizzaVariationDAO();
+        PizzaVariationDatabaseDAO pizzaVariationDatabaseDAO = databaseDAOBundle.getPizzaVariationDatabaseDAO();
 
-        PizzaVariation pizzaVariation1 = pizzaVariationDAO.findPizzaVariationById( idPizzaVariation1 );
+        PizzaVariation pizzaVariation1 = pizzaVariationDatabaseDAO.findPizzaVariationById( idPizzaVariation1 );
         if( pizzaVariation1 == null )
             throw new DataAccessException( this, "Cannot find id_pizza_variation_1: " + idPizzaVariation1 + "!" );
 
         pizzaConfiguration.setPizzaVariation1( pizzaVariation1 );
 
-        PizzaVariation pizzaVariation2 = pizzaVariationDAO.findPizzaVariationById( idPizzaVariation2 );
+        PizzaVariation pizzaVariation2 = pizzaVariationDatabaseDAO.findPizzaVariationById( idPizzaVariation2 );
         if( split && pizzaVariation2 == null )
             throw new DataAccessException( this, "Cannot find id_pizza_variation_2: " + idPizzaVariation2 + "!" );
 

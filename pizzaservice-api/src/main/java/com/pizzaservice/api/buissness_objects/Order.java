@@ -15,7 +15,6 @@ public class Order
     private boolean delivering;
     private Address customerAddress;
     private Date timeAtStartOfDelivering;
-
     private Collection<PizzaConfiguration> pizzaConfigurations;
 
     public Order() {}

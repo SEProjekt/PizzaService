@@ -1,6 +1,5 @@
-package com.pizzaservice.api.data_access_objects_impl;
+package com.pizzaservice.api.database_data_access_objects;
 
-import com.pizzaservice.api.data_access_objects.DAOBundle;
 import com.pizzaservice.api.data_access_objects.DataAccessException;
 import com.pizzaservice.api.db.Database;
 
@@ -12,12 +11,12 @@ import java.sql.SQLException;
 public abstract class DatabaseDAO
 {
     protected Database database;
-    protected DAOBundle daoBundle;
+    protected DatabaseDAOBundle databaseDAOBundle;
 
-    public DatabaseDAO( Database database, DAOBundle daoBundle )
+    public DatabaseDAO( Database database, DatabaseDAOBundle databaseDAOBundle )
     {
         this.database = database;
-        this.daoBundle = daoBundle;
+        this.databaseDAOBundle = databaseDAOBundle;
     }
 
     /**

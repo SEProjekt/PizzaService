@@ -1,4 +1,4 @@
-package com.pizzaservice.api.data_access_objects_impl;
+package com.pizzaservice.api.database_data_access_objects;
 
 import com.pizzaservice.api.buissness_objects.Topping;
 import com.pizzaservice.api.buissness_objects.Recipe;
@@ -26,9 +26,9 @@ public class ToppingDatabaseDAO extends DatabaseDAO implements ToppingDAO
 
     private Hashtable<Long, Topping> cache = new Hashtable<>();
 
-    public ToppingDatabaseDAO( Database database, DAOBundle daoBundle )
+    public ToppingDatabaseDAO( Database database, DatabaseDAOBundle databaseDAOBundle )
     {
-        super( database, daoBundle );
+        super( database, databaseDAOBundle );
     }
 
     @Override
@@ -98,9 +98,9 @@ public class ToppingDatabaseDAO extends DatabaseDAO implements ToppingDAO
     {
         long idRecipe = row.getLong( COLUMN_ID_RECIPE );
 
-        RecipeDAO recipeDAO = daoBundle.getRecipeDAO();
+        RecipeDatabaseDAO recipeDatabaseDAO = databaseDAOBundle.getRecipeDatabaseDAO();
 
-        Recipe recipe = recipeDAO.findRecipeById( idRecipe );
+        Recipe recipe = recipeDatabaseDAO.findRecipeById( idRecipe );
         if( recipe == null )
             throw new DataAccessException( this, "Could not find id_recipe: " + idRecipe + "!" );
 

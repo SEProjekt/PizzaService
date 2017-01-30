@@ -1,4 +1,4 @@
-package com.pizzaservice.api.data_access_objects_impl;
+package com.pizzaservice.api.database_data_access_objects;
 
 import com.pizzaservice.api.buissness_objects.*;
 import com.pizzaservice.api.data_access_objects.CustomerDAO;
@@ -11,6 +11,7 @@ import com.pizzaservice.api.db.Database;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Hashtable;
 import java.util.List;
 
 /**
@@ -18,23 +19,11 @@ import java.util.List;
  */
 public class OrderDatabaseDAO extends DatabaseDAO implements OrderDAO
 {
-    public static final int COLUMN_ID = 1;
-    public static final int COLUMN_ID_CUSTOMER = 2;
-    public static final int COLUMN_ID_STORE = 3;
-    public static final int COLUMN_STATE = 4;
-    public static final int COLUMN_DELIVERING = 5;
-    public static final int COLUMN_STREET = 6;
-    public static final int COLUMN_HOUSE_NUMBER = 7;
-    public static final int COLUMN_POSTCODE = 8;
-    public static final int COLUMN_CITY = 9;
-    public static final int COLUMN_COUNTRY = 10;
-    public static final int COLUMN_TIME_AT_START_OF_DELIVERING = 11;
-
     private static int queryCounter = 0;
 
-    public OrderDatabaseDAO( Database database, DAOBundle daoBundle )
+    public OrderDatabaseDAO( Database database, DatabaseDAOBundle databaseDAOBundle )
     {
-        super( database, daoBundle );
+        super( database, databaseDAOBundle );
     }
 
     @Override
@@ -91,31 +80,57 @@ public class OrderDatabaseDAO extends DatabaseDAO implements OrderDAO
 
         try
         {
-            Collection<Order> orders = new ArrayList<>();
+            Hashtable<Long, Order> orders = new Hashtable<>();
 
-            String query = "SELECT * FROM orders WHERE id_store = ?";
+            String query =
+                "SELECT pizza_configurations.id, pizza_configurations.id_order, pizza_configurations.size, " +
+                "pizza_configurations.split, pizza_configurations.id_pizza_variation_1, pizza_configurations.id_pizza_variation_2, " +
+                "pizza_configurations.id_topping_1, pizza_configurations.id_topping_2, pizza_configurations.id_topping_3, " +
+                "pizza_configurations.id_topping_4, pizza_configurations.id_topping_5, " +
+                "orders.id, orders.id_customer, orders.id_store, orders.state, orders.delivering, orders.street, " +
+                "orders.house_number, orders.postcode, orders.city, orders.country, orders.time_at_start_of_delivering " +
+                "FROM pizza_configurations " +
+                "INNER JOIN orders ON orders.id = pizza_configurations.id_order " +
+                "WHERE orders.id_store = ?";
+
             List<Object> args = new ArrayList<>();
             args.add( store.getId() );
+
             database.query( query, args, row ->
             {
-                Order order = new Order();
+                long idOrder = row.getLong( "orders.id" );
+                Order order = orders.get( idOrder );
+                if( order == null )
+                {
+                    order = new Order();
+                    processOrder( order, store, new ArrayList<>(), row );
+                    orders.put( order.getId(), order );
+                }
 
-                order.setId( row.getLong( COLUMN_ID ) );
-                processCustomer( order, row );
-                order.setStore( store );
-                order.setState( OrderState.fromInt( row.getInt( COLUMN_STATE ) ) );
-                order.setDelivering( row.getBoolean( COLUMN_DELIVERING ) );
-                processAddress( order, row );
-                order.setTimeAtStartOfDelivering( row.getTime( COLUMN_TIME_AT_START_OF_DELIVERING ) );
-
-                daoBundle.getPizzaConfigurationDAO().getPizzaConfigurationsOfOrder( order );
-
-                orders.add( order );
+                PizzaConfiguration pizzaConfiguration = new PizzaConfiguration();
+                PizzaConfigurationDatabaseDAO pizzaConfigurationDatabaseDAO = databaseDAOBundle.getPizzaConfigurationDatabaseDAO();
+                pizzaConfigurationDatabaseDAO.processPizzaConfiguration( pizzaConfiguration, order, row );
+                order.getPizzaConfigurations().add( pizzaConfiguration );
             } );
 
-            store.setOrders( orders );
+            store.setOrders( orders.values() );
         }
         catch( Exception e ) { throw handleException( e ); }
+    }
+
+    public void processOrder( Order order,
+                              Store store,
+                              Collection<PizzaConfiguration> pizzaConfigurations,
+                              Row row ) throws SQLException, DataAccessException
+    {
+        order.setId( row.getLong( "orders.id" ) );
+        processCustomer( order, row );
+        order.setStore( store );
+        order.setState( OrderState.fromInt( row.getInt( "orders.state" ) ) );
+        order.setDelivering( row.getBoolean( "orders.delivering" ) );
+        processAddress( order, row );
+        order.setTimeAtStartOfDelivering( row.getTime( "orders.time_at_start_of_delivering" ) );
+        order.setPizzaConfigurations( pizzaConfigurations );
     }
 
     private List<Object> makeInsertArgs( Order order )
@@ -146,19 +161,19 @@ public class OrderDatabaseDAO extends DatabaseDAO implements OrderDAO
     private void processAddress( Order order, Row row ) throws SQLException
     {
         Address address = new Address();
-        address.setStreet( row.getString( COLUMN_STREET ) );
-        address.setHouseNumber( row.getString( COLUMN_HOUSE_NUMBER ) );
-        address.setPostcode( row.getString( COLUMN_POSTCODE ) );
-        address.setCity( row.getString( COLUMN_CITY ) );
-        address.setCountry( row.getString( COLUMN_COUNTRY ) );
+        address.setStreet( row.getString( "orders.street" ) );
+        address.setHouseNumber( row.getString( "orders.house_number" ) );
+        address.setPostcode( row.getString( "orders.postcode" ) );
+        address.setCity( row.getString( "orders.city" ) );
+        address.setCountry( row.getString( "orders.country" ) );
 
         order.setCustomerAddress( address );
     }
 
     private void processCustomer( Order order, Row row ) throws SQLException, DataAccessException
     {
-        long idCustomer = row.getLong( COLUMN_ID_CUSTOMER );
-        CustomerDAO customerDAO = daoBundle.getCustomerDAO();
+        long idCustomer = row.getLong( "orders.id_customer" );
+        CustomerDatabaseDAO customerDAO = databaseDAOBundle.getCustomerDatabaseDAO();
         Customer customer = customerDAO.findCustomerById( idCustomer );
         if( customer == null )
             throw new DataAccessException( this, "Cannot find id_customer: " + idCustomer + "!" );

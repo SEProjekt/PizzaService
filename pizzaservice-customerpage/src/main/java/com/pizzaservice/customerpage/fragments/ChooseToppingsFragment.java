@@ -6,7 +6,6 @@ import com.pizzaservice.api.buissness_objects.Topping;
 import com.pizzaservice.customerpage.MyUtils;
 import com.pizzaservice.api.data_access_objects.DataAccessException;
 import com.pizzaservice.api.data_access_objects.ToppingDAO;
-import com.pizzaservice.api.data_access_objects_impl.ToppingDatabaseDAO;
 import com.pizzaservice.common.Utils;
 import com.pizzaservice.common.items.ToppingItem;
 import com.pizzaservice.customerpage.views.ToppingSelectorView;

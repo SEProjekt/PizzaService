@@ -8,7 +8,6 @@ import java.util.Collection;
 public class Recipe
 {
     private long id;
-
     private Collection<RecipeEntry> entries;
 
     public Recipe() {}

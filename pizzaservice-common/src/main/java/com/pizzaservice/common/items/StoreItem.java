@@ -5,8 +5,6 @@ import com.pizzaservice.api.buissness_objects.Store;
 import com.pizzaservice.api.data_access_objects.DAOBundle;
 import com.pizzaservice.api.data_access_objects.DataAccessException;
 import com.pizzaservice.api.data_access_objects.StoreDAO;
-import com.pizzaservice.api.data_access_objects_impl.StoreDatabaseDAO;
-import com.pizzaservice.api.db.Database;
 import javafx.collections.FXCollections;
 import javafx.scene.control.ChoiceBox;
 

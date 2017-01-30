@@ -1,4 +1,4 @@
-package com.pizzaservice.api.data_access_objects_impl;
+package com.pizzaservice.api.database_data_access_objects;
 
 import com.pizzaservice.api.buissness_objects.Store;
 import com.pizzaservice.api.data_access_objects.DAOBundle;
@@ -24,9 +24,9 @@ public class StoreDatabaseDAO extends DatabaseDAO implements StoreDAO
     public static final int COLUMN_CITY = 5;
     public static final int COLUMN_COUNTRY = 6;
 
-    public StoreDatabaseDAO( Database database, DAOBundle daoBundle )
+    public StoreDatabaseDAO( Database database, DatabaseDAOBundle databaseDAOBundle )
     {
-        super( database, daoBundle );
+        super( database, databaseDAOBundle );
     }
 
     @Override
