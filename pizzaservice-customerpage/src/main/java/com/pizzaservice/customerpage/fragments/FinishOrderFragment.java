@@ -49,6 +49,30 @@ public class FinishOrderFragment extends Fragment
         setupBill();
     }
 
+    public FinishOrderFragment enterFirstName( String firstName )
+    {
+        tfFirstName.setText( firstName );
+        return this;
+    }
+
+    public FinishOrderFragment enterSecondName( String secondName )
+    {
+        tfSecondName.setText( secondName );
+        return this;
+    }
+
+    public FinishOrderFragment enterPhoneNumber( String phoneName )
+    {
+        tfPhoneNumber.setText( phoneName );
+        return this;
+    }
+
+    public FinishOrderFragment chooseStore( int storeIndex )
+    {
+        cbStore.getSelectionModel().select( storeIndex );
+        return this;
+    }
+
     public FinishOrderFragment toggleBill()
     {
         showBill( !billShowing );
