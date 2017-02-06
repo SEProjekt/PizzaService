@@ -3,54 +3,21 @@ package com.pizzaservice.api.data_access_objects;
 /**
  * Created by phili on 29.01.2017.
  */
-public abstract class DAOBundle
+public interface DAOBundle
 {
-    protected StoreDAO storeDAO;
-    protected OrderDAO orderDAO;
-    protected CustomerDAO customerDAO;
-    protected PizzaConfigurationDAO pizzaConfigurationDAO;
-    protected ToppingDAO toppingDAO;
-    protected PizzaVariationDAO pizzaVariationDAO;
-    protected RecipeDAO recipeDAO;
-    protected IngredientDAO ingredientDAO;
+    StoreDAO getStoreDAO();
 
-    public StoreDAO getStoreDAO()
-    {
-        return storeDAO;
-    }
+    OrderDAO getOrderDAO();
 
-    public OrderDAO getOrderDAO()
-    {
-        return orderDAO;
-    }
+    CustomerDAO getCustomerDAO();
 
-    public CustomerDAO getCustomerDAO()
-    {
-        return customerDAO;
-    }
+    PizzaConfigurationDAO getPizzaConfigurationDAO();
 
-    public PizzaConfigurationDAO getPizzaConfigurationDAO()
-    {
-        return pizzaConfigurationDAO;
-    }
+    ToppingDAO getToppingDAO();
 
-    public ToppingDAO getToppingDAO()
-    {
-        return toppingDAO;
-    }
+    PizzaVariationDAO getPizzaVariationDAO();
 
-    public PizzaVariationDAO getPizzaVariationDAO()
-    {
-        return pizzaVariationDAO;
-    }
+    RecipeDAO getRecipeDAO();
 
-    public RecipeDAO getRecipeDAO()
-    {
-        return recipeDAO;
-    }
-
-    public IngredientDAO getIngredientDAO()
-    {
-        return ingredientDAO;
-    }
+    IngredientDAO getIngredientDAO();
 }

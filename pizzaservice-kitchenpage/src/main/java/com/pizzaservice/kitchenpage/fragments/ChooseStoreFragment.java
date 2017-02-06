@@ -25,6 +25,12 @@ public class ChooseStoreFragment extends Fragment
         super( "choose_store.fxml", rootPane, session, daoBundle );
     }
 
+    public ChooseStoreFragment chooseStore( int storeIndex )
+    {
+        cbStore.getSelectionModel().select( storeIndex );
+        return this;
+    }
+
     @Override
     public void setup()
     {

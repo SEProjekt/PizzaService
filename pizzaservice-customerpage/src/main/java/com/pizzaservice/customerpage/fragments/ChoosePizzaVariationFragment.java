@@ -1,12 +1,10 @@
 package com.pizzaservice.customerpage.fragments;
 
 import com.pizzaservice.api.buissness_objects.PizzaConfiguration;
-import com.pizzaservice.api.buissness_objects.PizzaSize;
 import com.pizzaservice.api.buissness_objects.PizzaVariation;
 import com.pizzaservice.customerpage.MyUtils;
 import com.pizzaservice.api.data_access_objects.DataAccessException;
 import com.pizzaservice.api.data_access_objects.PizzaVariationDAO;
-import com.pizzaservice.api.data_access_objects_impl.PizzaVariationDatabaseDAO;
 import com.pizzaservice.common.Utils;
 import com.pizzaservice.common.items.PizzaVariationItem;
 import javafx.collections.FXCollections;
@@ -14,7 +12,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 

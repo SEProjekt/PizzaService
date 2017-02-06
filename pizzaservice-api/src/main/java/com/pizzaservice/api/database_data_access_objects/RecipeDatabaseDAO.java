@@ -1,4 +1,4 @@
-package com.pizzaservice.api.data_access_objects_impl;
+package com.pizzaservice.api.database_data_access_objects;
 
 import com.pizzaservice.api.buissness_objects.Ingredient;
 import com.pizzaservice.api.buissness_objects.Recipe;
@@ -17,9 +17,9 @@ import java.util.List;
  */
 public class RecipeDatabaseDAO extends DatabaseDAO implements RecipeDAO
 {
-    public RecipeDatabaseDAO( Database database, DAOBundle daoBundle )
+    public RecipeDatabaseDAO( Database database, DatabaseDAOBundle databaseDAOBundle )
     {
-        super( database, daoBundle );
+        super( database, databaseDAOBundle );
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.pizzaservice.api.data_access_objects_impl;
+package com.pizzaservice.api.database_data_access_objects;
 
 import com.pizzaservice.api.buissness_objects.PizzaVariation;
 import com.pizzaservice.api.buissness_objects.Recipe;
@@ -33,9 +33,9 @@ public class PizzaVariationDatabaseDAO extends DatabaseDAO implements PizzaVaria
 
     private static int queryCounter = 0;
 
-    public PizzaVariationDatabaseDAO( Database database, DAOBundle daoBundle )
+    public PizzaVariationDatabaseDAO( Database database, DatabaseDAOBundle databaseDAOBundle )
     {
-        super( database, daoBundle );
+        super( database, databaseDAOBundle );
     }
 
     @Override
@@ -109,21 +109,21 @@ public class PizzaVariationDatabaseDAO extends DatabaseDAO implements PizzaVaria
         long idRecipeLarge = row.getLong( COLUMN_ID_RECIPE_LARGE );
         long idRecipeXLarge = row.getLong( COLUMN_ID_RECIPE_X_LARGE );
 
-        RecipeDAO recipeDAO = daoBundle.getRecipeDAO();
+        RecipeDatabaseDAO recipeDatabaseDAO = databaseDAOBundle.getRecipeDatabaseDAO();
 
-        Recipe recipeSmall = recipeDAO.findRecipeById( idRecipeSmall );
+        Recipe recipeSmall = recipeDatabaseDAO.findRecipeById( idRecipeSmall );
         if( recipeSmall == null )
             throw new DataAccessException( this, "Cannot find recipe small with id: " + idRecipeSmall + " !" );
 
         pizzaVariation.setRecipeSmall( recipeSmall );
 
-        Recipe recipeLarge = recipeDAO.findRecipeById( idRecipeLarge );
+        Recipe recipeLarge = recipeDatabaseDAO.findRecipeById( idRecipeLarge );
         if( recipeLarge == null )
             throw new DataAccessException( this, "Cannot find recipe large with id: " + idRecipeLarge + " !" );
 
         pizzaVariation.setRecipeLarge( recipeLarge );
 
-        Recipe recipeXLarge = recipeDAO.findRecipeById( idRecipeXLarge );
+        Recipe recipeXLarge = recipeDatabaseDAO.findRecipeById( idRecipeXLarge );
         if( recipeXLarge == null )
             throw new DataAccessException( this, "Cannot find recipe x-large with id: " + idRecipeXLarge + " !" );
 

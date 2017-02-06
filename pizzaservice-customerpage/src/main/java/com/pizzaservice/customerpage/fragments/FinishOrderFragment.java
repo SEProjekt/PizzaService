@@ -6,9 +6,6 @@ import com.pizzaservice.api.data_access_objects.DataAccessException;
 import com.pizzaservice.api.data_access_objects.OrderDAO;
 import com.pizzaservice.api.data_access_objects.PizzaConfigurationDAO;
 import com.pizzaservice.customerpage.MyUtils;
-import com.pizzaservice.api.data_access_objects_impl.CustomerDatabaseDAO;
-import com.pizzaservice.api.data_access_objects_impl.OrderDatabaseDAO;
-import com.pizzaservice.api.data_access_objects_impl.PizzaConfigurationDatabaseDAO;
 import com.pizzaservice.common.Utils;
 import com.pizzaservice.common.items.PizzaConfigurationItem;
 import com.pizzaservice.common.items.StoreItem;
@@ -48,6 +45,30 @@ public class FinishOrderFragment extends Fragment
     {
         setupStoreChoiceBox();
         setupBill();
+    }
+
+    public FinishOrderFragment enterFirstName( String firstName )
+    {
+        tfFirstName.setText( firstName );
+        return this;
+    }
+
+    public FinishOrderFragment enterSecondName( String secondName )
+    {
+        tfSecondName.setText( secondName );
+        return this;
+    }
+
+    public FinishOrderFragment enterPhoneNumber( String phoneName )
+    {
+        tfPhoneNumber.setText( phoneName );
+        return this;
+    }
+
+    public FinishOrderFragment chooseStore( int storeIndex )
+    {
+        cbStore.getSelectionModel().select( storeIndex );
+        return this;
     }
 
     public FinishOrderFragment toggleBill()
