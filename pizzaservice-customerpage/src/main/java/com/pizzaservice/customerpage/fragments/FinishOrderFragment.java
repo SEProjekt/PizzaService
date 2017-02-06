@@ -32,6 +32,7 @@ public class FinishOrderFragment extends Fragment
     @FXML public void actionSubmitOrder( ActionEvent actionEvent ) { submitOrder(); }
     @FXML public void actionAbort( ActionEvent actionEvent ) { abort(); }
 
+
     private boolean billShowing;
 
     public FinishOrderFragment( Fragment oldFragment )
