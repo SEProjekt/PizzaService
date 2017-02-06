@@ -70,7 +70,7 @@ public class CustomerPageTest extends GuiTest {
 
 
     @Test
-    public void clickFinishOrderTest() {
+    public void clickFinishEmptyOrderTest() {
         click("#btnFinishOrder");
         // As long as there aren't any pizza configurations added,
         // it should keep us on the main menu!
@@ -214,9 +214,25 @@ public class CustomerPageTest extends GuiTest {
     }
 
 
-    //basically the same as above, but without choosing Split
+    //basically the same as above, but with choosing Split
     public void testChooseSplitPizzaVariations(PizzaSize size) {
+        TestUtils.testOnUIThread(() ->
+        {
+            MainMenuFragment mainMenu = find("#fragMainMenu");
 
+            ChoosePizzaSizeFragment choosePizzaSizeFragment = (ChoosePizzaSizeFragment) mainMenu.addPizza();
+            find("#fragChoosePizzaSize");
+            choosePizzaSizeFragment.choose(size);
+
+            ChooseSplitFragment chooseSplitFragment = (ChooseSplitFragment) choosePizzaSizeFragment.next();
+            chooseSplitFragment.choose(true);
+
+            ChoosePizzaVariationFragment choosePizzaVariationFragment = (ChoosePizzaVariationFragment) chooseSplitFragment.next();
+            find("#fragChoosePizzaVariations");
+            choosePizzaVariationFragment.choose(0, 1);//Margherita and Hawaii
+            choosePizzaVariationFragment.next();
+            find("#fragChooseToppings");
+        });
     }
 
     //test arguments for testChooseSplitPizzaVariation for LARGE and XLARGE
@@ -308,12 +324,14 @@ public class CustomerPageTest extends GuiTest {
     public void choose5ToppingsTest() {
         testChooseToppings(5, PizzaSize.SMALL);
         testChooseToppings(5, PizzaSize.LARGE);
-        testChooseToppings(5, PizzaSize.X_LARGE);    }
+        testChooseToppings(5, PizzaSize.X_LARGE);
+    }
     @Test
     public void choose6ToppingsTest() {
         testChooseToppings(6, PizzaSize.SMALL);
         testChooseToppings(6, PizzaSize.LARGE);
-        testChooseToppings(6, PizzaSize.X_LARGE);    }
+        testChooseToppings(6, PizzaSize.X_LARGE);
+    }
 
 
     @Test
@@ -336,14 +354,104 @@ public class CustomerPageTest extends GuiTest {
 
             chooseToppingsFragment.addToppingSelector(0);
 
-            chooseToppingsFragment.next();
+            FinishPizzaConfigurationFragment finishPizzaConfigurationFragment = (FinishPizzaConfigurationFragment) chooseToppingsFragment.next();
+            find("#fragFinishPizzaConfiguration");
+            finishPizzaConfigurationFragment.finish();
+            find("#fragMainMenu");
         });
     }
 
     @Test
-    public void finishOrderTest()
+    public void showCartWithPizzaTest()
     {
+        TestUtils.testOnUIThread(() ->
+        {
+            MainMenuFragment mainMenu = find("#fragMainMenu");
 
+            ChoosePizzaSizeFragment choosePizzaSizeFragment = (ChoosePizzaSizeFragment) mainMenu.addPizza();
+            find("#fragChoosePizzaSize");
+            choosePizzaSizeFragment.choose(PizzaSize.SMALL);
+
+            ChoosePizzaVariationFragment choosePizzaVariationFragment = (ChoosePizzaVariationFragment) choosePizzaSizeFragment.next();
+            find("#fragChoosePizzaVariation");
+            choosePizzaVariationFragment.choose(0);//just Margherita again
+
+            ChooseToppingsFragment chooseToppingsFragment = (ChooseToppingsFragment) choosePizzaVariationFragment.next();
+            find("#fragChooseToppings");
+
+            chooseToppingsFragment.addToppingSelector(0);
+
+            FinishPizzaConfigurationFragment finishPizzaConfigurationFragment = (FinishPizzaConfigurationFragment) chooseToppingsFragment.next();
+            find("#fragFinishPizzaConfiguration");
+            mainMenu = (MainMenuFragment) finishPizzaConfigurationFragment.finish();
+            find("#fragMainMenu");
+
+            mainMenu.showCart();
+            find("#fragShowCart");//the Cart was filled and displayed successfully
+        });
+    }
+
+
+    public void testFinishOrder(String name, String address, String phone)
+    {
+        TestUtils.testOnUIThread(() ->
+        {
+            MainMenuFragment mainMenu = find("#fragMainMenu");
+
+            ChoosePizzaSizeFragment choosePizzaSizeFragment = (ChoosePizzaSizeFragment) mainMenu.addPizza();
+            find("#fragChoosePizzaSize");
+            choosePizzaSizeFragment.choose(PizzaSize.SMALL);
+
+            ChoosePizzaVariationFragment choosePizzaVariationFragment = (ChoosePizzaVariationFragment) choosePizzaSizeFragment.next();
+            find("#fragChoosePizzaVariation");
+            choosePizzaVariationFragment.choose(0);//just Margherita again
+
+            ChooseToppingsFragment chooseToppingsFragment = (ChooseToppingsFragment) choosePizzaVariationFragment.next();
+            find("#fragChooseToppings");
+
+            chooseToppingsFragment.addToppingSelector(0);
+
+            FinishPizzaConfigurationFragment finishPizzaConfigurationFragment = (FinishPizzaConfigurationFragment) chooseToppingsFragment.next();
+            find("#fragFinishPizzaConfiguration");
+            mainMenu = (MainMenuFragment) finishPizzaConfigurationFragment.finish();
+            find("#fragMainMenu");
+
+            FinishOrderFragment finishOrderFragment = (FinishOrderFragment) mainMenu.finishOrder();
+            find("#fragFinishOrder");
+
+            //TODO: add a way to call finishOrderFragment.submitOrder() with different inputs (name, address, phone)
+            //finishOrderFragment.submitOrder(name,address,phone);
+        });
+    }
+    @Ignore
+    @Test
+    public void finishOrderEmptyInputTest()
+    {
+        testFinishOrder("","","");
+    }
+    @Ignore
+    @Test
+    public void finishOrderNoLettersInputTest()
+    {
+        testFinishOrder(" "," ","5");
+    }
+    @Ignore
+    @Test
+    public void finishOrderNumbersInputTest()
+    {
+        testFinishOrder("1","3","b");
+    }
+    @Ignore
+    @Test
+    public void finishOrderNotAlphanumericalInputTest()
+    {
+        testFinishOrder("!","%","§");
+    }
+    @Ignore
+    @Test
+    public void finishOrderValidInputTest()
+    {
+        testFinishOrder("Philipp","Street of Dreams","123");
     }
 
 }
